@@ -118,13 +118,72 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnMinimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnMinimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btnClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icone ControlBox_Close</comment>
+  </data>
+  <data name="btnMinimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnMinimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icone ControlBox_Minimize</comment>
   </data>
   <data name="LogoImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Logo</comment>
+  </data>
+  <data name="MollenNarrow-Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="MollenNarrow-BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="MollenNarrow-Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="MollenNarrow-LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="MollenNarrow-Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="MollenNarrow-RegularItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MollenNarrow-RegularItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>Custom Font para UI</comment>
+  </data>
+  <data name="TrimSettings_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrimSettings_idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="TrimSettings_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrimSettings_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="UVPlanning_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UVPlanning_idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="UVPlanning_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UVPlanning_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="HelpInfo_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpInfo_idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="HelpInfo_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpInfo_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="About_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\About_idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
+  </data>
+  <data name="About_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\About_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>WinMain Icon UI</comment>
   </data>
 </root>

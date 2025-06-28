@@ -7,12 +7,18 @@ using System.Windows.Forms;
 
 namespace TrimSheet_Tools.Controller
 {
+    /// <summary>
+    /// Controlador de funcionalidades dos botões de gerência da janela principal "Close button e Minilize button" 
+    /// </summary>
     internal class WinMain_ControlBox
     {
-        // variáveis privadas globis
+        // variáveis privadas globais
         private TrimSheet_Tools.View.WinMain formRef;   // Referência para WinMain
-
-        // Método setter
+                
+        /// <summary>
+        /// Inicializador do controlador
+        /// </summary>
+        /// <param name="formInput">Referência da janela principal</param>
         public WinMain_ControlBox(TrimSheet_Tools.View.WinMain formInput)
         {
             this.formRef = formInput;
@@ -23,12 +29,10 @@ namespace TrimSheet_Tools.Controller
             this.formRef.Resize += this.WinMain_Resize;
         }
 
+
         //Métodos de controle dos Eventos
         private void btnClose_Click(object sender, EventArgs e)
-        {
-            // Fecha o programa
-            formRef.Close();
-        }
+        { formRef.Close(); }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {

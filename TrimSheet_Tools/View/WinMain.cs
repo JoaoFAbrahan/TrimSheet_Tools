@@ -22,6 +22,8 @@ namespace TrimSheet_Tools.View
 
 
             controlBox = new WinMain_ControlBox(this); //Controle btnMinimize e Close
+            //new SetFontStyle(bunifuButton1, Model.CustomFont.MollenLight);
         }
+
     }
 }
