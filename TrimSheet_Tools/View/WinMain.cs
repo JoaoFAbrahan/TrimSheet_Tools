@@ -13,14 +13,15 @@ namespace TrimSheet_Tools.View
 {
     public partial class WinMain : Form
     {
-        private mainWindow_MoveController movementController;
+        // variáveis privadas globais
+        private WinMain_ControlBox controlBox;
 
         public WinMain()
         {
             InitializeComponent();
 
-            // Sistema de movimentação movimentação da janela
-            movementController = new mainWindow_MoveController(this);
-    }
+
+            controlBox = new WinMain_ControlBox(this); //Controle btnMinimize e Close
+        }
     }
 }

@@ -118,6 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMinimize.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAaCAYAAADWm14/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVEhL7c6hEQAwCARBKghP/6VRRgogE5uJBnPizJtf
+        c0W6ooZK+4ytAQAAAAAAAAAAAAAAYB6wXPsdu7rfBzCg2IhgHSNcAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="topPanelSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAtAAAAAOCAYAAAAG/CvqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABLSURBVHhe7dYxDQAACAQx/Kt6Z7AzsdMm5+GqAAAAAAAA
+        AAAAAAAAAAAAAAAAAOAuSUuSJEm6tX8aAAAAAAAAAAAAAAAAAAAAAP4Z5UIhuENbXi4AAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAaCAYAAADWm14/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVEhL7c6hEQAwCARBKghP/6VRRgogE5uJBnPizJtf
+        c0W6ooZK+4ytAQAAAAAAAAAAAAAAYB6wXPsdu7rfBzCg2IhgHSNcAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="MaainWindow_MovementSystem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>142, 17</value>
+  </metadata>
   <data name="logoPanelSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKoAAAAOCAYAAAC/+4d6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -132,15 +160,4 @@
         OUla2t7/LQAAAHDFA+NtJ/UxtAnvAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="topPanelSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAtAAAAAOCAYAAAAG/CvqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABLSURBVHhe7dYxDQAACAQx/Kt6Z7AzsdMm5+GqAAAAAAAA
-        AAAAAAAAAAAAAAAAAOAuSUuSJEm6tX8aAAAAAAAAAAAAAAAAAAAAAP4Z5UIhuENbXi4AAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
