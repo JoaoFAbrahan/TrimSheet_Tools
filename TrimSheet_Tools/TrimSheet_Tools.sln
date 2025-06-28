@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimSheet_Tools", "TrimSheet_Tools.csproj", "{4326A69D-CDC4-4D3C-A816-AFF8DB36C683}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4326A69D-CDC4-4D3C-A816-AFF8DB36C683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4326A69D-CDC4-4D3C-A816-AFF8DB36C683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4326A69D-CDC4-4D3C-A816-AFF8DB36C683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4326A69D-CDC4-4D3C-A816-AFF8DB36C683}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF69E185-3677-497B-851E-5123F5DF5A55}
+	EndGlobalSection
+EndGlobal
