@@ -40,8 +40,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
       <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
       <HintPath>..\..\..\..\Downloads\BunifuCrack-main\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
@@ -60,7 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FontLoader.cs" />
+    <Compile Include="Controller\SetFontStyle.cs" />
     <Compile Include="Controller\WinMain_ControlBox.cs" />
+    <Compile Include="Model\FontStyle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\WinMain.cs">
@@ -97,7 +109,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <None Include="Resources\TrimSettings_idle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnClose.png" />
@@ -107,6 +119,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrimSettings_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UVPlanning_idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UVPlanning_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpInfo_idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpInfo_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
