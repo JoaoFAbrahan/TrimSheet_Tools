@@ -1,9 +1,9 @@
-﻿// Enumerator de família de fontes usadas na UI
+﻿// Enumerator of font families used in UI
 
 namespace TrimSheet_Tools.Model
 {
     /// <summary>
-    /// Enumerator com lista de todas as fontes carregadas no Resources.resx
+    /// Enumerator with list of all fonts loaded in Resources.resx
     /// </summary>
     public enum CustomFont
     {

@@ -132,27 +132,27 @@
   </data>
   <data name="MollenNarrow-Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="MollenNarrow-BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="MollenNarrow-Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="MollenNarrow-LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="MollenNarrow-Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="MollenNarrow-RegularItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MollenNarrow-RegularItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>Custom Font para UI</comment>
+    <comment>Custom Font for UI</comment>
   </data>
   <data name="TrimSettings_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrimSettings_idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

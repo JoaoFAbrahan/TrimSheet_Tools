@@ -1,31 +1,28 @@
-﻿// Classe utilizada para carregar as fonte customizada do Resources para a memoria.
+﻿// Class used to load custom fonts from Resources into memory.
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
-using System.IO;
-using System.Reflection;
-using System.Windows.Forms;
 using TrimSheet_Tools.Properties;
 using TrimSheet_Tools.Model;
 
 namespace TrimSheet_Tools.Controller
-{    
+{
     /// <summary>
-    /// Loader das fontes customizadas do resource na memória da aplicação
+    /// Loads custom resource sources into application memory
     /// </summary>
     internal class FontLoader
     {
-        // variáveis privadas globais
+        // Global Variables
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         private static Dictionary<CustomFont, FontFamily> fontLib = new Dictionary<CustomFont, FontFamily>();
 
         /// <summary>
-        /// Inicializador
+        /// Resource Initializer
         /// </summary>
         static FontLoader()
         {
-            // Carrega as fontes do Resources
+            // Loads fonts from Resources
             LoadFont(Resources.MollenNarrow_Regular, CustomFont.MollenRegular);
             LoadFont(Resources.MollenNarrow_RegularItalic, CustomFont.MollenRegularItatic);
             LoadFont(Resources.MollenNarrow_Light,CustomFont.MollenLight);
