@@ -15,14 +15,16 @@ namespace TrimSheet_Tools.View
     {
         // Global variables
         private WinMain_ControlBox controlBox;
+        private DockPanel dockPanelSystem;
 
         public WinMain()
         {
             InitializeComponent();
 
-
+            // Initialize 
             controlBox = new WinMain_ControlBox(this); // Minimize and Close control
-            SetFontFromUI();
+            dockPanelSystem = new DockPanel(this.mainMenuTransition, this.logoImage, this.menuPanel, 80, 740); // Dock system Main Menu
+            SetFontFromUI(); // Buttons Custom Type
         }
 
         private void SetFontFromUI()
@@ -31,7 +33,7 @@ namespace TrimSheet_Tools.View
             new SetFontStyle(uvPlanningBtn, Model.CustomFont.MollenRegular);
             new SetFontStyle(helpInfoBtn, Model.CustomFont.MollenRegular);
             new SetFontStyle(aboutBtn, Model.CustomFont.MollenRegular);
-            new SetFontStyle(toggleBtnLabel, Model.CustomFont.MollenLight);
+            new SetFontStyle(onTopLabel, Model.CustomFont.MollenLight);
         }
 
 
@@ -54,6 +56,12 @@ namespace TrimSheet_Tools.View
         private void aboutBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuToggleSwitch1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            // Apply window behavior
+            this.TopMost = onTopToggleSwitch.Value;
         }
     }
 }

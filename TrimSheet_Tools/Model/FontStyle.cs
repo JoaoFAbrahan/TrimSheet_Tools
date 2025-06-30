@@ -1,5 +1,4 @@
 ﻿// Enumerator of font families used in UI
-
 namespace TrimSheet_Tools.Model
 {
     /// <summary>

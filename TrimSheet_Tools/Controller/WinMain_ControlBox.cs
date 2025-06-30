@@ -10,39 +10,39 @@ namespace TrimSheet_Tools.Controller
     internal class WinMain_ControlBox
     {
         // Global variables
-        private TrimSheet_Tools.View.WinMain formRef;   // Referência para WinMain
+        private TrimSheet_Tools.View.WinMain targetForm;   // Reference to WinMain
 
         /// <summary>
         /// Controller Initializer
         /// </summary>
-        /// <param name="formInput">Main Window Reference</param>
-        public WinMain_ControlBox(TrimSheet_Tools.View.WinMain formInput)
+        /// <param name="formRef">Main Window Reference</param>
+        public WinMain_ControlBox(TrimSheet_Tools.View.WinMain formRef)
         {
-            this.formRef = formInput;
+            this.targetForm = formRef;
 
             // Connect form events to methods
-            this.formRef.btnClose.Click += this.btnClose_Click;
-            this.formRef.btnMinimize.Click += this.btnMinimize_Click;
-            this.formRef.Resize += this.WinMain_Resize;
+            this.targetForm.btnClose.Click += this.btnClose_Click;
+            this.targetForm.btnMinimize.Click += this.btnMinimize_Click;
+            this.targetForm.Resize += this.WinMain_Resize;
         }
 
 
         //Event Control Methods
         private void btnClose_Click(object sender, EventArgs e)
-        { formRef.Close(); }
+        { targetForm.Close(); }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             // Minimize the program
-            formRef.topPanelSeparator.Visible = false;
-            formRef.WindowState = System.Windows.Forms.FormWindowState.Minimized; // Correção de bug lib bunifu
+            targetForm.topPanelSeparator.Visible = false;
+            targetForm.WindowState = System.Windows.Forms.FormWindowState.Minimized; // bunifu lib bug correction
         }
 
         private void WinMain_Resize(object sender, EventArgs e)
         {
             // bunifu bug fix
-            if (formRef.WindowState != FormWindowState.Minimized)
-                formRef.topPanelSeparator.Visible = true;
+            if (targetForm.WindowState != FormWindowState.Minimized)
+                targetForm.topPanelSeparator.Visible = true;
         }
     }
 }
