@@ -9,10 +9,11 @@ namespace TrimSheet_Tools.Controller
     /// <summary>
     /// Functionality controller for the docking panel system 
     /// </summary>
-    internal class DockPanel
+    public class DockPanel
     {
         // Global variables
         private bool expandStatus = false;
+        private bool dockingStatus = false;
 
         // Panel Reference
         private Panel targetPanel;
@@ -27,6 +28,7 @@ namespace TrimSheet_Tools.Controller
         // Docking Size
         private int defaultSize_X, defaultSize_Y;
         private int dockedSize_X, dockedSize_Y;
+
 
         /// <summary>
         /// DockingSystem Initializer
@@ -121,6 +123,8 @@ namespace TrimSheet_Tools.Controller
         }
 
 
+        public bool GetDockingStatus()
+        { return dockingStatus; }
 
         private void ApplyDocking_Click(object sender, EventArgs e)
         {
@@ -132,6 +136,7 @@ namespace TrimSheet_Tools.Controller
                 targetPanel.Width = dockedSize_X;
                 targetPanel.Height = dockedSize_Y;
                 expandStatus = false;
+                dockingStatus = true;
             }
             else
             {
@@ -140,6 +145,7 @@ namespace TrimSheet_Tools.Controller
                 targetPanel.Height = defaultSize_Y;
                 targetTransition.ShowSync(targetPanel);
                 expandStatus = true;
+                dockingStatus = false;
             }
         }
 

@@ -17,6 +17,7 @@ namespace TrimSheet_Tools.Controller
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         private static Dictionary<CustomFont, FontFamily> fontLib = new Dictionary<CustomFont, FontFamily>();
 
+
         /// <summary>
         /// Resource Initializer
         /// </summary>

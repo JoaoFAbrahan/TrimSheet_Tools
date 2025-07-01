@@ -102,6 +102,7 @@
     <Compile Include="Controller\DockPanel.cs" />
     <Compile Include="Controller\FontLoader.cs" />
     <Compile Include="Controller\SetFontStyle.cs" />
+    <Compile Include="Controller\TrimSettings_ResponsivitySystem.cs" />
     <Compile Include="Controller\WinMain_ControlBox.cs" />
     <Compile Include="Model\FontStyle.cs" />
     <Compile Include="Program.cs" />

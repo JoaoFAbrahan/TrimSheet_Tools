@@ -18,6 +18,7 @@ namespace TrimSheet_Tools.View
         private WinMain_ControlBox controlBox;
         private DockPanel dockPanelSystem;
 
+
         public WinMain()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace TrimSheet_Tools.View
         }
         private void LoadWindow()
         {
-            TrimSettings newForm = new TrimSettings();
+            TrimSettings newForm = new TrimSettings(dockPanelSystem);
             newForm.TopLevel = false;
             newForm.Dock = DockStyle.Fill;
 

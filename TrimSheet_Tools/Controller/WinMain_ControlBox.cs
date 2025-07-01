@@ -12,6 +12,7 @@ namespace TrimSheet_Tools.Controller
         // Global variables
         private TrimSheet_Tools.View.WinMain targetForm;   // Reference to WinMain
 
+
         /// <summary>
         /// Controller Initializer
         /// </summary>

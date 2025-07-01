@@ -7,29 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrimSheet_Tools.Controller;
 
 namespace TrimSheet_Tools.View
 {
     public partial class TrimSettings : Form
     {
-        public TrimSettings()
+        // Global variables
+        private TrimSettings_ResponsivitySystem responsivitySystem;
+
+
+        public TrimSettings(DockPanel dockingPanelRef)
         {
             InitializeComponent();
+
+            // Get Reference
+            responsivitySystem = new TrimSettings_ResponsivitySystem(this,  dockingPanelRef);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        // 
+        private void TrimSettings_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void texelDensityGridCheker_CheckBox_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            // Docking System re-drawing
+            responsivitySystem.ResponsiveSystem();
         }
     }
 }
