@@ -63,7 +63,6 @@
             this.MaainWindowMenuPanel_MovementSystem = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.mainMenuTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.formContainerPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.menuPanel.SuspendLayout();
             this.aboutFlowLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,7 +70,6 @@
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.topPanel.SuspendLayout();
-            this.formContainerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -86,7 +84,7 @@
             this.menuPanel.Margin = new System.Windows.Forms.Padding(0);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 20);
-            this.menuPanel.Size = new System.Drawing.Size(215, 740);
+            this.menuPanel.Size = new System.Drawing.Size(215, 900);
             this.menuPanel.TabIndex = 0;
             // 
             // aboutFlowLayoutPanel
@@ -96,7 +94,7 @@
             this.aboutFlowLayoutPanel.Controls.Add(this.panel1);
             this.mainMenuTransition.SetDecoration(this.aboutFlowLayoutPanel, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.aboutFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutFlowLayoutPanel.Location = new System.Drawing.Point(15, 606);
+            this.aboutFlowLayoutPanel.Location = new System.Drawing.Point(15, 766);
             this.aboutFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.aboutFlowLayoutPanel.Name = "aboutFlowLayoutPanel";
             this.aboutFlowLayoutPanel.Size = new System.Drawing.Size(185, 114);
@@ -279,7 +277,7 @@
             toggleState6.BorderThicknessInner = 1;
             this.onTopToggleSwitch.ToggleStateOn = toggleState6;
             this.onTopToggleSwitch.Value = false;
-            this.onTopToggleSwitch.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.bunifuToggleSwitch1_CheckedChanged);
+            this.onTopToggleSwitch.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.onTopToggleSwitch_CheckedChanged);
             // 
             // menuButtonsFlowLayoutPanel
             // 
@@ -875,36 +873,27 @@
             this.formContainerPanel.BorderColor = System.Drawing.Color.Transparent;
             this.formContainerPanel.BorderRadius = 3;
             this.formContainerPanel.BorderThickness = 1;
-            this.formContainerPanel.Controls.Add(this.panel2);
             this.mainMenuTransition.SetDecoration(this.formContainerPanel, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.formContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formContainerPanel.Location = new System.Drawing.Point(215, 45);
             this.formContainerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.formContainerPanel.Name = "formContainerPanel";
             this.formContainerPanel.ShowBorders = true;
-            this.formContainerPanel.Size = new System.Drawing.Size(985, 695);
+            this.formContainerPanel.Size = new System.Drawing.Size(985, 855);
             this.formContainerPanel.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainMenuTransition.SetDecoration(this.panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(371, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 600);
-            this.panel2.TabIndex = 0;
             // 
             // WinMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.ClientSize = new System.Drawing.Size(1200, 900);
             this.Controls.Add(this.formContainerPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.menuPanel);
             this.mainMenuTransition.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WinMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menuPanel.ResumeLayout(false);
@@ -915,7 +904,6 @@
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.topPanel.ResumeLayout(false);
-            this.formContainerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -941,7 +929,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuDragControl MaainWindowMenuPanel_MovementSystem;
         private Bunifu.UI.WinForms.BunifuPanel formContainerPanel;
-        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel menuPanel;
         private Bunifu.UI.WinForms.BunifuTransition mainMenuTransition;
         private System.Windows.Forms.PictureBox logoImage;
