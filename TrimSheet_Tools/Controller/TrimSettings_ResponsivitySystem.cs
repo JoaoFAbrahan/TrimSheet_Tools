@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// TrimSettings Form Responsive Controller
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TrimSheet_Tools.Model;
 using TrimSheet_Tools.View;
 
 namespace TrimSheet_Tools.Controller
@@ -11,33 +8,32 @@ namespace TrimSheet_Tools.Controller
     internal class TrimSettings_ResponsivitySystem
     {
         // Global variables
-        private TrimSettings targetTrimSettings;
-        private DockPanel targetDockingPanelSystem;
+        private TrimSettings _targetTrimSettings;
+        private DockPanelModel _targetDockingPanelSystem;
 
 
-        public TrimSettings_ResponsivitySystem(TrimSettings trimSettingsRef, DockPanel dockingPanelRef)
+        public TrimSettings_ResponsivitySystem(TrimSettings trimSettingsRef, DockPanelModel dockingPanelRef)
         {
-            this.targetTrimSettings = trimSettingsRef;
-            this.targetDockingPanelSystem = dockingPanelRef;
+            this._targetTrimSettings = trimSettingsRef;
+            this._targetDockingPanelSystem = dockingPanelRef;
         }
 
 
         // Methods
         public void ResponsiveSystem()
-        {
-            // Docking System re-drawing
-            if (targetDockingPanelSystem.GetDockingStatus())
-            {
-                targetTrimSettings.uvTrimView_Panel.Size = new Size(615, 615);
-                targetTrimSettings.trimSheetViewerPanel.Height = 700;
-                targetTrimSettings.exportTexturePanel.Location = new Point(targetTrimSettings.exportTexturePanel.Location.X, 730);
-            }
-            else
-            {
-                targetTrimSettings.uvTrimView_Panel.Size = new Size(480, 480);
-                targetTrimSettings.trimSheetViewerPanel.Height = 564;
-                targetTrimSettings.exportTexturePanel.Location = new Point(targetTrimSettings.exportTexturePanel.Location.X, 593);
-            }
+        {            
+            // FlipFlop responsive resize
+            bool isDocked = _targetDockingPanelSystem.isDocked;
+
+            _targetTrimSettings.uvTrimView_Panel.Size = isDocked ? new Size(615, 615) : new Size(480, 480);         // UV Panel
+            _targetTrimSettings.trimSheetViewerPanel.Size = isDocked ? new Size(655, 700) : new Size(519, 564);     // TrimSheet Viewer Panel
+            _targetTrimSettings.exportTexturePanel.Size = isDocked ? new Size(655, 118) : new Size(519, 118);       // Export Texture Panel
+
+            // FlipFlop responsive position
+            int defaultPositionX = _targetTrimSettings.exportTexturePanel.Location.X;
+            int newPositionY = isDocked ? 730 : 593;
+
+            _targetTrimSettings.exportTexturePanel.Location = new Point(defaultPositionX, newPositionY);            
         }
     }
 }

@@ -7,10 +7,10 @@ namespace TrimSheet_Tools.Controller
     internal class SetFontStyle
     {
         // Global variables
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton targetBunifuButton;
-        private Bunifu.UI.WinForms.BunifuLabel targetBunifuLabel;
-        private Label targetLabel;
-        private CustomFont fontName;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton _targetBunifuButton;
+        private Bunifu.UI.WinForms.BunifuLabel _targetBunifuLabel;
+        private Label _targetLabel;
+        private ECustomFont _fontName;
 
 
         /// <summary>
@@ -18,10 +18,10 @@ namespace TrimSheet_Tools.Controller
         /// </summary>
         /// <param name="bunifuButtonRef">BunifuButton that receives the custom font</param>
         /// <param name="selectedFont">CustonFont to be defined</param>
-        public SetFontStyle(Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButtonRef, CustomFont selectedFont)
+        public SetFontStyle(Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButtonRef, ECustomFont selectedFont)
         {
-            this.fontName = selectedFont;
-            this.targetBunifuButton = bunifuButtonRef;
+            this._fontName = selectedFont;
+            this._targetBunifuButton = bunifuButtonRef;
 
             SetFont(0);
         }
@@ -31,10 +31,10 @@ namespace TrimSheet_Tools.Controller
         /// </summary>
         /// <param name="bunifuLabelRef">BunifuLabel that receives the custom font</param>
         /// <param name="selectedFont">CustonFont to be defined</param>
-        public SetFontStyle(Bunifu.UI.WinForms.BunifuLabel bunifuLabelRef, CustomFont selectedFont)
+        public SetFontStyle(Bunifu.UI.WinForms.BunifuLabel bunifuLabelRef, ECustomFont selectedFont)
         {
-            this.fontName = selectedFont;
-            this.targetBunifuLabel = bunifuLabelRef;
+            this._fontName = selectedFont;
+            this._targetBunifuLabel = bunifuLabelRef;
 
             SetFont(1);
         }
@@ -44,10 +44,10 @@ namespace TrimSheet_Tools.Controller
         /// </summary>
         /// <param name="labelRef">Label that receives the custom font</param>
         /// <param name="selectedFont">CustonFont to be defined</param>
-        public SetFontStyle(Label labelRef, CustomFont selectedFont) 
+        public SetFontStyle(Label labelRef, ECustomFont selectedFont) 
         {
-            this.fontName = selectedFont;
-            this.targetLabel = labelRef;
+            this._fontName = selectedFont;
+            this._targetLabel = labelRef;
 
             SetFont(2);
         }
@@ -58,13 +58,13 @@ namespace TrimSheet_Tools.Controller
             switch (index)
             {
                 case 0:
-                    targetBunifuButton.Font = FontLoader.GetFont(fontName, targetBunifuButton.Font.Size, targetBunifuButton.Font.Style);
+                    _targetBunifuButton.Font = FontLoader.GetFont(_fontName, _targetBunifuButton.Font.Size, _targetBunifuButton.Font.Style);
                     break;
                 case 1:
-                    targetBunifuLabel.Font = FontLoader.GetFont(fontName, targetBunifuLabel.Font.Size, targetBunifuLabel.Font.Style);
+                    _targetBunifuLabel.Font = FontLoader.GetFont(_fontName, _targetBunifuLabel.Font.Size, _targetBunifuLabel.Font.Style);
                     break;
                 case 2:
-                    targetLabel.Font = FontLoader.GetFont(fontName, targetLabel.Font.Size, targetLabel.Font.Style);
+                    _targetLabel.Font = FontLoader.GetFont(_fontName, _targetLabel.Font.Size, _targetLabel.Font.Style);
                     break;
                 default:
                     MessageBox.Show($"Erro: índice de destino inválido ({index}). Nenhum controle foi encontrado para aplicar a fonte.",

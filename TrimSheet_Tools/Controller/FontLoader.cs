@@ -14,8 +14,8 @@ namespace TrimSheet_Tools.Controller
     internal class FontLoader
     {
         // Global Variables
-        private static PrivateFontCollection fontCollection = new PrivateFontCollection();
-        private static Dictionary<CustomFont, FontFamily> fontLib = new Dictionary<CustomFont, FontFamily>();
+        private static PrivateFontCollection _fontCollection = new PrivateFontCollection();
+        private static Dictionary<ECustomFont, FontFamily> _fontLib = new Dictionary<ECustomFont, FontFamily>();
 
 
         /// <summary>
@@ -24,31 +24,31 @@ namespace TrimSheet_Tools.Controller
         static FontLoader()
         {
             // Loads fonts from Resources
-            LoadFont(Resources.MollenNarrow_Regular, CustomFont.MollenRegular);
-            LoadFont(Resources.MollenNarrow_RegularItalic, CustomFont.MollenRegularItatic);
-            LoadFont(Resources.MollenNarrow_Light,CustomFont.MollenLight);
-            LoadFont(Resources.MollenNarrow_LightItalic, CustomFont.MollenLightItalic);
-            LoadFont(Resources.MollenNarrow_Bold, CustomFont.MollenBold);
-            LoadFont(Resources.MollenNarrow_BoldItalic, CustomFont.MollenBoldItalic);
+            LoadFont(Resources.MollenNarrow_Regular, ECustomFont.MollenRegular);
+            LoadFont(Resources.MollenNarrow_RegularItalic, ECustomFont.MollenRegularItatic);
+            LoadFont(Resources.MollenNarrow_Light,ECustomFont.MollenLight);
+            LoadFont(Resources.MollenNarrow_LightItalic, ECustomFont.MollenLightItalic);
+            LoadFont(Resources.MollenNarrow_Bold, ECustomFont.MollenBold);
+            LoadFont(Resources.MollenNarrow_BoldItalic, ECustomFont.MollenBoldItalic);
         }
 
 
-        private static void LoadFont(byte[] fontData, CustomFont font)
+        private static void LoadFont(byte[] fontData, ECustomFont font)
         {
             IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
             System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
 
-            fontCollection.AddMemoryFont(fontPtr, fontData.Length);
-            FontFamily family = fontCollection.Families[fontCollection.Families.Length - 1];
+            _fontCollection.AddMemoryFont(fontPtr, fontData.Length);
+            FontFamily family = _fontCollection.Families[_fontCollection.Families.Length - 1];
 
-            fontLib[font] = family;
+            _fontLib[font] = family;
 
             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
         }
 
-        public static Font GetFont(CustomFont font, float size, FontStyle style = FontStyle.Regular)
+        public static Font GetFont(ECustomFont font, float size, FontStyle style = FontStyle.Regular)
         {
-            if(fontLib.TryGetValue(font, out FontFamily family))
+            if(_fontLib.TryGetValue(font, out FontFamily family))
                 return new Font(family, size, style);
             
 

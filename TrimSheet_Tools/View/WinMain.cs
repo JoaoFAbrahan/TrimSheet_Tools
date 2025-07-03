@@ -1,22 +1,32 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms.BunifuButton;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrimSheet_Tools.Properties;
 using TrimSheet_Tools.Controller;
 
 namespace TrimSheet_Tools.View
 {
-    public partial class WinMain : Form
+    public partial class WinMain : Form, IDockPanelView
     {
         // Global variables
-        private WinMain_ControlBox controlBox;
-        private DockPanel dockPanelSystem;
+        // ControlBox Component 
+        private WinMain_ControlBox _controlBox;
+
+        // Docking Panel System Component
+        private DockPanelController _dockPanelSystem;
+        private TrimSheet_Tools.Model.DockPanelModel _dockPanelModel;
+
+        // Forms
+        private WinMain_LoadForms _loadFormSystem;
+        private TrimSettings _trimSettings;
+        private UVPlanning _uvPlanning;
 
 
         public WinMain()
@@ -24,42 +34,52 @@ namespace TrimSheet_Tools.View
             InitializeComponent();
 
             // Initialize 
-            controlBox = new WinMain_ControlBox(this); // Minimize and Close control
-            dockPanelSystem = new DockPanel(this.mainMenuTransition, this.logoImage, this.menuPanel, 80, 740); // Dock system Main Menu
-            SetFontFromUI(); // Buttons Custom Type
+            _controlBox = new WinMain_ControlBox(this); //Minimize and Close control
+            _loadFormSystem = new WinMain_LoadForms(formContainerPanel); //Form Loader System
 
-            LoadWindow();
+            // Docking Panel System
+            _dockPanelModel = new TrimSheet_Tools.Model.DockPanelModel();
+            _dockPanelSystem = new DockPanelController(_dockPanelModel, this, menuPanel.Width, menuPanel.Height, 80, 740);
+            logoImage.Click += (s, e) => _dockPanelSystem.ToggleDocking();
+
+            // Set Resources Type
+            SetFontFromUI(); //Buttons Custom Type
+
+            // Form initialize
+            _loadFormSystem.AddFormList(_trimSettings = new TrimSettings(_dockPanelModel));
+            _loadFormSystem.AddFormList(_uvPlanning = new UVPlanning());
+            _loadFormSystem.LoadWindow(0);
+            trimSettingsBtn.Focus();
         }
+
 
         // Window Methods
         private void SetFontFromUI()
         {
-            new SetFontStyle(trimSettingsBtn, Model.CustomFont.MollenBold);
-            new SetFontStyle(uvPlanningBtn, Model.CustomFont.MollenRegular);
-            new SetFontStyle(helpInfoBtn, Model.CustomFont.MollenRegular);
-            new SetFontStyle(aboutBtn, Model.CustomFont.MollenRegular);
-            new SetFontStyle(onTopLabel, Model.CustomFont.MollenLight);
+            new SetFontStyle(trimSettingsBtn, Model.ECustomFont.MollenBold);
+            new SetFontStyle(uvPlanningBtn, Model.ECustomFont.MollenBold);
+            new SetFontStyle(helpInfoBtn, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(aboutBtn, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(onTopLabel, Model.ECustomFont.MollenLight);
         }
-        private void LoadWindow()
-        {
-            TrimSettings newForm = new TrimSettings(dockPanelSystem);
-            newForm.TopLevel = false;
-            newForm.Dock = DockStyle.Fill;
 
-            formContainerPanel.Controls.Clear();
-            formContainerPanel.Controls.Add(newForm);
-            newForm.Show();
-        }
+
+        public void SetPanelSize(int width, int height)
+        { menuPanel.Size  = new Size(width, height); }
+
+        public void AnimatePanel()
+        { mainMenuTransition.ShowSync(menuPanel); }
+
 
         // Event Methods
         private void trimSettingsBtn_Click(object sender, EventArgs e)
         {
-
+            _loadFormSystem.LoadWindow(0);
         }
 
         private void uvPlanningBtn_Click(object sender, EventArgs e)
         {
-
+            _loadFormSystem.LoadWindow(1);
         }
 
         private void helpInfoBtn_Click(object sender, EventArgs e)

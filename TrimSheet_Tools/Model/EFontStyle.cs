@@ -4,7 +4,7 @@ namespace TrimSheet_Tools.Model
     /// <summary>
     /// Enumerator with list of all fonts loaded in Resources.resx
     /// </summary>
-    public enum CustomFont
+    public enum ECustomFont
     {
         MollenRegular,
         MollenRegularItatic,

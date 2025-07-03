@@ -8,21 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrimSheet_Tools.Controller;
+using TrimSheet_Tools.Model;
 
 namespace TrimSheet_Tools.View
 {
     public partial class TrimSettings : Form
     {
         // Global variables
-        private TrimSettings_ResponsivitySystem responsivitySystem;
+        private TrimSettings_ResponsivitySystem _responsivitySystem;
 
 
-        public TrimSettings(DockPanel dockingPanelRef)
+        public TrimSettings(DockPanelModel dockingPanelRef)
         {
             InitializeComponent();
 
             // Get Reference
-            responsivitySystem = new TrimSettings_ResponsivitySystem(this,  dockingPanelRef);
+            _responsivitySystem = new TrimSettings_ResponsivitySystem(this,  dockingPanelRef);
         }
 
 
@@ -30,7 +31,7 @@ namespace TrimSheet_Tools.View
         private void TrimSettings_Paint(object sender, PaintEventArgs e)
         {
             // Docking System re-drawing
-            responsivitySystem.ResponsiveSystem();
+            _responsivitySystem.ResponsiveSystem();
         }
     }
 }
