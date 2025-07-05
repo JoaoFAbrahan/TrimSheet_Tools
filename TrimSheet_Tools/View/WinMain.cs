@@ -20,8 +20,9 @@ namespace TrimSheet_Tools.View
         private WinMain_ControlBox _controlBox;
 
         // Docking Panel System Component
-        private DockPanelController _dockPanelSystem;
         private TrimSheet_Tools.Model.DockPanelModel _dockPanelModel;
+        private TrimSheet_Tools.Model.SColorButtonStates _buttonColor;
+        private DockPanelController _dockPanelSystem;
 
         // Forms
         private WinMain_LoadForms _loadFormSystem;
@@ -35,6 +36,9 @@ namespace TrimSheet_Tools.View
 
             // Initialize 
             _controlBox = new WinMain_ControlBox(this); //Minimize and Close control
+            _buttonColor = new TrimSheet_Tools.Model.SColorButtonStates { IdleState = Color.FromArgb(27, 30, 32), 
+                                                                          HoverState = Color.FromArgb(100, 90, 200), 
+                                                                          PressedState = Color.FromArgb(84, 65, 246) };
             _loadFormSystem = new WinMain_LoadForms(formContainerPanel); //Form Loader System
 
             // Docking Panel System
@@ -45,11 +49,9 @@ namespace TrimSheet_Tools.View
             // Set Resources Type
             SetFontFromUI(); //Buttons Custom Type
 
-            // Form initialize
+            // Forms initialization
             _loadFormSystem.AddFormList(_trimSettings = new TrimSettings(_dockPanelModel));
             _loadFormSystem.AddFormList(_uvPlanning = new UVPlanning());
-            _loadFormSystem.LoadWindow(0);
-            trimSettingsBtn.Focus();
         }
 
 

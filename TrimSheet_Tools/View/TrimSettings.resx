@@ -159,8 +159,8 @@
   <data name="stripInformationSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW8AAAAOCAYAAADg451fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dRRCQBACAVB+6d6zbz/AwMoM7AVtgoAAAAA
-        AAAAAAC4LElLknb1vxwAAAAAAAAAAGYPqbWnjk2wfYkAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dTBCQBACAQx++93397/wAKUBKaFqQIAAAAA
+        AAAAAAAuS9KSpF39LwcAAAAAAAAAgNkDAImLjiacsugAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="selectedSripPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -208,8 +208,8 @@
   <data name="selectedStripSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW8AAAAOCAYAAADg451fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dRRCQBACAVB+6d6zbz/AwMoM7AVtgoAAAAA
-        AAAAAAC4LElLknb1vxwAAAAAAAAAAGYPqbWnjk2wfYkAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dTBCQBACAQx++93397/wAKUBKaFqQIAAAAA
+        AAAAAAAuS9KSpF39LwcAAAAAAAAAgNkDAImLjiacsugAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="changeStripTexelDensity_Btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -267,8 +267,8 @@
   <data name="textureSettingsSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW8AAAAOCAYAAADg451fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dRRCQBACAVB+6d6zbz/AwMoM7AVtgoAAAAA
-        AAAAAAC4LElLknb1vxwAAAAAAAAAAGYPqbWnjk2wfYkAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVHhe7dTBCQBACAQx++93397/wAKUBKaFqQIAAAAA
+        AAAAAAAuS9KSpF39LwcAAAAAAAAAgNkDAImLjiacsugAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="generateTexture_Btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -345,8 +345,8 @@
   <data name="exportTextureSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAl4AAAAOCAYAAAD+MBJYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVHhe7dYxDQAACAQx/Kt6Z7Czs5A2OQ9XBQAAAAAA
-        AAAAAAAAAAAAAMAnSVqSJEn37Q8DAAAAAAAAAAAAAAAAALgxMmSvjDIkDTcAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVHhe7dahDQAACAQx9t/3NXg8hrTJ7XBVAAAAAAAA
+        AAAAAAAAAAAAAHySpCVJknTf/jAAAAAAAAAAAAAAAAAAgBsD+t4oDHMWmy4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="trimSheetViewerPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -417,10 +417,10 @@
   </data>
   <data name="trimSheetViewerSeparator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAl4AAAAQCAYAAADH7HGzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVHhe7daxDQAwCAQx9p/qNyN9OgoKJFu6Ha4KAAAA
-        AAAAAAAAAAAAAAAAAAAAGEvSkiRJ2u//MAAAAAAAAAAAAAAAAAAAAABOe4J6r4w7TIdXAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAAmEAAAAQCAYAAABeFKgGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABKSURBVHhe7dYxDQAACAQx/Pv9GXYEEIY2OQ9XBQAAAAAA
+        AAAAAAAAAAAAAAAAALyTpCVJknTbfjIAAAAAAAAAAAAAAAAAAAAAWAYJrDOm7tvIGgAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>

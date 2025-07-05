@@ -34,17 +34,16 @@ namespace TrimSheet_Tools.Controller
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            //_targetForm.topPanelSeparator.Visible = false;
-            //_targetForm.WindowState = System.Windows.Forms.FormWindowState.Minimized; // bunifu lib bug correction
-            
-
+            _targetForm.bunifuSeparator2.Dock = DockStyle.None; //bunifu Separator Anchor bug correction
             _targetForm.WindowState = FormWindowState.Minimized;
         }
 
         private void WinMain_Resize(object sender, EventArgs e)
         {
-            //if (_targetForm.WindowState != FormWindowState.Minimized)
-                
+            // Bunifu Separator Anchor bug correction
+            if (_targetForm.WindowState != FormWindowState.Minimized)
+               _targetForm.bunifuSeparator2.Dock = DockStyle.Bottom;
+
         }
     }
 }

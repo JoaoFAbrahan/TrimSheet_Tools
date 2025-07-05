@@ -1,13 +1,7 @@
-﻿using System;
+﻿// Load Form System
+using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrimSheet_Tools.Model;
-using TrimSheet_Tools.View;
 
 namespace TrimSheet_Tools.Controller
 {
@@ -15,12 +9,13 @@ namespace TrimSheet_Tools.Controller
     {
         // Global variables
         private Panel _targetContainerPanel;
+        private TrimSheet_Tools.Model.SColorButtonStates _buttonColorState;
         private List<Form> _formsList = new List<Form>();
-
+        
 
         public WinMain_LoadForms(Panel panelRef)
         {
-            _targetContainerPanel = panelRef;
+            this._targetContainerPanel = panelRef;
         }
 
 
@@ -39,7 +34,7 @@ namespace TrimSheet_Tools.Controller
                 formRef.TopLevel = false;
                 formRef.Dock = DockStyle.Fill;
                 _formsList.Add(formRef);
-            }
+            }            
         }
 
         /// <summary>
@@ -47,12 +42,11 @@ namespace TrimSheet_Tools.Controller
         /// </summary>
         /// <param name="index">Index of the form that should be displayed</param>
         public void LoadWindow(int index)
-        {       
-           // Load Form based on index to a referenced containerPanel
+        {
+            // Load Form based on index to a referenced containerPanel
             _targetContainerPanel.Controls.Clear();
             _targetContainerPanel.Controls.Add(_formsList[index]);
             _formsList[index].Show();
         }
-
     }
 }

@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinMain));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation2 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState7 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState8 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState9 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation3 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.aboutFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -65,6 +65,9 @@
             this.MaainWindowMenuPanel_MovementSystem = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.mainMenuTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.formContainerPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textPresentation1Label = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.menuPanel.SuspendLayout();
@@ -74,6 +77,8 @@
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.topPanel.SuspendLayout();
+            this.formContainerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -111,7 +116,7 @@
             this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
             this.mainMenuTransition.SetDecoration(this.bunifuSeparator1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(3, 3);
@@ -139,11 +144,11 @@
             this.aboutBtn.ColorContrastOnClick = 45;
             this.aboutBtn.ColorContrastOnHover = 45;
             this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.aboutBtn.CustomizableEdges = borderEdges7;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.aboutBtn.CustomizableEdges = borderEdges13;
             this.mainMenuTransition.SetDecoration(this.aboutBtn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.aboutBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.aboutBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -246,39 +251,39 @@
             this.onTopToggleSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mainMenuTransition.SetDecoration(this.onTopToggleSwitch, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.onTopToggleSwitch.InnerCirclePadding = 3;
-            this.onTopToggleSwitch.Location = new System.Drawing.Point(9, 18);
+            this.onTopToggleSwitch.Location = new System.Drawing.Point(11, 18);
             this.onTopToggleSwitch.Margin = new System.Windows.Forms.Padding(0);
             this.onTopToggleSwitch.Name = "onTopToggleSwitch";
             this.onTopToggleSwitch.Size = new System.Drawing.Size(30, 16);
             this.onTopToggleSwitch.TabIndex = 0;
             this.onTopToggleSwitch.ThumbMargin = 3;
-            toggleState4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            toggleState4.BackColorInner = System.Drawing.Color.White;
-            toggleState4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            toggleState4.BorderColorInner = System.Drawing.Color.White;
-            toggleState4.BorderRadius = 17;
-            toggleState4.BorderRadiusInner = 11;
-            toggleState4.BorderThickness = 1;
-            toggleState4.BorderThicknessInner = 1;
-            this.onTopToggleSwitch.ToggleStateDisabled = toggleState4;
-            toggleState5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
-            toggleState5.BackColorInner = System.Drawing.Color.White;
-            toggleState5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
-            toggleState5.BorderColorInner = System.Drawing.Color.White;
-            toggleState5.BorderRadius = 17;
-            toggleState5.BorderRadiusInner = 11;
-            toggleState5.BorderThickness = 1;
-            toggleState5.BorderThicknessInner = 1;
-            this.onTopToggleSwitch.ToggleStateOff = toggleState5;
-            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(65)))), ((int)(((byte)(246)))));
-            toggleState6.BackColorInner = System.Drawing.Color.White;
-            toggleState6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(65)))), ((int)(((byte)(246)))));
-            toggleState6.BorderColorInner = System.Drawing.Color.White;
-            toggleState6.BorderRadius = 17;
-            toggleState6.BorderRadiusInner = 11;
-            toggleState6.BorderThickness = 1;
-            toggleState6.BorderThicknessInner = 1;
-            this.onTopToggleSwitch.ToggleStateOn = toggleState6;
+            toggleState7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            toggleState7.BackColorInner = System.Drawing.Color.White;
+            toggleState7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            toggleState7.BorderColorInner = System.Drawing.Color.White;
+            toggleState7.BorderRadius = 17;
+            toggleState7.BorderRadiusInner = 11;
+            toggleState7.BorderThickness = 1;
+            toggleState7.BorderThicknessInner = 1;
+            this.onTopToggleSwitch.ToggleStateDisabled = toggleState7;
+            toggleState8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
+            toggleState8.BackColorInner = System.Drawing.Color.White;
+            toggleState8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
+            toggleState8.BorderColorInner = System.Drawing.Color.White;
+            toggleState8.BorderRadius = 17;
+            toggleState8.BorderRadiusInner = 11;
+            toggleState8.BorderThickness = 1;
+            toggleState8.BorderThicknessInner = 1;
+            this.onTopToggleSwitch.ToggleStateOff = toggleState8;
+            toggleState9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(65)))), ((int)(((byte)(246)))));
+            toggleState9.BackColorInner = System.Drawing.Color.White;
+            toggleState9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(65)))), ((int)(((byte)(246)))));
+            toggleState9.BorderColorInner = System.Drawing.Color.White;
+            toggleState9.BorderRadius = 17;
+            toggleState9.BorderRadiusInner = 11;
+            toggleState9.BorderThickness = 1;
+            toggleState9.BorderThicknessInner = 1;
+            this.onTopToggleSwitch.ToggleStateOn = toggleState9;
             this.onTopToggleSwitch.Value = false;
             this.onTopToggleSwitch.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.onTopToggleSwitch_CheckedChanged);
             // 
@@ -304,6 +309,7 @@
             this.trimSettingsBtn.AutoRoundBorders = false;
             this.trimSettingsBtn.AutoSizeLeftIcon = true;
             this.trimSettingsBtn.AutoSizeRightIcon = true;
+            this.trimSettingsBtn.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.trimSettingsBtn.BackColor = System.Drawing.Color.Transparent;
             this.trimSettingsBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.trimSettingsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("trimSettingsBtn.BackgroundImage")));
@@ -313,11 +319,11 @@
             this.trimSettingsBtn.ColorContrastOnClick = 45;
             this.trimSettingsBtn.ColorContrastOnHover = 45;
             this.trimSettingsBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.trimSettingsBtn.CustomizableEdges = borderEdges8;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.trimSettingsBtn.CustomizableEdges = borderEdges14;
             this.mainMenuTransition.SetDecoration(this.trimSettingsBtn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.trimSettingsBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.trimSettingsBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -380,6 +386,7 @@
             this.trimSettingsBtn.OnPressedState.IconRightImage = null;
             this.trimSettingsBtn.Size = new System.Drawing.Size(185, 40);
             this.trimSettingsBtn.TabIndex = 0;
+            this.trimSettingsBtn.TabStop = false;
             this.trimSettingsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.trimSettingsBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.trimSettingsBtn.TextMarginLeft = 0;
@@ -397,6 +404,7 @@
             this.uvPlanningBtn.AutoRoundBorders = false;
             this.uvPlanningBtn.AutoSizeLeftIcon = true;
             this.uvPlanningBtn.AutoSizeRightIcon = true;
+            this.uvPlanningBtn.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.uvPlanningBtn.BackColor = System.Drawing.Color.Transparent;
             this.uvPlanningBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.uvPlanningBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uvPlanningBtn.BackgroundImage")));
@@ -406,11 +414,11 @@
             this.uvPlanningBtn.ColorContrastOnClick = 45;
             this.uvPlanningBtn.ColorContrastOnHover = 45;
             this.uvPlanningBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.uvPlanningBtn.CustomizableEdges = borderEdges9;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.uvPlanningBtn.CustomizableEdges = borderEdges15;
             this.mainMenuTransition.SetDecoration(this.uvPlanningBtn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.uvPlanningBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.uvPlanningBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -473,6 +481,7 @@
             this.uvPlanningBtn.OnPressedState.IconRightImage = null;
             this.uvPlanningBtn.Size = new System.Drawing.Size(185, 40);
             this.uvPlanningBtn.TabIndex = 1;
+            this.uvPlanningBtn.TabStop = false;
             this.uvPlanningBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uvPlanningBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.uvPlanningBtn.TextMarginLeft = 0;
@@ -490,6 +499,7 @@
             this.helpInfoBtn.AutoRoundBorders = false;
             this.helpInfoBtn.AutoSizeLeftIcon = true;
             this.helpInfoBtn.AutoSizeRightIcon = true;
+            this.helpInfoBtn.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.helpInfoBtn.BackColor = System.Drawing.Color.Transparent;
             this.helpInfoBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.helpInfoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("helpInfoBtn.BackgroundImage")));
@@ -499,11 +509,11 @@
             this.helpInfoBtn.ColorContrastOnClick = 45;
             this.helpInfoBtn.ColorContrastOnHover = 45;
             this.helpInfoBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.helpInfoBtn.CustomizableEdges = borderEdges10;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.helpInfoBtn.CustomizableEdges = borderEdges16;
             this.mainMenuTransition.SetDecoration(this.helpInfoBtn, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.helpInfoBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.helpInfoBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -566,6 +576,7 @@
             this.helpInfoBtn.OnPressedState.IconRightImage = null;
             this.helpInfoBtn.Size = new System.Drawing.Size(185, 40);
             this.helpInfoBtn.TabIndex = 2;
+            this.helpInfoBtn.TabStop = false;
             this.helpInfoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.helpInfoBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.helpInfoBtn.TextMarginLeft = 0;
@@ -596,7 +607,7 @@
             this.aboutPanelSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.aboutPanelSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
             this.mainMenuTransition.SetDecoration(this.aboutPanelSeparator, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.aboutPanelSeparator.LineColor = System.Drawing.Color.Silver;
+            this.aboutPanelSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
             this.aboutPanelSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.aboutPanelSeparator.LineThickness = 1;
             this.aboutPanelSeparator.Location = new System.Drawing.Point(0, 63);
@@ -666,12 +677,13 @@
             // 
             // bunifuSeparator2
             // 
+            this.bunifuSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
             this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
             this.mainMenuTransition.SetDecoration(this.bunifuSeparator2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(15, 30);
@@ -700,11 +712,11 @@
             this.btnMinimize.ColorContrastOnClick = 45;
             this.btnMinimize.ColorContrastOnHover = 45;
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btnMinimize.CustomizableEdges = borderEdges11;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.btnMinimize.CustomizableEdges = borderEdges17;
             this.mainMenuTransition.SetDecoration(this.btnMinimize, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnMinimize.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMinimize.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -792,11 +804,11 @@
             this.btnClose.ColorContrastOnClick = 45;
             this.btnClose.ColorContrastOnHover = 45;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.btnClose.CustomizableEdges = borderEdges12;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges18;
             this.mainMenuTransition.SetDecoration(this.btnClose, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -886,31 +898,75 @@
             // 
             this.mainMenuTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide;
             this.mainMenuTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.mainMenuTransition.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.mainMenuTransition.DefaultAnimation = animation3;
             // 
             // formContainerPanel
             // 
+            this.formContainerPanel.Controls.Add(this.pictureBox1);
+            this.formContainerPanel.Controls.Add(this.label1);
+            this.formContainerPanel.Controls.Add(this.textPresentation1Label);
             this.mainMenuTransition.SetDecoration(this.formContainerPanel, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.formContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formContainerPanel.Location = new System.Drawing.Point(215, 45);
             this.formContainerPanel.Name = "formContainerPanel";
             this.formContainerPanel.Size = new System.Drawing.Size(985, 861);
             this.formContainerPanel.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.mainMenuTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox1.Image = global::TrimSheet_Tools.Properties.Resources.LogoTitle;
+            this.pictureBox1.Location = new System.Drawing.Point(271, 279);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(451, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.mainMenuTransition.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Mollen Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(287, 485);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(430, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "in the creation of trim sheet textures";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textPresentation1Label
+            // 
+            this.textPresentation1Label.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textPresentation1Label.AutoSize = true;
+            this.mainMenuTransition.SetDecoration(this.textPresentation1Label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.textPresentation1Label.Font = new System.Drawing.Font("Mollen Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPresentation1Label.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textPresentation1Label.Location = new System.Drawing.Point(152, 454);
+            this.textPresentation1Label.Name = "textPresentation1Label";
+            this.textPresentation1Label.Size = new System.Drawing.Size(700, 31);
+            this.textPresentation1Label.TabIndex = 0;
+            this.textPresentation1Label.Text = "An open source software developed with the aim of assisting ";
+            this.textPresentation1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WinMain
             // 
@@ -934,6 +990,9 @@
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.formContainerPanel.ResumeLayout(false);
+            this.formContainerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -955,16 +1014,19 @@
         public System.Windows.Forms.Panel menuPanel;
         private Bunifu.UI.WinForms.BunifuTransition mainMenuTransition;
         private System.Windows.Forms.PictureBox logoImage;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton trimSettingsBtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton helpInfoBtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton uvPlanningBtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuSeparator aboutPanelSeparator;
         private Bunifu.UI.WinForms.BunifuSeparator logoPanelSeparator;
         public Bunifu.UI.WinForms.BunifuSeparator topPanelSeparator;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Panel formContainerPanel;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        public Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton trimSettingsBtn;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton helpInfoBtn;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton uvPlanningBtn;
+        private System.Windows.Forms.Label textPresentation1Label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
