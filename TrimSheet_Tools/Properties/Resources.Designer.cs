@@ -155,7 +155,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_Bold {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-Bold", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_Bold", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -165,7 +165,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_BoldItalic {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-BoldItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_BoldItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -175,7 +175,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_Light {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-Light", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_Light", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -185,7 +185,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_LightItalic {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-LightItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_LightItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -195,7 +195,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_Regular {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-Regular", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_Regular", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -205,7 +205,7 @@ namespace TrimSheet_Tools.Properties {
         /// </summary>
         internal static byte[] MollenNarrow_RegularItalic {
             get {
-                object obj = ResourceManager.GetObject("MollenNarrow-RegularItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("MollenNarrow_RegularItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }

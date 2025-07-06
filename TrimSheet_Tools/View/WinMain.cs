@@ -21,7 +21,6 @@ namespace TrimSheet_Tools.View
 
         // Docking Panel System Component
         private TrimSheet_Tools.Model.DockPanelModel _dockPanelModel;
-        private TrimSheet_Tools.Model.SColorButtonStates _buttonColor;
         private DockPanelController _dockPanelSystem;
 
         // Forms
@@ -36,9 +35,6 @@ namespace TrimSheet_Tools.View
 
             // Initialize 
             _controlBox = new WinMain_ControlBox(this); //Minimize and Close control
-            _buttonColor = new TrimSheet_Tools.Model.SColorButtonStates { IdleState = Color.FromArgb(27, 30, 32), 
-                                                                          HoverState = Color.FromArgb(100, 90, 200), 
-                                                                          PressedState = Color.FromArgb(84, 65, 246) };
             _loadFormSystem = new WinMain_LoadForms(formContainerPanel); //Form Loader System
 
             // Docking Panel System
@@ -60,9 +56,11 @@ namespace TrimSheet_Tools.View
         {
             new SetFontStyle(trimSettingsBtn, Model.ECustomFont.MollenBold);
             new SetFontStyle(uvPlanningBtn, Model.ECustomFont.MollenBold);
-            new SetFontStyle(helpInfoBtn, Model.ECustomFont.MollenRegular);
-            new SetFontStyle(aboutBtn, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(helpInfoBtn, Model.ECustomFont.MollenBold);
+            new SetFontStyle(aboutBtn, Model.ECustomFont.MollenBold);
             new SetFontStyle(onTopLabel, Model.ECustomFont.MollenLight);
+            new SetFontStyle(textPresentation1Label, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(textPresentation2Label, Model.ECustomFont.MollenRegular);
         }
 
 

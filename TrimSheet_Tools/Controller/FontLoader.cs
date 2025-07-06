@@ -39,8 +39,11 @@ namespace TrimSheet_Tools.Controller
             System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
 
             _fontCollection.AddMemoryFont(fontPtr, fontData.Length);
-            FontFamily family = _fontCollection.Families[_fontCollection.Families.Length - 1];
 
+            if (_fontCollection.Families.Length == 0)
+                throw new Exception($"The font {font} was not loaded correctly.");
+
+            var family = _fontCollection.Families[_fontCollection.Families.Length - 1];
             _fontLib[font] = family;
 
             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
@@ -52,7 +55,7 @@ namespace TrimSheet_Tools.Controller
                 return new Font(family, size, style);
             
 
-            throw new ArgumentException($"Fonte não encontrada: {font}");
+            throw new ArgumentException($"Font not found: {font}");
         }
     }
 }

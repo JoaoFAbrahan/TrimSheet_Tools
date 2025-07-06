@@ -9,7 +9,6 @@ namespace TrimSheet_Tools.Controller
     {
         // Global variables
         private Panel _targetContainerPanel;
-        private TrimSheet_Tools.Model.SColorButtonStates _buttonColorState;
         private List<Form> _formsList = new List<Form>();
         
 

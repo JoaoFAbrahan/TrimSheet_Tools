@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrimSettings));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -46,6 +46,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.detailsPanel = new System.Windows.Forms.Panel();
             this.stripsInformationPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.stripsInfo_DataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
@@ -57,13 +58,13 @@
             this.splitStrip_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.selectedStripSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.stripTexelDensityLabel3 = new System.Windows.Forms.Label();
             this.changeStripTexelDensity_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.stripTexelDensity512_Btn = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.stripTexelDensityLabel2 = new System.Windows.Forms.Label();
             this.StripTexelDesnsityLabel = new System.Windows.Forms.Label();
             this.stripTexelDensity1024_Btn = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label8 = new System.Windows.Forms.Label();
+            this.stripTexelDensityLabel1 = new System.Windows.Forms.Label();
             this.stripTexelDensity2048_Btn = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.selectedStripManipulationTitle_Label = new System.Windows.Forms.Label();
             this.textureSettingsPanel = new Bunifu.UI.WinForms.BunifuPanel();
@@ -99,6 +100,10 @@
             this.uvTrimView_Panel = new System.Windows.Forms.Panel();
             this.trimSheetViewerSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.trimSheetViewer_Label = new System.Windows.Forms.Label();
+            this.ShapeColor = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeTexDensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsPanel.SuspendLayout();
             this.stripsInformationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stripsInfo_DataGridView)).BeginInit();
@@ -148,51 +153,59 @@
             // stripsInfo_DataGridView
             // 
             this.stripsInfo_DataGridView.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(126)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.stripsInfo_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.stripsInfo_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.stripsInfo_DataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.stripsInfo_DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stripsInfo_DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.stripsInfo_DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.stripsInfo_DataGridView.ColumnHeadersHeight = 40;
+            this.stripsInfo_DataGridView.ColumnHeadersHeight = 30;
+            this.stripsInfo_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ShapeColor,
+            this.ShapeName,
+            this.ShapeSize,
+            this.ShapeTexDensity});
             this.stripsInfo_DataGridView.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.stripsInfo_DataGridView.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.stripsInfo_DataGridView.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
             this.stripsInfo_DataGridView.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.stripsInfo_DataGridView.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.stripsInfo_DataGridView.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.stripsInfo_DataGridView.CurrentTheme.BackColor = System.Drawing.Color.RosyBrown;
             this.stripsInfo_DataGridView.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
             this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
             this.stripsInfo_DataGridView.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.stripsInfo_DataGridView.CurrentTheme.Name = null;
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.stripsInfo_DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(126)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.stripsInfo_DataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.stripsInfo_DataGridView.EnableHeadersVisualStyles = false;
-            this.stripsInfo_DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.stripsInfo_DataGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.stripsInfo_DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
+            this.stripsInfo_DataGridView.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
             this.stripsInfo_DataGridView.HeaderBgColor = System.Drawing.Color.Empty;
             this.stripsInfo_DataGridView.HeaderForeColor = System.Drawing.Color.White;
             this.stripsInfo_DataGridView.Location = new System.Drawing.Point(21, 64);
@@ -210,7 +223,7 @@
             this.stripInformationSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stripInformationSeparator.BackgroundImage")));
             this.stripInformationSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stripInformationSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.stripInformationSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
+            this.stripInformationSeparator.LineColor = System.Drawing.Color.DarkGray;
             this.stripInformationSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.stripInformationSeparator.LineThickness = 1;
             this.stripInformationSeparator.Location = new System.Drawing.Point(23, 34);
@@ -446,7 +459,7 @@
             this.selectedStripSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectedStripSeparator.BackgroundImage")));
             this.selectedStripSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.selectedStripSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.selectedStripSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
+            this.selectedStripSeparator.LineColor = System.Drawing.Color.DarkGray;
             this.selectedStripSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.selectedStripSeparator.LineThickness = 1;
             this.selectedStripSeparator.Location = new System.Drawing.Point(23, 34);
@@ -458,13 +471,13 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.stripTexelDensityLabel3);
             this.panel4.Controls.Add(this.changeStripTexelDensity_Btn);
             this.panel4.Controls.Add(this.stripTexelDensity512_Btn);
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.stripTexelDensityLabel2);
             this.panel4.Controls.Add(this.StripTexelDesnsityLabel);
             this.panel4.Controls.Add(this.stripTexelDensity1024_Btn);
-            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.stripTexelDensityLabel1);
             this.panel4.Controls.Add(this.stripTexelDensity2048_Btn);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel4.Location = new System.Drawing.Point(176, 50);
@@ -473,19 +486,19 @@
             this.panel4.Size = new System.Drawing.Size(226, 102);
             this.panel4.TabIndex = 10;
             // 
-            // label4
+            // stripTexelDensityLabel3
             // 
-            this.label4.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(188, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "5.12";
+            this.stripTexelDensityLabel3.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.stripTexelDensityLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stripTexelDensityLabel3.AutoSize = true;
+            this.stripTexelDensityLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.stripTexelDensityLabel3.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stripTexelDensityLabel3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.stripTexelDensityLabel3.Location = new System.Drawing.Point(188, 35);
+            this.stripTexelDensityLabel3.Name = "stripTexelDensityLabel3";
+            this.stripTexelDensityLabel3.Size = new System.Drawing.Size(25, 12);
+            this.stripTexelDensityLabel3.TabIndex = 2;
+            this.stripTexelDensityLabel3.Text = "5.12";
             // 
             // changeStripTexelDensity_Btn
             // 
@@ -581,7 +594,7 @@
             this.stripTexelDensity512_Btn.AllowBindingControlLocation = false;
             this.stripTexelDensity512_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stripTexelDensity512_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.stripTexelDensity512_Btn.BindingControl = this.label4;
+            this.stripTexelDensity512_Btn.BindingControl = this.stripTexelDensityLabel3;
             this.stripTexelDensity512_Btn.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.stripTexelDensity512_Btn.BorderThickness = 1;
             this.stripTexelDensity512_Btn.Checked = false;
@@ -596,29 +609,29 @@
             this.stripTexelDensity512_Btn.TabIndex = 4;
             this.stripTexelDensity512_Btn.Text = null;
             // 
-            // label5
+            // stripTexelDensityLabel2
             // 
-            this.label5.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(113, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "10.24";
+            this.stripTexelDensityLabel2.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.stripTexelDensityLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stripTexelDensityLabel2.AutoSize = true;
+            this.stripTexelDensityLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.stripTexelDensityLabel2.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stripTexelDensityLabel2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.stripTexelDensityLabel2.Location = new System.Drawing.Point(113, 35);
+            this.stripTexelDensityLabel2.Name = "stripTexelDensityLabel2";
+            this.stripTexelDensityLabel2.Size = new System.Drawing.Size(32, 12);
+            this.stripTexelDensityLabel2.TabIndex = 2;
+            this.stripTexelDensityLabel2.Text = "10.24";
             // 
             // StripTexelDesnsityLabel
             // 
             this.StripTexelDesnsityLabel.AutoSize = true;
             this.StripTexelDesnsityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StripTexelDesnsityLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StripTexelDesnsityLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StripTexelDesnsityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.StripTexelDesnsityLabel.Location = new System.Drawing.Point(9, 11);
             this.StripTexelDesnsityLabel.Name = "StripTexelDesnsityLabel";
-            this.StripTexelDesnsityLabel.Size = new System.Drawing.Size(121, 16);
+            this.StripTexelDesnsityLabel.Size = new System.Drawing.Size(119, 16);
             this.StripTexelDesnsityLabel.TabIndex = 9;
             this.StripTexelDesnsityLabel.Text = "Strip Texel Density:";
             // 
@@ -627,7 +640,7 @@
             this.stripTexelDensity1024_Btn.AllowBindingControlLocation = false;
             this.stripTexelDensity1024_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stripTexelDensity1024_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.stripTexelDensity1024_Btn.BindingControl = this.label5;
+            this.stripTexelDensity1024_Btn.BindingControl = this.stripTexelDensityLabel2;
             this.stripTexelDensity1024_Btn.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.stripTexelDensity1024_Btn.BorderThickness = 1;
             this.stripTexelDensity1024_Btn.Checked = false;
@@ -642,26 +655,26 @@
             this.stripTexelDensity1024_Btn.TabIndex = 4;
             this.stripTexelDensity1024_Btn.Text = null;
             // 
-            // label8
+            // stripTexelDensityLabel1
             // 
-            this.label8.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(35, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 12);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "20.48";
+            this.stripTexelDensityLabel1.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.stripTexelDensityLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stripTexelDensityLabel1.AutoSize = true;
+            this.stripTexelDensityLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.stripTexelDensityLabel1.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stripTexelDensityLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.stripTexelDensityLabel1.Location = new System.Drawing.Point(35, 35);
+            this.stripTexelDensityLabel1.Name = "stripTexelDensityLabel1";
+            this.stripTexelDensityLabel1.Size = new System.Drawing.Size(33, 12);
+            this.stripTexelDensityLabel1.TabIndex = 2;
+            this.stripTexelDensityLabel1.Text = "20.48";
             // 
             // stripTexelDensity2048_Btn
             // 
             this.stripTexelDensity2048_Btn.AllowBindingControlLocation = false;
             this.stripTexelDensity2048_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stripTexelDensity2048_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.stripTexelDensity2048_Btn.BindingControl = this.label8;
+            this.stripTexelDensity2048_Btn.BindingControl = this.stripTexelDensityLabel1;
             this.stripTexelDensity2048_Btn.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.stripTexelDensity2048_Btn.BorderThickness = 1;
             this.stripTexelDensity2048_Btn.Checked = true;
@@ -727,7 +740,7 @@
             // 
             this.resolutionLabel.AutoSize = true;
             this.resolutionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.resolutionLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resolutionLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resolutionLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.resolutionLabel.Location = new System.Drawing.Point(8, 8);
             this.resolutionLabel.Name = "resolutionLabel";
@@ -739,11 +752,11 @@
             // 
             this.verticalLabel.AutoSize = true;
             this.verticalLabel.BackColor = System.Drawing.Color.Transparent;
-            this.verticalLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verticalLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verticalLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.verticalLabel.Location = new System.Drawing.Point(96, 76);
             this.verticalLabel.Name = "verticalLabel";
-            this.verticalLabel.Size = new System.Drawing.Size(53, 16);
+            this.verticalLabel.Size = new System.Drawing.Size(55, 16);
             this.verticalLabel.TabIndex = 14;
             this.verticalLabel.Text = "Vertical:";
             // 
@@ -927,7 +940,7 @@
             // 
             this.trimRowsLabel.AutoSize = true;
             this.trimRowsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.trimRowsLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trimRowsLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trimRowsLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.trimRowsLabel.Location = new System.Drawing.Point(8, 76);
             this.trimRowsLabel.Name = "trimRowsLabel";
@@ -941,7 +954,7 @@
             this.textureSettingsSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textureSettingsSeparator.BackgroundImage")));
             this.textureSettingsSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.textureSettingsSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.textureSettingsSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
+            this.textureSettingsSeparator.LineColor = System.Drawing.Color.DarkGray;
             this.textureSettingsSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.textureSettingsSeparator.LineThickness = 1;
             this.textureSettingsSeparator.Location = new System.Drawing.Point(23, 34);
@@ -1110,11 +1123,11 @@
             // 
             this.texelDensityLabel.AutoSize = true;
             this.texelDensityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.texelDensityLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texelDensityLabel.Font = new System.Drawing.Font("Mollen Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.texelDensityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.texelDensityLabel.Location = new System.Drawing.Point(9, 8);
             this.texelDensityLabel.Name = "texelDensityLabel";
-            this.texelDensityLabel.Size = new System.Drawing.Size(90, 16);
+            this.texelDensityLabel.Size = new System.Drawing.Size(88, 16);
             this.texelDensityLabel.TabIndex = 9;
             this.texelDensityLabel.Text = "Texel Density:";
             // 
@@ -1561,7 +1574,7 @@
             this.exportTextureSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportTextureSeparator.BackgroundImage")));
             this.exportTextureSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exportTextureSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.exportTextureSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
+            this.exportTextureSeparator.LineColor = System.Drawing.Color.DarkGray;
             this.exportTextureSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.exportTextureSeparator.LineThickness = 1;
             this.exportTextureSeparator.Location = new System.Drawing.Point(23, 35);
@@ -1617,7 +1630,7 @@
             this.trimSheetViewerSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("trimSheetViewerSeparator.BackgroundImage")));
             this.trimSheetViewerSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.trimSheetViewerSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.trimSheetViewerSeparator.LineColor = System.Drawing.Color.WhiteSmoke;
+            this.trimSheetViewerSeparator.LineColor = System.Drawing.Color.DarkGray;
             this.trimSheetViewerSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.trimSheetViewerSeparator.LineThickness = 1;
             this.trimSheetViewerSeparator.Location = new System.Drawing.Point(22, 34);
@@ -1640,6 +1653,43 @@
             this.trimSheetViewer_Label.Size = new System.Drawing.Size(121, 17);
             this.trimSheetViewer_Label.TabIndex = 17;
             this.trimSheetViewer_Label.Text = "Trim Sheet Viewer";
+            // 
+            // ShapeColor
+            // 
+            this.ShapeColor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeColor.FillWeight = 121.8274F;
+            this.ShapeColor.HeaderText = "Color";
+            this.ShapeColor.Name = "ShapeColor";
+            this.ShapeColor.ReadOnly = true;
+            this.ShapeColor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeColor.Width = 50;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.FillWeight = 10.03859F;
+            this.ShapeName.HeaderText = "Name";
+            this.ShapeName.Name = "ShapeName";
+            // 
+            // ShapeSize
+            // 
+            this.ShapeSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.ShapeSize.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ShapeSize.FillWeight = 154.5942F;
+            this.ShapeSize.HeaderText = "Size";
+            this.ShapeSize.Name = "ShapeSize";
+            this.ShapeSize.Width = 70;
+            // 
+            // ShapeTexDensity
+            // 
+            this.ShapeTexDensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeTexDensity.FillWeight = 113.5398F;
+            this.ShapeTexDensity.HeaderText = "Density";
+            this.ShapeTexDensity.Name = "ShapeTexDensity";
+            this.ShapeTexDensity.ReadOnly = true;
+            this.ShapeTexDensity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeTexDensity.Width = 65;
             // 
             // TrimSettings
             // 
@@ -1700,10 +1750,10 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuSeparator selectedStripSeparator;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label stripTexelDensityLabel3;
+        private System.Windows.Forms.Label stripTexelDensityLabel2;
         private System.Windows.Forms.Label StripTexelDesnsityLabel;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label stripTexelDensityLabel1;
         private System.Windows.Forms.Label selectedStripManipulationTitle_Label;
         private Bunifu.UI.WinForms.BunifuPanel stripsInformationPanel;
         private Bunifu.UI.WinForms.BunifuSeparator stripInformationSeparator;
@@ -1734,5 +1784,9 @@
         public Bunifu.UI.WinForms.BunifuPanel exportTexturePanel;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton exportTexture_Btn;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton selectFolder_Btn;
+        private System.Windows.Forms.DataGridViewImageColumn ShapeColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeTexDensity;
     }
 }

@@ -9,8 +9,10 @@ namespace TrimSheet_Tools.Controller
         // Global variables
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton _targetBunifuButton;
         private Bunifu.UI.WinForms.BunifuLabel _targetBunifuLabel;
+        private Bunifu.UI.WinForms.BunifuDataGridView _targetDataGridView;
         private Label _targetLabel;
         private ECustomFont _fontName;
+        private ECustomFont _fontName2;
 
 
         /// <summary>
@@ -51,6 +53,14 @@ namespace TrimSheet_Tools.Controller
 
             SetFont(2);
         }
+
+        public SetFontStyle(Bunifu.UI.WinForms.BunifuDataGridView dataGridViewRef, ECustomFont headerCellFont, ECustomFont rowsCellFont)
+        {
+            this._fontName = headerCellFont;
+            this._fontName2 = rowsCellFont;
+            this._targetDataGridView = dataGridViewRef;
+            SetFont(3);
+        }
         
 
         private void SetFont(int index)
@@ -66,11 +76,15 @@ namespace TrimSheet_Tools.Controller
                 case 2:
                     _targetLabel.Font = FontLoader.GetFont(_fontName, _targetLabel.Font.Size, _targetLabel.Font.Style);
                     break;
+                case 3:
+                    _targetDataGridView.ColumnHeadersDefaultCellStyle.Font = FontLoader.GetFont(_fontName, _targetDataGridView.ColumnHeadersDefaultCellStyle.Font.Size, _targetDataGridView.ColumnHeadersDefaultCellStyle.Font.Style);
+                    _targetDataGridView.DefaultCellStyle.Font = FontLoader.GetFont(_fontName2, _targetDataGridView.DefaultCellStyle.Font.Size, _targetDataGridView.DefaultCellStyle.Font.Style);
+                    break;
                 default:
-                    MessageBox.Show($"Erro: índice de destino inválido ({index}). Nenhum controle foi encontrado para aplicar a fonte.",
-                        "Erro de aplicação de fonte",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    MessageBox.Show($"Error: Invalid target index ({index}). No control was found to apply the font.", 
+                                    "Font application error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
                     break;
             }
         }
