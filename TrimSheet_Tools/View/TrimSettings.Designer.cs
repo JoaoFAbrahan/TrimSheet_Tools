@@ -1084,6 +1084,7 @@
             this.generateTexture_Btn.TextMarginLeft = 0;
             this.generateTexture_Btn.TextPadding = new System.Windows.Forms.Padding(0);
             this.generateTexture_Btn.UseDefaultRadiusAndThickness = true;
+            this.generateTexture_Btn.Click += new System.EventHandler(this.generateTexture_Btn_Click);
             // 
             // texelDensity512_btn
             // 

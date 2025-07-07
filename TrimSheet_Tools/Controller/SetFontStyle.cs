@@ -54,6 +54,12 @@ namespace TrimSheet_Tools.Controller
             SetFont(2);
         }
 
+        /// <summary>
+        /// Apply a custom font to a DataGridView
+        /// </summary>
+        /// <param name="dataGridViewRef">DataGridView that receives the custom font</param>
+        /// <param name="headerCellFont">CustonFont to be defined in Header</param>
+        /// <param name="rowsCellFont">CustonFont to be defined in Rows</param>
         public SetFontStyle(Bunifu.UI.WinForms.BunifuDataGridView dataGridViewRef, ECustomFont headerCellFont, ECustomFont rowsCellFont)
         {
             this._fontName = headerCellFont;

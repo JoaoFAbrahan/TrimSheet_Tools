@@ -108,7 +108,6 @@
     <Compile Include="Controller\WinMain_LoadForms.cs" />
     <Compile Include="Model\DockPanelModel.cs" />
     <Compile Include="Model\EFontStyle.cs" />
-    <Compile Include="Model\SColorButtonStates.cs" />
     <Compile Include="Model\SResponsiveLocationState.cs" />
     <Compile Include="Model\SResponsiveSizeState.cs" />
     <Compile Include="Program.cs" />
@@ -173,9 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnMinimize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LogoImage.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TrimSettings_hover.png" />

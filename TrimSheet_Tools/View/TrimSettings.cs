@@ -30,6 +30,7 @@ namespace TrimSheet_Tools.View
 
             // Set Resources Type
             SetResourceFonts();
+            DataGridViewStart();
         }
 
 
@@ -79,7 +80,7 @@ namespace TrimSheet_Tools.View
             new SetFontStyle(deleteStrip_Btn, Model.ECustomFont.MollenBold);
             new SetFontStyle(changeStripTexelDensity_Btn, Model.ECustomFont.MollenBold);
 
-            // StripsInformation Panel
+            // DataGridView Panel
             new SetFontStyle(stripsInfo_DataGridView, Model.ECustomFont.MollenBold, Model.ECustomFont.MollenRegular);
             stripsInfo_DataGridView.DefaultCellStyle.Font = new Font(stripsInfo_DataGridView.DefaultCellStyle.Font.FontFamily, 
                                                                      8, 
@@ -87,7 +88,10 @@ namespace TrimSheet_Tools.View
             stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.Font = new Font(stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.Font.FontFamily,
                                                                      10,
                                                                      stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.Font.Style);
+        }
 
+        private void DataGridViewStart()
+        {
             // Custom DataGridView Style
             // Headers
             stripsInfo_DataGridView.ColumnHeadersHeight = 45;
@@ -116,5 +120,9 @@ namespace TrimSheet_Tools.View
             _responsivitySystem.ResponsiveSystem();
         }
 
+        private void generateTexture_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
