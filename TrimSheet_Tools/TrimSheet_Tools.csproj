@@ -104,12 +104,15 @@
     <Compile Include="Controller\IStartComponents.cs" />
     <Compile Include="Controller\SetFontStyle.cs" />
     <Compile Include="Controller\ResponsivitySystem.cs" />
+    <Compile Include="Controller\TrimSheetGenerated.cs" />
     <Compile Include="Controller\WinMain_ControlBox.cs" />
     <Compile Include="Controller\WinMain_LoadForms.cs" />
     <Compile Include="Model\DockPanelModel.cs" />
     <Compile Include="Model\EFontStyle.cs" />
     <Compile Include="Model\SResponsiveLocationState.cs" />
     <Compile Include="Model\SResponsiveSizeState.cs" />
+    <Compile Include="Model\StripData.cs" />
+    <Compile Include="Model\TrimStrips.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\IDockPanelView.cs" />
