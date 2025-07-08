@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrimSheet_Tools.Model;
 using TrimSheet_Tools.View;
@@ -77,7 +75,7 @@ namespace TrimSheet_Tools.Controller
             }
         }
 
-        private void RebuildShapesFromData()
+        public void RebuildShapesFromData()
         {
             // Get parameters
             if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out int resolution))
@@ -101,8 +99,8 @@ namespace TrimSheet_Tools.Controller
                 // Get Strip orientation
                 int width = verticalMode  ? (int)(shapeSize * scaleFactor) : _targetForm.uvTrimView_Panel.Width;
                 int height = verticalMode ? _targetForm.uvTrimView_Panel.Height : (int)(shapeSize * scaleFactor);
-                int left = verticalMode   ? (int)(currentOffset * scaleFactor) : 0;
-                int top = verticalMode    ? 0: (int)(currentOffset * scaleFactor);
+                int left = verticalMode   ? (int)(currentOffset * _targetForm.uvTrimView_Panel.Width) : 0;
+                int top = verticalMode    ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
 
                 shape.Width = width;
                 shape.Height = height;
@@ -170,8 +168,8 @@ namespace TrimSheet_Tools.Controller
                 // Get Strip orientation
                 int width =  verticalMode ? (int)(equalSize * resolution * scaleFactor) : _targetForm.uvTrimView_Panel.Width;
                 int height = verticalMode ? _targetForm.uvTrimView_Panel.Height : (int)(equalSize * resolution * scaleFactor);
-                int left =   verticalMode ? (int)(currentOffset * resolution * scaleFactor) : 0;
-                int top =    verticalMode ? 0 : (int)(currentOffset * resolution * scaleFactor);
+                int left = verticalMode   ? (int)(currentOffset * _targetForm.uvTrimView_Panel.Width) : 0;
+                int top = verticalMode    ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
 
                 // Create a shape
                 BunifuShapes shape = new BunifuShapes
@@ -187,6 +185,7 @@ namespace TrimSheet_Tools.Controller
                 Color pastelColor = GeneratedColor(_random);
                 shape.FillColor = pastelColor;
                 _targetForm.uvTrimView_Panel.Controls.Add(shape);
+                shape.SendToBack();
 
                 var stripData = new StripData
                 {

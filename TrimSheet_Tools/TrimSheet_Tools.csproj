@@ -112,7 +112,6 @@
     <Compile Include="Model\SResponsiveLocationState.cs" />
     <Compile Include="Model\SResponsiveSizeState.cs" />
     <Compile Include="Model\StripData.cs" />
-    <Compile Include="Model\TrimStrips.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\IDockPanelView.cs" />

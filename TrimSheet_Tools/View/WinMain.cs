@@ -97,5 +97,6 @@ namespace TrimSheet_Tools.View
             // Apply window behavior
             this.TopMost = onTopToggleSwitch.Value;
         }
+
     }
 }
