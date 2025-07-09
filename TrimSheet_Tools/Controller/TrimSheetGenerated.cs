@@ -1,10 +1,12 @@
-﻿using Bunifu.UI.WinForms;
+﻿// Class contains trim sheet shape generation system
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
+using TrimSheet_Tools.Properties;
 using TrimSheet_Tools.Model;
 using TrimSheet_Tools.View;
 
@@ -19,6 +21,11 @@ namespace TrimSheet_Tools.Controller
         private HashSet<int> _usedHueBuckets = new HashSet<int>();
 
 
+        /// <summary>
+        /// Trim Sheet Generated System
+        /// </summary>
+        /// <param name="trimSettingsRef">TrimSettings form reference</param>
+        /// <param name="dockingPanelRef"></param>
         public TrimSheetGenerated(TrimSettings trimSettingsRef, DockPanelModel dockingPanelRef)
         {
             this._targetForm = trimSettingsRef;
@@ -30,6 +37,12 @@ namespace TrimSheet_Tools.Controller
 
 
         // Methods
+        /// <summary>
+        /// Redraws the viewport as part of ResponsiveSystem
+        /// </summary>
+        public void ResponsiveSystemViewer()
+        { RebuildShapesFromData(true); }
+
         private Color GeneratedColor(Random range)
         {
             int hueBucket;
@@ -75,13 +88,37 @@ namespace TrimSheet_Tools.Controller
             }
         }
 
-        public void RebuildShapesFromData()
+        private String CheckerTexelDensity(Panel panelRef)
+        {
+            // Check the selected Radio Button in the Panel
+            String radioButtonSelected = null;
+
+            foreach (Control ctrl in panelRef.Controls)
+            {
+                if (ctrl is BunifuRadioButton btn && btn.Checked)
+                {
+                    radioButtonSelected = btn.Tag?.ToString();
+                    break;
+                }
+            }
+
+            // Return the selected button value
+            return radioButtonSelected;
+        }
+
+        private void RebuildShapesFromData(bool viewTarget)
         {
             // Get parameters
             if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out int resolution))
                 return;
 
-            float scaleFactor = _targetDockingPanelSystem.isDocked ? 615f / (float)resolution : 480f / (float)resolution;
+            // Check image target to Viewer or Export
+            float scaleFactor;
+            if (viewTarget)
+                scaleFactor = _targetDockingPanelSystem.isDocked ? 615f / (float)resolution : 480f / (float)resolution;
+            else
+                scaleFactor = (float)resolution;
+
             float currentOffset = 0f;
             bool verticalMode = _targetForm.verticalMode_CheckBox.Checked;
 
@@ -110,24 +147,26 @@ namespace TrimSheet_Tools.Controller
                 _targetForm.uvTrimView_Panel.Controls.Add(shape);
 
                 // Create a StripName Label
-                Label nameLabel = new Label
+                VerticalLabel nameLabel = new VerticalLabel
                 {
                     Name = $"labelShapeName{i}",
                     Text = stripData.StripName,
                     ForeColor = Color.Black,
                     BackColor = stripData.StripColor,
+                    BackgroundImage = stripData.StripShape.BackgroundImage,
+                    BackgroundImageLayout = ImageLayout.Tile,
                     AutoSize = false,
                     TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
                     Width = width,
                     Height = height,
                     Top = top,
-                    Left = left
+                    Left = left,
+                    DrawVertically = verticalMode // chave do controle
                 };
 
                 _targetForm.uvTrimView_Panel.Controls.Add(nameLabel);
                 nameLabel.BringToFront();
-
 
                 currentOffset += stripData.StripSize;
 
@@ -157,6 +196,27 @@ namespace TrimSheet_Tools.Controller
             if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out int resolution))
                 return;
 
+            // Texel Density Checker map verification
+            bool useCheckerTexture = _targetForm.texelDensityGridCheker_CheckBox.Checked;
+            String texDensitySelected = CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated);
+            Image checkerTexture = null;
+
+            if(useCheckerTexture)
+            {
+                switch(texDensitySelected)
+                {
+                    case "5.12":
+                        checkerTexture = Resources.Checker_5_12;
+                        break;
+                    case "10.24":
+                        checkerTexture = Resources.Checker_10_24;
+                        break;
+                    case "20.48":
+                        checkerTexture = Resources.Checker_20_48;
+                        break;
+                }
+            };
+
             // Generated Shape
             bool verticalMode = _targetForm.verticalMode_CheckBox.Checked;
             float equalSize = 1f / stripCount;
@@ -172,8 +232,13 @@ namespace TrimSheet_Tools.Controller
                 int top = verticalMode    ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
 
                 // Create a shape
+                Color pastelColor = GeneratedColor(_random);
+
                 BunifuShapes shape = new BunifuShapes
                 {
+                    BackColor = pastelColor,
+                    BackgroundImage = checkerTexture,
+                    BackgroundImageLayout = ImageLayout.Tile,
                     Shape = BunifuShapes.Shapes.Rectangle,
                     Width = width,
                     Height = height,
@@ -182,11 +247,10 @@ namespace TrimSheet_Tools.Controller
                     BorderThickness = 0,
                 };
 
-                Color pastelColor = GeneratedColor(_random);
-                shape.FillColor = pastelColor;
                 _targetForm.uvTrimView_Panel.Controls.Add(shape);
                 shape.SendToBack();
 
+                // Set strip data
                 var stripData = new StripData
                 {
                     StripShape = shape,
@@ -197,11 +261,11 @@ namespace TrimSheet_Tools.Controller
 
                 // Add the shape to DataList
                 _stripDataList.Add(stripData);
-                _targetForm.stripsInfo_DataGridView.Rows.Add(stripData.GetBitmap(), stripData.StripName, equalSize.ToString("0.###", CultureInfo.InvariantCulture), "1x");
+                _targetForm.stripsInfo_DataGridView.Rows.Add(stripData.GetBitmap(), stripData.StripName, equalSize.ToString("0.###", CultureInfo.InvariantCulture), texDensitySelected);
                 currentOffset += equalSize;
             }
 
-            RebuildShapesFromData();
+            RebuildShapesFromData(true);
         }
 
         private void stripsInfo_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -265,11 +329,11 @@ namespace TrimSheet_Tools.Controller
                             adjustedPrev.ToString("0.###", CultureInfo.InvariantCulture);
                     }
 
-                    RebuildShapesFromData();
+                    RebuildShapesFromData(true);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao editar shape: " + ex.Message);
+                    MessageBox.Show("Error editing shape: " + ex.Message);
                 }
             }
             else if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeName"].Index)
@@ -277,11 +341,12 @@ namespace TrimSheet_Tools.Controller
                 string newName = _targetForm.stripsInfo_DataGridView.Rows[e.RowIndex].Cells["ShapeName"].Value.ToString();
                 _stripDataList[e.RowIndex].StripName = newName;
 
-                // Atualiza texto da label
+                // Update Label Text
                 var label = _targetForm.uvTrimView_Panel.Controls.Find($"labelShapeName{e.RowIndex}", false).FirstOrDefault() as Label;
                 if (label != null)
                     label.Text = newName;
             }
         }
+
     }
 }

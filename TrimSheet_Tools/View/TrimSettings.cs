@@ -124,7 +124,7 @@ namespace TrimSheet_Tools.View
         {
             // Docking System re-drawing
             _responsivitySystem.ResponsiveSystem();
-            _generatedTexureSystem.RebuildShapesFromData();
+            _generatedTexureSystem.ResponsiveSystemViewer();
         }
     }
 }

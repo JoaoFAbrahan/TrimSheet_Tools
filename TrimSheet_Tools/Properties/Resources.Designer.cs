@@ -103,6 +103,36 @@ namespace TrimSheet_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Checker_10_24 {
+            get {
+                object obj = ResourceManager.GetObject("Checker_10-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checker_20_48 {
+            get {
+                object obj = ResourceManager.GetObject("Checker_20-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checker_5_12 {
+            get {
+                object obj = ResourceManager.GetObject("Checker_5-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HelpInfo_hover {
             get {
                 object obj = ResourceManager.GetObject("HelpInfo_hover", resourceCulture);

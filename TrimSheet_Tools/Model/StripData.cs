@@ -1,6 +1,6 @@
-﻿using System;
+﻿// Trim sheet strip data class
+using System;
 using System.Drawing;
-using System.Reflection.Emit;
 using Bunifu.UI.WinForms;
 
 namespace TrimSheet_Tools.Model
