@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DockPanelController.cs" />
+    <Compile Include="Controller\ExportTextureSystem.cs" />
     <Compile Include="Controller\FontLoader.cs" />
     <Compile Include="Controller\IStartComponents.cs" />
     <Compile Include="Controller\SetFontStyle.cs" />

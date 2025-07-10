@@ -29,31 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrimSettings));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.detailsPanel = new System.Windows.Forms.Panel();
             this.stripsInformationPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.stripsInfo_DataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.ShapeColor = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeTexDensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stripInformationSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.stripInformation_Label = new System.Windows.Forms.Label();
             this.selectedSripPanel = new Bunifu.UI.WinForms.BunifuPanel();
@@ -95,7 +90,6 @@
             this.textureSettingsTitle_Label = new System.Windows.Forms.Label();
             this.viewPanel = new System.Windows.Forms.Panel();
             this.exportTexturePanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.exportTexture_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.selectFolder_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.folderPath_TextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.exportTextureSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -104,6 +98,10 @@
             this.uvTrimView_Panel = new System.Windows.Forms.Panel();
             this.trimSheetViewerSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.trimSheetViewer_Label = new System.Windows.Forms.Label();
+            this.ShapeColor = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeTexDensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsPanel.SuspendLayout();
             this.stripsInformationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stripsInfo_DataGridView)).BeginInit();
@@ -154,24 +152,24 @@
             // 
             this.stripsInfo_DataGridView.AllowCustomTheming = false;
             this.stripsInfo_DataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(126)))), ((int)(((byte)(124)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.stripsInfo_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(126)))), ((int)(((byte)(124)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.stripsInfo_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.stripsInfo_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.stripsInfo_DataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.stripsInfo_DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.stripsInfo_DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.stripsInfo_DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.stripsInfo_DataGridView.ColumnHeadersHeight = 40;
             this.stripsInfo_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ShapeColor,
@@ -196,14 +194,14 @@
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.stripsInfo_DataGridView.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.stripsInfo_DataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.stripsInfo_DataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.stripsInfo_DataGridView.EnableHeadersVisualStyles = false;
             this.stripsInfo_DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.stripsInfo_DataGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -217,43 +215,6 @@
             this.stripsInfo_DataGridView.Size = new System.Drawing.Size(370, 341);
             this.stripsInfo_DataGridView.TabIndex = 18;
             this.stripsInfo_DataGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // ShapeColor
-            // 
-            this.ShapeColor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShapeColor.FillWeight = 121.8274F;
-            this.ShapeColor.HeaderText = "Color";
-            this.ShapeColor.Name = "ShapeColor";
-            this.ShapeColor.ReadOnly = true;
-            this.ShapeColor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ShapeColor.Width = 50;
-            // 
-            // ShapeName
-            // 
-            this.ShapeName.FillWeight = 10.03859F;
-            this.ShapeName.HeaderText = "Name";
-            this.ShapeName.Name = "ShapeName";
-            // 
-            // ShapeSize
-            // 
-            this.ShapeSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Format = "N0";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.ShapeSize.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ShapeSize.FillWeight = 154.5942F;
-            this.ShapeSize.HeaderText = "Size";
-            this.ShapeSize.Name = "ShapeSize";
-            this.ShapeSize.Width = 70;
-            // 
-            // ShapeTexDensity
-            // 
-            this.ShapeTexDensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShapeTexDensity.FillWeight = 113.5398F;
-            this.ShapeTexDensity.HeaderText = "Density";
-            this.ShapeTexDensity.Name = "ShapeTexDensity";
-            this.ShapeTexDensity.ReadOnly = true;
-            this.ShapeTexDensity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ShapeTexDensity.Width = 65;
             // 
             // stripInformationSeparator
             // 
@@ -332,11 +293,11 @@
             this.deleteStrip_Btn.ColorContrastOnClick = 45;
             this.deleteStrip_Btn.ColorContrastOnHover = 45;
             this.deleteStrip_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.deleteStrip_Btn.CustomizableEdges = borderEdges9;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.deleteStrip_Btn.CustomizableEdges = borderEdges1;
             this.deleteStrip_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.deleteStrip_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.deleteStrip_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -421,11 +382,11 @@
             this.splitStrip_Btn.ColorContrastOnClick = 45;
             this.splitStrip_Btn.ColorContrastOnHover = 45;
             this.splitStrip_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.splitStrip_Btn.CustomizableEdges = borderEdges10;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.splitStrip_Btn.CustomizableEdges = borderEdges2;
             this.splitStrip_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.splitStrip_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.splitStrip_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -557,11 +518,11 @@
             this.changeStripTexelDensity_Btn.ColorContrastOnClick = 45;
             this.changeStripTexelDensity_Btn.ColorContrastOnHover = 45;
             this.changeStripTexelDensity_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.changeStripTexelDensity_Btn.CustomizableEdges = borderEdges7;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.changeStripTexelDensity_Btn.CustomizableEdges = borderEdges3;
             this.changeStripTexelDensity_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.changeStripTexelDensity_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.changeStripTexelDensity_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -936,26 +897,26 @@
             this.stripQuantity_TextBox.Modified = false;
             this.stripQuantity_TextBox.Multiline = false;
             this.stripQuantity_TextBox.Name = "stripQuantity_TextBox";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.stripQuantity_TextBox.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.stripQuantity_TextBox.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.stripQuantity_TextBox.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Black;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.stripQuantity_TextBox.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.stripQuantity_TextBox.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.stripQuantity_TextBox.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.stripQuantity_TextBox.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Black;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.stripQuantity_TextBox.OnIdleState = stateProperties4;
             this.stripQuantity_TextBox.Padding = new System.Windows.Forms.Padding(3);
             this.stripQuantity_TextBox.PasswordChar = '\0';
             this.stripQuantity_TextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1056,11 +1017,11 @@
             this.generateTexture_Btn.ColorContrastOnClick = 45;
             this.generateTexture_Btn.ColorContrastOnHover = 45;
             this.generateTexture_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.generateTexture_Btn.CustomizableEdges = borderEdges8;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.generateTexture_Btn.CustomizableEdges = borderEdges4;
             this.generateTexture_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.generateTexture_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.generateTexture_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1340,7 +1301,6 @@
             this.exportTexturePanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.exportTexturePanel.BorderRadius = 15;
             this.exportTexturePanel.BorderThickness = 1;
-            this.exportTexturePanel.Controls.Add(this.exportTexture_Btn);
             this.exportTexturePanel.Controls.Add(this.selectFolder_Btn);
             this.exportTexturePanel.Controls.Add(this.folderPath_TextBox);
             this.exportTexturePanel.Controls.Add(this.exportTextureSeparator);
@@ -1352,96 +1312,6 @@
             this.exportTexturePanel.ShowBorders = true;
             this.exportTexturePanel.Size = new System.Drawing.Size(655, 118);
             this.exportTexturePanel.TabIndex = 20;
-            // 
-            // exportTexture_Btn
-            // 
-            this.exportTexture_Btn.AllowAnimations = true;
-            this.exportTexture_Btn.AllowMouseEffects = true;
-            this.exportTexture_Btn.AllowToggling = false;
-            this.exportTexture_Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exportTexture_Btn.AnimationSpeed = 200;
-            this.exportTexture_Btn.AutoGenerateColors = false;
-            this.exportTexture_Btn.AutoRoundBorders = false;
-            this.exportTexture_Btn.AutoSizeLeftIcon = true;
-            this.exportTexture_Btn.AutoSizeRightIcon = true;
-            this.exportTexture_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.exportTexture_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.exportTexture_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportTexture_Btn.BackgroundImage")));
-            this.exportTexture_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.exportTexture_Btn.ButtonText = "Export Texture";
-            this.exportTexture_Btn.ButtonTextMarginLeft = 0;
-            this.exportTexture_Btn.ColorContrastOnClick = 45;
-            this.exportTexture_Btn.ColorContrastOnHover = 45;
-            this.exportTexture_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.exportTexture_Btn.CustomizableEdges = borderEdges11;
-            this.exportTexture_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.exportTexture_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.exportTexture_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.exportTexture_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.exportTexture_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.exportTexture_Btn.Font = new System.Drawing.Font("Mollen Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportTexture_Btn.ForeColor = System.Drawing.Color.White;
-            this.exportTexture_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exportTexture_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.exportTexture_Btn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.exportTexture_Btn.IconMarginLeft = 11;
-            this.exportTexture_Btn.IconPadding = 10;
-            this.exportTexture_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.exportTexture_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.exportTexture_Btn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.exportTexture_Btn.IconSize = 25;
-            this.exportTexture_Btn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.exportTexture_Btn.IdleBorderRadius = 5;
-            this.exportTexture_Btn.IdleBorderThickness = 1;
-            this.exportTexture_Btn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.exportTexture_Btn.IdleIconLeftImage = null;
-            this.exportTexture_Btn.IdleIconRightImage = null;
-            this.exportTexture_Btn.IndicateFocus = false;
-            this.exportTexture_Btn.Location = new System.Drawing.Point(515, 67);
-            this.exportTexture_Btn.Name = "exportTexture_Btn";
-            this.exportTexture_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.exportTexture_Btn.OnDisabledState.BorderRadius = 5;
-            this.exportTexture_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.exportTexture_Btn.OnDisabledState.BorderThickness = 1;
-            this.exportTexture_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.exportTexture_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.exportTexture_Btn.OnDisabledState.IconLeftImage = null;
-            this.exportTexture_Btn.OnDisabledState.IconRightImage = null;
-            this.exportTexture_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.exportTexture_Btn.onHoverState.BorderRadius = 5;
-            this.exportTexture_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.exportTexture_Btn.onHoverState.BorderThickness = 1;
-            this.exportTexture_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.exportTexture_Btn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.exportTexture_Btn.onHoverState.IconLeftImage = null;
-            this.exportTexture_Btn.onHoverState.IconRightImage = null;
-            this.exportTexture_Btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.exportTexture_Btn.OnIdleState.BorderRadius = 5;
-            this.exportTexture_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.exportTexture_Btn.OnIdleState.BorderThickness = 1;
-            this.exportTexture_Btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.exportTexture_Btn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.exportTexture_Btn.OnIdleState.IconLeftImage = null;
-            this.exportTexture_Btn.OnIdleState.IconRightImage = null;
-            this.exportTexture_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.exportTexture_Btn.OnPressedState.BorderRadius = 5;
-            this.exportTexture_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.exportTexture_Btn.OnPressedState.BorderThickness = 1;
-            this.exportTexture_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.exportTexture_Btn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.exportTexture_Btn.OnPressedState.IconLeftImage = null;
-            this.exportTexture_Btn.OnPressedState.IconRightImage = null;
-            this.exportTexture_Btn.Size = new System.Drawing.Size(120, 32);
-            this.exportTexture_Btn.TabIndex = 19;
-            this.exportTexture_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.exportTexture_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.exportTexture_Btn.TextMarginLeft = 0;
-            this.exportTexture_Btn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.exportTexture_Btn.UseDefaultRadiusAndThickness = true;
             // 
             // selectFolder_Btn
             // 
@@ -1457,16 +1327,16 @@
             this.selectFolder_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
             this.selectFolder_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectFolder_Btn.BackgroundImage")));
             this.selectFolder_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.selectFolder_Btn.ButtonText = "Select Folder";
+            this.selectFolder_Btn.ButtonText = "Save Texture";
             this.selectFolder_Btn.ButtonTextMarginLeft = 0;
             this.selectFolder_Btn.ColorContrastOnClick = 45;
             this.selectFolder_Btn.ColorContrastOnHover = 45;
             this.selectFolder_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.selectFolder_Btn.CustomizableEdges = borderEdges12;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.selectFolder_Btn.CustomizableEdges = borderEdges5;
             this.selectFolder_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.selectFolder_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.selectFolder_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1531,6 +1401,7 @@
             this.selectFolder_Btn.TextMarginLeft = 0;
             this.selectFolder_Btn.TextPadding = new System.Windows.Forms.Padding(0);
             this.selectFolder_Btn.UseDefaultRadiusAndThickness = true;
+            this.selectFolder_Btn.Click += new System.EventHandler(this.selectFolder_Btn_Click);
             // 
             // folderPath_TextBox
             // 
@@ -1569,26 +1440,26 @@
             this.folderPath_TextBox.Modified = false;
             this.folderPath_TextBox.Multiline = false;
             this.folderPath_TextBox.Name = "folderPath_TextBox";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.folderPath_TextBox.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.folderPath_TextBox.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.folderPath_TextBox.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.folderPath_TextBox.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.folderPath_TextBox.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.folderPath_TextBox.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.folderPath_TextBox.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.folderPath_TextBox.OnIdleState = stateProperties8;
             this.folderPath_TextBox.Padding = new System.Windows.Forms.Padding(3);
             this.folderPath_TextBox.PasswordChar = '\0';
             this.folderPath_TextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1599,7 +1470,7 @@
             this.folderPath_TextBox.SelectionLength = 0;
             this.folderPath_TextBox.SelectionStart = 0;
             this.folderPath_TextBox.ShortcutsEnabled = true;
-            this.folderPath_TextBox.Size = new System.Drawing.Size(370, 32);
+            this.folderPath_TextBox.Size = new System.Drawing.Size(518, 32);
             this.folderPath_TextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.folderPath_TextBox.TabIndex = 15;
             this.folderPath_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1698,6 +1569,43 @@
             this.trimSheetViewer_Label.TabIndex = 17;
             this.trimSheetViewer_Label.Text = "Trim Sheet Viewer";
             // 
+            // ShapeColor
+            // 
+            this.ShapeColor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeColor.FillWeight = 121.8274F;
+            this.ShapeColor.HeaderText = "Color";
+            this.ShapeColor.Name = "ShapeColor";
+            this.ShapeColor.ReadOnly = true;
+            this.ShapeColor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeColor.Width = 50;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.FillWeight = 10.03859F;
+            this.ShapeName.HeaderText = "Name";
+            this.ShapeName.Name = "ShapeName";
+            // 
+            // ShapeSize
+            // 
+            this.ShapeSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.ShapeSize.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ShapeSize.FillWeight = 154.5942F;
+            this.ShapeSize.HeaderText = "Size (cm)";
+            this.ShapeSize.Name = "ShapeSize";
+            this.ShapeSize.Width = 60;
+            // 
+            // ShapeTexDensity
+            // 
+            this.ShapeTexDensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeTexDensity.FillWeight = 113.5398F;
+            this.ShapeTexDensity.HeaderText = "Density (px/cm)";
+            this.ShapeTexDensity.Name = "ShapeTexDensity";
+            this.ShapeTexDensity.ReadOnly = true;
+            this.ShapeTexDensity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeTexDensity.Width = 65;
+            // 
             // TrimSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1787,13 +1695,12 @@
         public System.Windows.Forms.Panel uvTrimView_Panel;
         public Bunifu.UI.WinForms.BunifuPanel trimSheetViewerPanel;
         public Bunifu.UI.WinForms.BunifuPanel exportTexturePanel;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton exportTexture_Btn;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton selectFolder_Btn;
+        public System.Windows.Forms.Panel TexelDensityGroupGenerated;
+        public System.Windows.Forms.Panel TexelDensityGroupModifier;
         private System.Windows.Forms.DataGridViewImageColumn ShapeColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeTexDensity;
-        public System.Windows.Forms.Panel TexelDensityGroupGenerated;
-        public System.Windows.Forms.Panel TexelDensityGroupModifier;
     }
 }

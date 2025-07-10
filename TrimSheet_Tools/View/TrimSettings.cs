@@ -16,6 +16,7 @@ namespace TrimSheet_Tools.View
         private TrimSheet_Tools.Model.DockPanelModel _dockingPanelState;
         private ResponsivitySystem _responsivitySystem;
         private TrimSheetGenerated _generatedTexureSystem;
+        private ExportTextureSystem _exportTextureSystem;
 
 
         public TrimSettings(TrimSheet_Tools.Model.DockPanelModel dockingPanelRef)
@@ -25,6 +26,7 @@ namespace TrimSheet_Tools.View
             // Initialize
             this._dockingPanelState = dockingPanelRef;
             this._generatedTexureSystem = new TrimSheetGenerated(this, this._dockingPanelState);
+            this._exportTextureSystem = new ExportTextureSystem();
 
             // Set Responsive Panels
             this._responsivitySystem = new ResponsivitySystem(this, _dockingPanelState);
@@ -126,5 +128,8 @@ namespace TrimSheet_Tools.View
             _responsivitySystem.ResponsiveSystem();
             _generatedTexureSystem.ResponsiveSystemViewer();
         }
+
+        private void selectFolder_Btn_Click(object sender, EventArgs e)
+        { folderPath_TextBox.Text = _exportTextureSystem.ExportTexture(_generatedTexureSystem.ImageToExport()); }
     }
 }
