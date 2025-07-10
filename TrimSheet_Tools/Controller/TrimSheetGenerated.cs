@@ -48,6 +48,7 @@ namespace TrimSheet_Tools.Controller
         public void ResponsiveSystemViewer()
         { RebuildShapesFromData(); }
 
+        // Color randomization
         private Color GeneratedColor(Random range)
         {
             int hueBucket;
@@ -93,10 +94,20 @@ namespace TrimSheet_Tools.Controller
             }
         }
 
+        // Unit size convertion
         private float Convert_CentimeterToViewer(float centimeters, int texResolution, float texelDensity)
         { return (centimeters * texelDensity) / texResolution; }
         private float Convert_ViewerToCentimeter(float centimeters, int texResolution, float texelDensity)
         { return (centimeters * texResolution) / texelDensity; }
+
+        // Label Size
+        private float LerpLabelSize(float value, float inputMin, float inputMax, float outputMin, float outputMax)
+        {
+            value = Math.Max(inputMin, Math.Min(inputMax, value));
+            float percent = (value - inputMin) / (inputMax - inputMin);
+
+            return outputMin + percent * (outputMax - outputMin);
+        }
 
         private String CheckerTexelDensity(Panel panelRef)
         {
@@ -157,7 +168,7 @@ namespace TrimSheet_Tools.Controller
                     BackgroundImageLayout = ImageLayout.Tile,
                     AutoSize = false,
                     TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                    Font = new Font("Segoe UI", 8, FontStyle.Bold),
                     Width = width,
                     Height = height,
                     Top = top,
@@ -232,6 +243,9 @@ namespace TrimSheet_Tools.Controller
                     }
 
                     // Add the Labels
+                    float baseSize = _genVerticalMode ? width : height;
+                    float dynamicFontSize = LerpLabelSize(baseSize, 10f, resolution, 8f, 70f);
+
                     VerticalLabel nameLabel = new VerticalLabel
                     {
                         Text = stripData.StripName,
@@ -241,7 +255,7 @@ namespace TrimSheet_Tools.Controller
                         BackgroundImageLayout = ImageLayout.Tile,
                         AutoSize = false,
                         TextAlign = ContentAlignment.MiddleCenter,
-                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                        Font = new Font("Segoe UI", dynamicFontSize, FontStyle.Bold),
                         Width = width,
                         Height = height,
                         Top = y,
