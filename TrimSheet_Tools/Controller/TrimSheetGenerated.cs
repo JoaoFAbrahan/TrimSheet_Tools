@@ -36,8 +36,9 @@ namespace TrimSheet_Tools.Controller
             this._targetForm = trimSettingsRef;
             this._targetDockingPanelSystem = dockingPanelRef;
 
-            this._targetForm.stripsInfo_DataGridView.CellEndEdit += this.stripsInfo_DataGridView_CellEndEdit;
             this._targetForm.generateTexture_Btn.Click += this.generateTexture_Btn_Click;
+            this._targetForm.stripsInfo_DataGridView.CellEndEdit += this.stripsInfo_DataGridView_CellEndEdit;
+            this._targetForm.texelDensityGridCheker_CheckBox.CheckedChanged += this.texelDensityGridCheker_CheckBox_CheckedChanged;
         }
 
 
@@ -164,7 +165,7 @@ namespace TrimSheet_Tools.Controller
                     Text = stripData.StripName,
                     ForeColor = Color.Black,
                     BackColor = stripData.StripColor,
-                    BackgroundImage = stripData.StripShape.BackgroundImage,
+                    BackgroundImage = (_targetForm.texelDensityGridCheker_CheckBox.Checked) ? stripData.StripShape.BackgroundImage : null,
                     BackgroundImageLayout = ImageLayout.Tile,
                     AutoSize = false,
                     TextAlign = ContentAlignment.MiddleCenter,
@@ -299,25 +300,21 @@ namespace TrimSheet_Tools.Controller
                 return;
 
             // Texel Density Checker map verification
-            bool useCheckerTexture = _targetForm.texelDensityGridCheker_CheckBox.Checked;
             _genTexelDensity = CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated);
             Image checkerTexture = null;
 
-            if(useCheckerTexture)
+            switch (_genTexelDensity)
             {
-                switch(_genTexelDensity)
-                {
-                    case "5.12":
-                        checkerTexture = Resources.Checker_5_12;
-                        break;
-                    case "10.24":
-                        checkerTexture = Resources.Checker_10_24;
-                        break;
-                    case "20.48":
-                        checkerTexture = Resources.Checker_20_48;
-                        break;
-                }
-            };
+                case "5.12":
+                    checkerTexture = Resources.Checker_5_12;
+                    break;
+                case "10.24":
+                    checkerTexture = Resources.Checker_10_24;
+                    break;
+                case "20.48":
+                    checkerTexture = Resources.Checker_20_48;
+                    break;
+            }
 
             // Generated Shape
             _genVerticalMode = _targetForm.verticalMode_CheckBox.Checked;
@@ -357,7 +354,7 @@ namespace TrimSheet_Tools.Controller
                 {
                     StripShape = shape,
                     StripColor = pastelColor,
-                    StripName = $"Shape {i + 1}",
+                    StripName = $"Strip {i + 1}",
                     StripSize = equalSize
                 };
 
@@ -488,5 +485,7 @@ namespace TrimSheet_Tools.Controller
             }
         }
 
+        private void texelDensityGridCheker_CheckBox_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        { RebuildShapesFromData(); }
     }
 }
