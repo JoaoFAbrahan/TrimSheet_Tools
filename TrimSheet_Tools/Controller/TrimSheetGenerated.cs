@@ -187,7 +187,7 @@ namespace TrimSheet_Tools.Controller
                 float sizeCm = Convert_ViewerToCentimeter(stripData.StripSize, _genResolution, texelDensity);
 
                 // Update DataGridView
-                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeSize"].Value = sizeCm.ToString("0.##", CultureInfo.InvariantCulture);
+                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeSizeX"].Value = sizeCm.ToString("0.##", CultureInfo.InvariantCulture);
                 _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeName"].Value = stripData.StripName;
             }
 
@@ -364,7 +364,13 @@ namespace TrimSheet_Tools.Controller
                 // Convert to centimeters size
                 float shapeSizeCm = Convert_ViewerToCentimeter(equalSize, _genResolution, float.Parse(_genTexelDensity, CultureInfo.InvariantCulture));
 
-                _targetForm.stripsInfo_DataGridView.Rows.Add(stripData.GetBitmap(), stripData.StripName, shapeSizeCm.ToString("0.##", CultureInfo.InvariantCulture), _genTexelDensity);
+                // Add Informations
+                float coverageSpace = (_genResolution / float.Parse(_genTexelDensity)) * 100;
+                _targetForm.resolutionInfo.Text = _targetForm.selectedResolution.SelectedItem?.ToString() + " px";
+                _targetForm.coverageSpaceInfo.Text = coverageSpace.ToString() + " cm²";
+                _targetForm.baseDensityInfo.Text = _genTexelDensity.ToString() + " px/cm";
+
+                _targetForm.stripsInfo_DataGridView.Rows.Add(stripData.GetBitmap(), stripData.StripName, shapeSizeCm.ToString("0.##", CultureInfo.InvariantCulture), null,null,_genTexelDensity);
                 currentOffset += equalSize;
             }
 
@@ -378,7 +384,7 @@ namespace TrimSheet_Tools.Controller
                 return;
 
             // Verifica se a célula editada foi da coluna ShapeSize
-            if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeSize"].Index)
+            if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeSizeX"].Index)
             {
                 try
                 {
@@ -393,7 +399,7 @@ namespace TrimSheet_Tools.Controller
 
                     // Lê o valor digitado na célula em centímetros
                     float cmValue = float.Parse(
-                        _targetForm.stripsInfo_DataGridView.Rows[e.RowIndex].Cells["ShapeSize"].Value.ToString(),
+                        _targetForm.stripsInfo_DataGridView.Rows[e.RowIndex].Cells["ShapeSizeX"].Value.ToString(),
                         CultureInfo.InvariantCulture
                     );
 
@@ -429,9 +435,9 @@ namespace TrimSheet_Tools.Controller
                         float updatedCmNext = Convert_ViewerToCentimeter(adjustedNext, resolution, texelDensity);
 
                         // Atualiza visualmente os valores da tabela (em cm formatado)
-                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSize"].Value =
+                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSizeX"].Value =
                             updatedCmCurrent.ToString("0.##", CultureInfo.InvariantCulture);
-                        _targetForm.stripsInfo_DataGridView.Rows[index + 1].Cells["ShapeSize"].Value =
+                        _targetForm.stripsInfo_DataGridView.Rows[index + 1].Cells["ShapeSizeX"].Value =
                             updatedCmNext.ToString("0.##", CultureInfo.InvariantCulture);
                     }
                     else // Caso seja a última faixa, ajusta a anterior
@@ -456,9 +462,9 @@ namespace TrimSheet_Tools.Controller
                         float updatedCmPrev = Convert_ViewerToCentimeter(adjustedPrev, resolution, texelDensity);
 
                         // Atualiza visualmente os valores da tabela (em cm formatado)
-                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSize"].Value =
+                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSizeX"].Value =
                             updatedCmCurrent.ToString("0.##", CultureInfo.InvariantCulture);
-                        _targetForm.stripsInfo_DataGridView.Rows[index - 1].Cells["ShapeSize"].Value =
+                        _targetForm.stripsInfo_DataGridView.Rows[index - 1].Cells["ShapeSizeX"].Value =
                             updatedCmPrev.ToString("0.##", CultureInfo.InvariantCulture);
                     }
 

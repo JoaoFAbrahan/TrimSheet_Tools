@@ -93,7 +93,7 @@
             this.menuPanel.Margin = new System.Windows.Forms.Padding(0);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 20);
-            this.menuPanel.Size = new System.Drawing.Size(215, 906);
+            this.menuPanel.Size = new System.Drawing.Size(215, 910);
             this.menuPanel.TabIndex = 0;
             // 
             // aboutFlowLayoutPanel
@@ -103,7 +103,7 @@
             this.aboutFlowLayoutPanel.Controls.Add(this.panel1);
             this.mainMenuTransition.SetDecoration(this.aboutFlowLayoutPanel, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.aboutFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutFlowLayoutPanel.Location = new System.Drawing.Point(15, 772);
+            this.aboutFlowLayoutPanel.Location = new System.Drawing.Point(15, 776);
             this.aboutFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.aboutFlowLayoutPanel.Name = "aboutFlowLayoutPanel";
             this.aboutFlowLayoutPanel.Size = new System.Drawing.Size(185, 114);
@@ -672,7 +672,7 @@
             this.topPanel.Location = new System.Drawing.Point(215, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.topPanel.Size = new System.Drawing.Size(985, 45);
+            this.topPanel.Size = new System.Drawing.Size(1135, 45);
             this.topPanel.TabIndex = 1;
             // 
             // bunifuSeparator2
@@ -689,7 +689,7 @@
             this.bunifuSeparator2.Location = new System.Drawing.Point(15, 30);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(955, 14);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(1105, 14);
             this.bunifuSeparator2.TabIndex = 2;
             // 
             // btnMinimize
@@ -742,7 +742,7 @@
             this.btnMinimize.IdleIconRightImage = null;
             this.btnMinimize.ImeMode = System.Windows.Forms.ImeMode.On;
             this.btnMinimize.IndicateFocus = false;
-            this.btnMinimize.Location = new System.Drawing.Point(907, 6);
+            this.btnMinimize.Location = new System.Drawing.Point(1057, 6);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMinimize.OnDisabledState.BorderRadius = 0;
@@ -833,7 +833,7 @@
             this.btnClose.IdleIconLeftImage = global::TrimSheet_Tools.Properties.Resources.btnClose;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(945, 6);
+            this.btnClose.Location = new System.Drawing.Point(1095, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.OnDisabledState.BorderRadius = 0;
@@ -924,7 +924,7 @@
             this.formContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formContainerPanel.Location = new System.Drawing.Point(215, 45);
             this.formContainerPanel.Name = "formContainerPanel";
-            this.formContainerPanel.Size = new System.Drawing.Size(985, 861);
+            this.formContainerPanel.Size = new System.Drawing.Size(1135, 865);
             this.formContainerPanel.TabIndex = 2;
             // 
             // pictureBox1
@@ -933,7 +933,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.mainMenuTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox1.Image = global::TrimSheet_Tools.Properties.Resources.LogoTitle;
-            this.pictureBox1.Location = new System.Drawing.Point(267, 279);
+            this.pictureBox1.Location = new System.Drawing.Point(417, 281);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(451, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -947,7 +947,7 @@
             this.mainMenuTransition.SetDecoration(this.textPresentation2Label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.textPresentation2Label.Font = new System.Drawing.Font("Mollen Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPresentation2Label.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textPresentation2Label.Location = new System.Drawing.Point(283, 485);
+            this.textPresentation2Label.Location = new System.Drawing.Point(433, 487);
             this.textPresentation2Label.Name = "textPresentation2Label";
             this.textPresentation2Label.Size = new System.Drawing.Size(430, 31);
             this.textPresentation2Label.TabIndex = 1;
@@ -961,7 +961,7 @@
             this.mainMenuTransition.SetDecoration(this.textPresentation1Label, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.textPresentation1Label.Font = new System.Drawing.Font("Mollen Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPresentation1Label.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textPresentation1Label.Location = new System.Drawing.Point(148, 454);
+            this.textPresentation1Label.Location = new System.Drawing.Point(298, 456);
             this.textPresentation1Label.Name = "textPresentation1Label";
             this.textPresentation1Label.Size = new System.Drawing.Size(700, 31);
             this.textPresentation1Label.TabIndex = 0;
@@ -973,7 +973,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1200, 906);
+            this.ClientSize = new System.Drawing.Size(1350, 910);
             this.Controls.Add(this.formContainerPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.menuPanel);

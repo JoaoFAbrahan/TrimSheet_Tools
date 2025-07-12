@@ -238,10 +238,10 @@
   </data>
   <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAA7sAAAAOCAYAAADudQutAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVHhe7dcxDQAACAQx/Pv9GXYcQNrkRFwVAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAHBJkpYkSZIk6VP7fQEAAAAAAAAAAAAAAAAAAAAAAAAAAAB+GXVObf2L
-        iTHrAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAABFEAAAAOCAYAAADnjoOWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVHhe7dixDQAwCAQx9t/3a9KnoEfY0i1xVQAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwEVJWpIkSZIkSXP/UwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACA/R5J2LIvgqhkEAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnMinimize.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

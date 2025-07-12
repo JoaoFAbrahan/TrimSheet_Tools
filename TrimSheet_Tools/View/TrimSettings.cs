@@ -67,6 +67,8 @@ namespace TrimSheet_Tools.View
             new SetFontStyle(stripInformation_Label, Model.ECustomFont.MollenBold);
             new SetFontStyle(trimSheetViewer_Label, Model.ECustomFont.MollenBold);
             new SetFontStyle(exportTexture_Label, Model.ECustomFont.MollenBold);
+            new SetFontStyle(outputInfoTitle_Label, Model.ECustomFont.MollenBold);
+            new SetFontStyle(projectTitle_Label, Model.ECustomFont.MollenBold);
 
             // TextureSettings Panel
             new SetFontStyle(resolutionLabel, Model.ECustomFont.MollenRegular);
@@ -79,6 +81,14 @@ namespace TrimSheet_Tools.View
             new SetFontStyle(texelDensityLabel3, Model.ECustomFont.MollenLight);
             new SetFontStyle(generateTexture_Btn, Model.ECustomFont.MollenBold);
 
+            // Output Info Panel
+            new SetFontStyle(outResolutionLabel, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(outCoverageSpaceLabel, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(outBaseDensityLabel, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(resolutionInfo, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(coverageSpaceInfo, Model.ECustomFont.MollenRegular);
+            new SetFontStyle(baseDensityInfo, Model.ECustomFont.MollenRegular);
+
             // SelectedStripManipulation Panel
             new SetFontStyle(StripTexelDesnsityLabel, Model.ECustomFont.MollenRegular);
             new SetFontStyle(stripTexelDensityLabel1, Model.ECustomFont.MollenLight);
@@ -87,6 +97,10 @@ namespace TrimSheet_Tools.View
             new SetFontStyle(splitStrip_Btn, Model.ECustomFont.MollenBold);
             new SetFontStyle(deleteStrip_Btn, Model.ECustomFont.MollenBold);
             new SetFontStyle(changeStripTexelDensity_Btn, Model.ECustomFont.MollenBold);
+
+            // Project Panel
+            new SetFontStyle(projectSave_Btn, Model.ECustomFont.MollenBold);
+            new SetFontStyle(prujectImport_Btn, Model.ECustomFont.MollenBold);
 
             // DataGridView Panel
             new SetFontStyle(stripsInfo_DataGridView, Model.ECustomFont.MollenBold, Model.ECustomFont.MollenRegular);
@@ -108,6 +122,11 @@ namespace TrimSheet_Tools.View
             stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke;
             stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(63, 63, 66);
             stripsInfo_DataGridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            stripsInfo_DataGridView.Columns["ShapeSizeX"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            stripsInfo_DataGridView.Columns["ShapeSizeY"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            stripsInfo_DataGridView.Columns["StripSize"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            stripsInfo_DataGridView.Columns["ShapeTexDensity"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             // Rows
             stripsInfo_DataGridView.GridColor = Color.FromArgb(33, 37, 40);
             stripsInfo_DataGridView.DefaultCellStyle.BackColor = Color.FromArgb(33, 37, 40);
