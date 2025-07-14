@@ -38,7 +38,7 @@ namespace TrimSheet_Tools.Controller
 
             this._targetForm.generateTexture_Btn.Click += this.generateTexture_Btn_Click;
             this._targetForm.stripsInfo_DataGridView.CellEndEdit += this.stripsInfo_DataGridView_CellEndEdit;
-            this._targetForm.texelDensityGridCheker_CheckBox.CheckedChanged += this.texelDensityGridCheker_CheckBox_CheckedChanged;
+            //this._targetForm.texelDensityGridCheker_CheckBox.CheckedChanged += this.texelDensityGridCheker_CheckBox_CheckedChanged;
         }
 
 
@@ -128,28 +128,38 @@ namespace TrimSheet_Tools.Controller
             return radioButtonSelected;
         }
 
+        private void UpdateFixedDimensionValues(int resolution, float texelDensity)
+        {
+            float fixedValueCm = Convert_ViewerToCentimeter(1f, resolution, texelDensity);
+            string columnName = _genVerticalMode ? "ShapeSizeY" : "ShapeSizeX";
+
+            for (int i = 0; i < _stripDataList.Count; i++)
+            {
+                _targetForm.stripsInfo_DataGridView.Rows[i].Cells[columnName].Value =
+                    fixedValueCm.ToString("0.##", CultureInfo.InvariantCulture);
+            }
+        }
+
         private void RebuildShapesFromData()
         {
-            // Get parameters
+            // Obtém parâmetros
             float scaleFactor = _targetDockingPanelSystem.isDocked ? 615f / (float)_genResolution : 480f / (float)_genResolution;
             float currentOffset = 0f;
 
-            // Clear the viewport
+            // Limpa o viewport
             _targetForm.uvTrimView_Panel.Controls.Clear();
 
-            // Add new informations
+            // Adiciona as shapes
             for (int i = 0; i < _stripDataList.Count; i++)
             {
-
                 var stripData = _stripDataList[i];
                 var shape = stripData.StripShape;
-                float shapeSize = stripData.StripSize * _genResolution;
 
-                // Get Strip orientation
-                int width = _genVerticalMode  ? (int)(shapeSize * scaleFactor) : _targetForm.uvTrimView_Panel.Width;
-                int height = _genVerticalMode ? _targetForm.uvTrimView_Panel.Height : (int)(shapeSize * scaleFactor);
-                int left = _genVerticalMode   ? (int)(currentOffset * _targetForm.uvTrimView_Panel.Width) : 0;
-                int top = _genVerticalMode    ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
+                // Calcula dimensões
+                int width = (int)(stripData.StripSize.X * (_genVerticalMode ? _genResolution * scaleFactor : _targetForm.uvTrimView_Panel.Width));
+                int height = (int)(stripData.StripSize.Y * (_genVerticalMode ? _targetForm.uvTrimView_Panel.Height : _genResolution * scaleFactor));
+                int left = _genVerticalMode ? (int)(currentOffset * _targetForm.uvTrimView_Panel.Width) : 0;
+                int top = _genVerticalMode ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
 
                 shape.Width = width;
                 shape.Height = height;
@@ -158,14 +168,14 @@ namespace TrimSheet_Tools.Controller
 
                 _targetForm.uvTrimView_Panel.Controls.Add(shape);
 
-                // Create a StripName Label
+                // Cria o label
                 VerticalLabel nameLabel = new VerticalLabel
                 {
                     Name = $"labelShapeName{i}",
                     Text = stripData.StripName,
                     ForeColor = Color.Black,
                     BackColor = stripData.StripColor,
-                    BackgroundImage = (_targetForm.texelDensityGridCheker_CheckBox.Checked) ? stripData.StripShape.BackgroundImage : null,
+                    BackgroundImage = _targetForm.texelDensityGridCheker_CheckBox.Checked ? stripData.StripShape.BackgroundImage : null,
                     BackgroundImageLayout = ImageLayout.Tile,
                     AutoSize = false,
                     TextAlign = ContentAlignment.MiddleCenter,
@@ -174,21 +184,14 @@ namespace TrimSheet_Tools.Controller
                     Height = height,
                     Top = top,
                     Left = left,
-                    DrawVertically = _genVerticalMode // chave do controle
+                    DrawVertically = _genVerticalMode
                 };
 
                 _targetForm.uvTrimView_Panel.Controls.Add(nameLabel);
                 nameLabel.BringToFront();
 
-                currentOffset += stripData.StripSize;
-
-                // Convert to centimeters size
-                float texelDensity = float.Parse(CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated), CultureInfo.InvariantCulture);
-                float sizeCm = Convert_ViewerToCentimeter(stripData.StripSize, _genResolution, texelDensity);
-
-                // Update DataGridView
-                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeSizeX"].Value = sizeCm.ToString("0.##", CultureInfo.InvariantCulture);
-                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeName"].Value = stripData.StripName;
+                // Atualiza o offset
+                currentOffset += _genVerticalMode ? stripData.StripSize.X : stripData.StripSize.Y;
             }
 
             _targetForm.uvTrimView_Panel.Invalidate();
@@ -207,76 +210,76 @@ namespace TrimSheet_Tools.Controller
 
             // Create the image
             Bitmap finalImage = new Bitmap(resolution, resolution);
-            Graphics g = Graphics.FromImage(finalImage);
-            try
-            {
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-                g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
-                g.Clear(Color.White);
+            //Graphics g = Graphics.FromImage(finalImage);
+            //try
+            //{
+            //    g.SmoothingMode = SmoothingMode.AntiAlias;
+            //    g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
+            //    g.Clear(Color.White);
 
-                float currentOffset = 0f;
+            //    float currentOffset = 0f;
 
-                for (int i = 0; i < _stripDataList.Count; i++)
-                {
-                    var stripData = _stripDataList[i];
-                    float shapeSize = stripData.StripSize * resolution;
+            //    for (int i = 0; i < _stripDataList.Count; i++)
+            //    {
+            //        var stripData = _stripDataList[i];
+            //        float shapeSize = stripData.StripSize * resolution;
 
-                    // Shape Size
-                    int width = _genVerticalMode ? (int)(shapeSize * scaleFactor) : resolution;
-                    int height = _genVerticalMode ? resolution : (int)(shapeSize * scaleFactor);
-                    int x = _genVerticalMode ? (int)(currentOffset * resolution) : 0;
-                    int y = _genVerticalMode ? 0 : (int)(currentOffset * resolution);
+            //        // Shape Size
+            //        int width = _genVerticalMode ? (int)(shapeSize * scaleFactor) : resolution;
+            //        int height = _genVerticalMode ? resolution : (int)(shapeSize * scaleFactor);
+            //        int x = _genVerticalMode ? (int)(currentOffset * resolution) : 0;
+            //        int y = _genVerticalMode ? 0 : (int)(currentOffset * resolution);
 
-                    // Draw shape color
-                    using (Brush baseBrush = new SolidBrush(stripData.StripColor))
-                    {
-                        g.FillRectangle(baseBrush, x, y, width, height);
-                    }
+            //        // Draw shape color
+            //        using (Brush baseBrush = new SolidBrush(stripData.StripColor))
+            //        {
+            //            g.FillRectangle(baseBrush, x, y, width, height);
+            //        }
 
-                    // Apply Checker map
-                    if (stripData.StripShape.BackgroundImage != null)
-                    {
-                        using (TextureBrush texture = new TextureBrush(stripData.StripShape.BackgroundImage, WrapMode.Tile))
-                        {
-                            texture.TranslateTransform(x, y);
-                            g.FillRectangle(texture, x, y, width, height);
-                        }
-                    }
+            //        // Apply Checker map
+            //        if (stripData.StripShape.BackgroundImage != null)
+            //        {
+            //            using (TextureBrush texture = new TextureBrush(stripData.StripShape.BackgroundImage, WrapMode.Tile))
+            //            {
+            //                texture.TranslateTransform(x, y);
+            //                g.FillRectangle(texture, x, y, width, height);
+            //            }
+            //        }
 
-                    // Add the Labels
-                    float baseSize = _genVerticalMode ? width : height;
-                    float dynamicFontSize = LerpLabelSize(baseSize, 10f, resolution, 8f, 70f);
+            //        // Add the Labels
+            //        float baseSize = _genVerticalMode ? width : height;
+            //        float dynamicFontSize = LerpLabelSize(baseSize, 10f, resolution, 8f, 70f);
 
-                    VerticalLabel nameLabel = new VerticalLabel
-                    {
-                        Text = stripData.StripName,
-                        ForeColor = Color.Black,
-                        BackColor = stripData.StripColor,
-                        BackgroundImage = stripData.StripShape.BackgroundImage,
-                        BackgroundImageLayout = ImageLayout.Tile,
-                        AutoSize = false,
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        Font = new Font("Segoe UI", dynamicFontSize, FontStyle.Bold),
-                        Width = width,
-                        Height = height,
-                        Top = y,
-                        Left = x,
-                        DrawVertically = _genVerticalMode
-                    };
+            //        VerticalLabel nameLabel = new VerticalLabel
+            //        {
+            //            Text = stripData.StripName,
+            //            ForeColor = Color.Black,
+            //            BackColor = stripData.StripColor,
+            //            BackgroundImage = stripData.StripShape.BackgroundImage,
+            //            BackgroundImageLayout = ImageLayout.Tile,
+            //            AutoSize = false,
+            //            TextAlign = ContentAlignment.MiddleCenter,
+            //            Font = new Font("Segoe UI", dynamicFontSize, FontStyle.Bold),
+            //            Width = width,
+            //            Height = height,
+            //            Top = y,
+            //            Left = x,
+            //            DrawVertically = _genVerticalMode
+            //        };
 
-                    using (Bitmap labelBitmap = new Bitmap(width, height))
-                    {
-                        nameLabel.DrawToBitmap(labelBitmap, new Rectangle(0, 0, width, height));
-                        g.DrawImage(labelBitmap, x, y);
-                    }
+            //        using (Bitmap labelBitmap = new Bitmap(width, height))
+            //        {
+            //            nameLabel.DrawToBitmap(labelBitmap, new Rectangle(0, 0, width, height));
+            //            g.DrawImage(labelBitmap, x, y);
+            //        }
 
-                    currentOffset += stripData.StripSize;
-                }
-            }
-            finally
-            {
-                g.Dispose();
-            }
+            //        currentOffset += stripData.StripSize;
+            //    }
+            //}
+            //finally
+            //{
+            //    g.Dispose();
+            //}
 
             // Return the final image
             return finalImage;
@@ -286,212 +289,307 @@ namespace TrimSheet_Tools.Controller
         // Event Methods
         private void generateTexture_Btn_Click(object sender, EventArgs e)
         {
-            // Clear old informations
+            // Limpa informações antigas
             _targetForm.stripsInfo_DataGridView.Rows.Clear();
             _stripDataList.Clear();
             _targetForm.uvTrimView_Panel.Controls.Clear();
             _usedHueBuckets.Clear();
 
-            // Get parameters
+            // Obtém parâmetros
             if (!int.TryParse(_targetForm.stripQuantity_TextBox.Text, out int stripCount) || stripCount <= 0)
                 return;
 
             if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out _genResolution))
                 return;
 
-            // Texel Density Checker map verification
+            // Configuração da textura checker
             _genTexelDensity = CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated);
-            Image checkerTexture = null;
+            float texelDensity = float.Parse(_genTexelDensity, CultureInfo.InvariantCulture);
+            float totalSizeCm = _genResolution / texelDensity;
+            float minSizeCm = 1f; // Tamanho mínimo de 1cm
 
-            switch (_genTexelDensity)
+            // Calcula o tamanho igualitário garantindo o mínimo
+            float equalSizeCm = Math.Max(minSizeCm, totalSizeCm / stripCount);
+
+            // Se a soma ultrapassar, ajusta proporcionalmente
+            if (equalSizeCm * stripCount > totalSizeCm)
             {
-                case "5.12":
-                    checkerTexture = Resources.Checker_5_12;
-                    break;
-                case "10.24":
-                    checkerTexture = Resources.Checker_10_24;
-                    break;
-                case "20.48":
-                    checkerTexture = Resources.Checker_20_48;
-                    break;
+                equalSizeCm = totalSizeCm / stripCount;
             }
 
-            // Generated Shape
+            // Converte para fração (0-1)
+            float equalSizeFraction = Convert_CentimeterToViewer(equalSizeCm, _genResolution, texelDensity);
+
+            // Modo de geração
             _genVerticalMode = _targetForm.verticalMode_CheckBox.Checked;
-            float equalSize = 1f / stripCount;
-            float scaleFactor = _targetDockingPanelSystem.isDocked ? 615f / (float)_genResolution : 480f / (float)_genResolution;
-            float currentOffset = 0f;
+            Image checkerTexture = null;
+            switch (_genTexelDensity)
+            {
+                case "5.12": checkerTexture = Resources.Checker_5_12; break;
+                case "10.24": checkerTexture = Resources.Checker_10_24; break;
+                case "20.48": checkerTexture = Resources.Checker_20_48; break;
+            }
 
             for (int i = 0; i < stripCount; i++)
             {
-                // Get Strip orientation
-                int width =  _genVerticalMode ? (int)(equalSize * _genResolution * scaleFactor) : _targetForm.uvTrimView_Panel.Width;
-                int height = _genVerticalMode ? _targetForm.uvTrimView_Panel.Height : (int)(equalSize * _genResolution * scaleFactor);
-                int left = _genVerticalMode   ? (int)(currentOffset * _targetForm.uvTrimView_Panel.Width) : 0;
-                int top = _genVerticalMode    ? 0 : (int)(currentOffset * _targetForm.uvTrimView_Panel.Height);
-
-                // Create a shape
+                // Cria a shape
                 Color pastelColor = GeneratedColor(_random);
-
                 BunifuShapes shape = new BunifuShapes
                 {
                     BackColor = pastelColor,
                     BackgroundImage = checkerTexture,
                     BackgroundImageLayout = ImageLayout.Tile,
                     Shape = BunifuShapes.Shapes.Rectangle,
-                    Width = width,
-                    Height = height,
-                    Top = top,
-                    Left = left,
                     BorderThickness = 0,
                 };
 
-                _targetForm.uvTrimView_Panel.Controls.Add(shape);
-                shape.SendToBack();
-
-                // Set strip data
+                // Configura os dados da strip
                 var stripData = new StripData
                 {
                     StripShape = shape,
                     StripColor = pastelColor,
                     StripName = $"Strip {i + 1}",
-                    StripSize = equalSize
+                    StripSize = _genVerticalMode ?
+                        new Vector2D(equalSizeFraction, 1f) :
+                        new Vector2D(1f, equalSizeFraction)
                 };
 
-                // Add the shape to DataList
                 _stripDataList.Add(stripData);
 
-                // Convert to centimeters size
-                float shapeSizeCm = Convert_ViewerToCentimeter(equalSize, _genResolution, float.Parse(_genTexelDensity, CultureInfo.InvariantCulture));
+                // Converte para centímetros para exibição
+                float sizeXCm = _genVerticalMode ?
+                    equalSizeCm :
+                    totalSizeCm;
+                float sizeYCm = _genVerticalMode ?
+                    totalSizeCm :
+                    equalSizeCm;
 
-                // Add Informations
-                float coverageSpace = (_genResolution / float.Parse(_genTexelDensity)) * 100;
-                _targetForm.resolutionInfo.Text = _targetForm.selectedResolution.SelectedItem?.ToString() + " px";
-                _targetForm.coverageSpaceInfo.Text = coverageSpace.ToString() + " cm²";
-                _targetForm.baseDensityInfo.Text = _genTexelDensity.ToString() + " px/cm";
-
-                _targetForm.stripsInfo_DataGridView.Rows.Add(stripData.GetBitmap(), stripData.StripName, shapeSizeCm.ToString("0.##", CultureInfo.InvariantCulture), null,null,_genTexelDensity);
-                currentOffset += equalSize;
+                // Adiciona à DataGridView
+                _targetForm.stripsInfo_DataGridView.Rows.Add(
+                    stripData.GetBitmap(),
+                    stripData.StripName,
+                    sizeXCm.ToString("0.##", CultureInfo.InvariantCulture),
+                    sizeYCm.ToString("0.##", CultureInfo.InvariantCulture),
+                    null,
+                    _genTexelDensity
+                );
             }
+
+            // Atualiza informações
+            float coverageSpace = (_genResolution / texelDensity);
+            _targetForm.resolutionInfo.Text = _targetForm.selectedResolution.SelectedItem?.ToString() + " px";
+            _targetForm.coverageSpaceInfo.Text = coverageSpace.ToString() + " cm²";
+            _targetForm.baseDensityInfo.Text = _genTexelDensity + " px/cm";
 
             RebuildShapesFromData();
         }
 
         private void stripsInfo_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // Ignora se não for uma linha válida
-            if (e.RowIndex < 0)
-                return;
+            if (e.RowIndex < 0) return;
 
-            // Verifica se a célula editada foi da coluna ShapeSize
-            if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeSizeX"].Index)
+            try
             {
-                try
+                if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out int resolution))
+                    return;
+
+                string selectedDensity = CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated);
+                if (!float.TryParse(selectedDensity, NumberStyles.Float, CultureInfo.InvariantCulture, out float texelDensity))
+                    return;
+
+                int index = e.RowIndex;
+                StripData currentStrip = _stripDataList[index];
+                float minSizeCm = 1f; // Tamanho mínimo de 1cm
+                float minSizeFraction = Convert_CentimeterToViewer(minSizeCm, resolution, texelDensity);
+                float totalSizeCm = resolution / texelDensity;
+
+                bool isEditingPrimaryDimension =
+                    (_genVerticalMode && e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeSizeX"].Index) ||
+                    (!_genVerticalMode && e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeSizeY"].Index);
+
+                if (isEditingPrimaryDimension)
                 {
-                    // Obtém a resolução selecionada (ex: "1024x1024") e extrai o valor numérico
-                    if (!int.TryParse(_targetForm.selectedResolution.SelectedItem?.ToString().Split('x')[0], out int resolution))
-                        return;
-
-                    // Obtém a densidade de texel selecionada (ex: "5.12") e converte para float
-                    string selectedDensity = CheckerTexelDensity(_targetForm.TexelDensityGroupGenerated);
-                    if (!float.TryParse(selectedDensity, NumberStyles.Float, CultureInfo.InvariantCulture, out float texelDensity))
-                        return;
-
-                    // Lê o valor digitado na célula em centímetros
-                    float cmValue = float.Parse(
-                        _targetForm.stripsInfo_DataGridView.Rows[e.RowIndex].Cells["ShapeSizeX"].Value.ToString(),
-                        CultureInfo.InvariantCulture
-                    );
-
-                    // Converte de centímetros para a fração da textura com base na resolução e texel density
-                    float newValue = Convert_CentimeterToViewer(cmValue, resolution, texelDensity);
-
-                    // Garante que o valor fique entre 0.01 e 0.99 (evita faixas muito pequenas ou grandes)
-                    newValue = Math.Max(0.01f, Math.Min(0.99f, newValue));
-
-                    int index = e.RowIndex;
-                    StripData stripCurrent = _stripDataList[index];
-
-                    // Caso não seja a última faixa, ajusta a próxima faixa
-                    if (index < _stripDataList.Count - 1)
+                    // Obtém o novo valor em cm
+                    float newCmValue;
+                    if (!float.TryParse(
+                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells[
+                            _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value.ToString(),
+                        out newCmValue))
                     {
-                        StripData stripNext = _stripDataList[index + 1];
-                        float delta = newValue - stripCurrent.StripSize;
-                        float adjustedNext = stripNext.StripSize - delta;
-
-                        // Garante que a próxima faixa não fique menor que o mínimo permitido
-                        if (adjustedNext < 0.01f)
-                        {
-                            adjustedNext = 0.01f;
-                            newValue = stripCurrent.StripSize + (stripNext.StripSize - 0.01f);
-                        }
-
-                        // Aplica os novos valores às faixas
-                        stripCurrent.StripSize = newValue;
-                        stripNext.StripSize = adjustedNext;
-
-                        // Converte os valores de volta para cm para exibir na grade
-                        float updatedCmCurrent = Convert_ViewerToCentimeter(newValue, resolution, texelDensity);
-                        float updatedCmNext = Convert_ViewerToCentimeter(adjustedNext, resolution, texelDensity);
-
-                        // Atualiza visualmente os valores da tabela (em cm formatado)
-                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSizeX"].Value =
-                            updatedCmCurrent.ToString("0.##", CultureInfo.InvariantCulture);
-                        _targetForm.stripsInfo_DataGridView.Rows[index + 1].Cells["ShapeSizeX"].Value =
-                            updatedCmNext.ToString("0.##", CultureInfo.InvariantCulture);
-                    }
-                    else // Caso seja a última faixa, ajusta a anterior
-                    {
-                        StripData stripPrev = _stripDataList[index - 1];
-                        float delta = newValue - stripCurrent.StripSize;
-                        float adjustedPrev = stripPrev.StripSize - delta;
-
-                        // Garante que a faixa anterior não fique menor que o mínimo permitido
-                        if (adjustedPrev < 0.01f)
-                        {
-                            adjustedPrev = 0.01f;
-                            newValue = stripCurrent.StripSize + (stripPrev.StripSize - 0.01f);
-                        }
-
-                        // Aplica os novos valores às faixas
-                        stripCurrent.StripSize = newValue;
-                        stripPrev.StripSize = adjustedPrev;
-
-                        // Converte os valores de volta para cm para exibir na grade
-                        float updatedCmCurrent = Convert_ViewerToCentimeter(newValue, resolution, texelDensity);
-                        float updatedCmPrev = Convert_ViewerToCentimeter(adjustedPrev, resolution, texelDensity);
-
-                        // Atualiza visualmente os valores da tabela (em cm formatado)
-                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeSizeX"].Value =
-                            updatedCmCurrent.ToString("0.##", CultureInfo.InvariantCulture);
-                        _targetForm.stripsInfo_DataGridView.Rows[index - 1].Cells["ShapeSizeX"].Value =
-                            updatedCmPrev.ToString("0.##", CultureInfo.InvariantCulture);
+                        // Valor inválido, reverte para o valor anterior
+                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells[
+                            _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                            Convert_ViewerToCentimeter(
+                                _genVerticalMode ? currentStrip.StripSize.X : currentStrip.StripSize.Y,
+                                resolution, texelDensity)
+                            .ToString("0.##");
+                        return;
                     }
 
-                    // Recria visualmente os shapes com os novos tamanhos
+                    // Garante o mínimo de 1cm
+                    newCmValue = Math.Max(minSizeCm, newCmValue);
+                    float newSize = Convert_CentimeterToViewer(newCmValue, resolution, texelDensity);
+
+                    // Calcula o tamanho total já usado pelas shapes anteriores
+                    float usedSize = 0f;
+                    for (int i = 0; i < index; i++)
+                    {
+                        usedSize += _genVerticalMode ? _stripDataList[i].StripSize.X : _stripDataList[i].StripSize.Y;
+                    }
+
+                    // Calcula o espaço restante para as shapes seguintes
+                    float remainingSize = 1f - usedSize - newSize;
+                    int remainingShapes = _stripDataList.Count - index - 1;
+
+                    // Verifica se é possível distribuir o espaço restante mantendo o mínimo
+                    if (remainingShapes > 0 && remainingSize < minSizeFraction * remainingShapes)
+                    {
+                        // Calcula o valor máximo permitido para esta shape
+                        float maxAllowedCm = Convert_ViewerToCentimeter(
+                            1f - usedSize - (minSizeFraction * remainingShapes),
+                            resolution, texelDensity);
+
+                        // Limita ao valor máximo permitido
+                        newCmValue = Math.Min(newCmValue, maxAllowedCm);
+                        newSize = Convert_CentimeterToViewer(newCmValue, resolution, texelDensity);
+
+                        // Atualiza o valor na grid
+                        _targetForm.stripsInfo_DataGridView.Rows[index].Cells[
+                            _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                            newCmValue.ToString("0.##", CultureInfo.InvariantCulture);
+
+                        MessageBox.Show($"O valor máximo permitido para esta shape é {maxAllowedCm.ToString("0.##")} cm",
+                            "Valor inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Se chegou aqui, o valor é válido - prossegue com as alterações
+                    float currentSize = _genVerticalMode ? currentStrip.StripSize.X : currentStrip.StripSize.Y;
+                    float delta = newSize - currentSize;
+
+                    // Se for a última shape, trata de forma especial (ajusta apenas a penúltima)
+                    if (index == _stripDataList.Count - 1)
+                    {
+                        if (index > 0) // Tem uma shape anterior para ajustar
+                        {
+                            StripData prevStrip = _stripDataList[index - 1];
+                            float prevSize = _genVerticalMode ? prevStrip.StripSize.X : prevStrip.StripSize.Y;
+                            float newPrevSize = prevSize - delta;
+
+                            // Verifica se a penúltima shape ficaria com menos do que o mínimo
+                            if (newPrevSize < minSizeFraction)
+                            {
+                                // Calcula o valor máximo permitido para a última shape
+                                float maxAllowedCm = Convert_ViewerToCentimeter(
+                                    currentSize + (prevSize - minSizeFraction),
+                                    resolution, texelDensity);
+
+                                // Limita ao valor máximo permitido
+                                newCmValue = Math.Min(newCmValue, maxAllowedCm);
+                                newSize = Convert_CentimeterToViewer(newCmValue, resolution, texelDensity);
+
+                                // Atualiza o valor na grid
+                                _targetForm.stripsInfo_DataGridView.Rows[index].Cells[
+                                    _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                                    newCmValue.ToString("0.##", CultureInfo.InvariantCulture);
+
+                                MessageBox.Show($"O valor máximo permitido para esta shape é {maxAllowedCm.ToString("0.##")} cm",
+                                    "Valor inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            // Aplica os ajustes
+                            if (_genVerticalMode)
+                            {
+                                prevStrip.StripSize = new Vector2D(newPrevSize, 1f);
+                                currentStrip.StripSize = new Vector2D(newSize, 1f);
+                            }
+                            else
+                            {
+                                prevStrip.StripSize = new Vector2D(1f, newPrevSize);
+                                currentStrip.StripSize = new Vector2D(1f, newSize);
+                            }
+
+                            // Atualiza a grid para a penúltima shape
+                            _targetForm.stripsInfo_DataGridView.Rows[index - 1].Cells[
+                                _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                                Convert_ViewerToCentimeter(newPrevSize, resolution, texelDensity)
+                                .ToString("0.##", CultureInfo.InvariantCulture);
+                        }
+                    }
+                    else
+                    {
+                        // Para shapes que não são a última, redistribui entre todas as seguintes
+                        float remainingSizeAfterChange = 1f - usedSize - newSize;
+                        int remainingShapesAfterChange = _stripDataList.Count - index - 1;
+
+                        if (remainingShapesAfterChange > 0)
+                        {
+                            float equalSize = remainingSizeAfterChange / remainingShapesAfterChange;
+
+                            // Aplica o novo tamanho à shape atual
+                            if (_genVerticalMode)
+                                currentStrip.StripSize = new Vector2D(newSize, 1f);
+                            else
+                                currentStrip.StripSize = new Vector2D(1f, newSize);
+
+                            // Redistribui para as shapes seguintes
+                            for (int i = index + 1; i < _stripDataList.Count; i++)
+                            {
+                                if (_genVerticalMode)
+                                    _stripDataList[i].StripSize = new Vector2D(equalSize, 1f);
+                                else
+                                    _stripDataList[i].StripSize = new Vector2D(1f, equalSize);
+
+                                // Atualiza a grid
+                                _targetForm.stripsInfo_DataGridView.Rows[i].Cells[
+                                    _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                                    Convert_ViewerToCentimeter(equalSize, resolution, texelDensity)
+                                    .ToString("0.##", CultureInfo.InvariantCulture);
+                            }
+                        }
+                    }
+
+                    // Atualiza o valor na grid (pode ter sido ajustado)
+                    _targetForm.stripsInfo_DataGridView.Rows[index].Cells[
+                        _genVerticalMode ? "ShapeSizeX" : "ShapeSizeY"].Value =
+                        newCmValue.ToString("0.##", CultureInfo.InvariantCulture);
+
+                    // Atualiza a dimensão fixa
+                    UpdateFixedDimensionValues(resolution, texelDensity);
+
+                    // Reconstroi a visualização
                     RebuildShapesFromData();
                 }
-                catch (Exception ex)
+                else if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeName"].Index)
                 {
-                    // Exibe erro caso algo dê errado na conversão ou atualização
-                    MessageBox.Show("Error editing shape: " + ex.Message);
+                    string newName = _targetForm.stripsInfo_DataGridView.Rows[index].Cells["ShapeName"].Value.ToString();
+                    currentStrip.StripName = newName;
+
+                    var label = _targetForm.uvTrimView_Panel.Controls.Find($"labelShapeName{index}", false).FirstOrDefault() as Label;
+                    if (label != null)
+                        label.Text = newName;
                 }
             }
-            // Caso a célula editada seja o nome da shape
-            else if (e.ColumnIndex == _targetForm.stripsInfo_DataGridView.Columns["ShapeName"].Index)
+            catch (Exception ex)
             {
-                // Atualiza o nome da faixa no backend
-                string newName = _targetForm.stripsInfo_DataGridView.Rows[e.RowIndex].Cells["ShapeName"].Value.ToString();
-                _stripDataList[e.RowIndex].StripName = newName;
-
-                // Atualiza o texto do label correspondente na visualização (viewport)
-                var label = _targetForm.uvTrimView_Panel.Controls.Find($"labelShapeName{e.RowIndex}", false).FirstOrDefault() as Label;
-                if (label != null)
-                    label.Text = newName;
+                MessageBox.Show("Error editing shape: " + ex.Message);
             }
         }
 
-        private void texelDensityGridCheker_CheckBox_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
-        { RebuildShapesFromData(); }
+        private void UpdateAllDataGridViewValues(int resolution, float texelDensity)
+        {
+            for (int i = 0; i < _stripDataList.Count; i++)
+            {
+                var strip = _stripDataList[i];
+                float sizeXCm = Convert_ViewerToCentimeter(strip.StripSize.X, resolution, texelDensity);
+                float sizeYCm = Convert_ViewerToCentimeter(strip.StripSize.Y, resolution, texelDensity);
+
+                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeSizeX"].Value =
+                    sizeXCm.ToString("0.##", CultureInfo.InvariantCulture);
+                _targetForm.stripsInfo_DataGridView.Rows[i].Cells["ShapeSizeY"].Value =
+                    sizeYCm.ToString("0.##", CultureInfo.InvariantCulture);
+            }
+        }
     }
 }

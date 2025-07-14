@@ -7,12 +7,18 @@ namespace TrimSheet_Tools.Model
 {
     public class StripData
     {
+        // Public Variables
         public BunifuShapes StripShape { get; set; }
         public Color StripColor { get; set; }
         public String StripName { get; set; }
-        public float StripSize { get; set; }
+        public Vector2D StripSize { get; set; }
+        public String StripDensity { get; set; }
+
+        // Internal
+        private bool _stripSplited;
 
 
+        // Methods
         public Bitmap GetBitmap()
         {
             Bitmap bmp = new Bitmap(24, 24);
@@ -24,5 +30,12 @@ namespace TrimSheet_Tools.Model
 
             return bmp;
         }
+
+        public void Split()
+        { _stripSplited = true; }
+        public void Unspli()
+        { _stripSplited = false; }
+        public bool CheckSplit()
+        { return _stripSplited; }
     }
 }
