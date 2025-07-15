@@ -25,8 +25,9 @@ namespace TrimSheet_Tools.Controller
         private List<SResponsiveLocationState> _targetBunifuPanelLocateStateList = new List<SResponsiveLocationState> ();
 
 
-        public ResponsivitySystem(Form trimSettingsRef, DockPanelModel dockingPanelRef)
+        public ResponsivitySystem(Form trimSettingsRef, in DockPanelModel dockingPanelRef)
         {
+            // Initialize References
             this._targetForm = trimSettingsRef;
             this._targetDockingPanelSystem = dockingPanelRef;
         }
@@ -59,6 +60,9 @@ namespace TrimSheet_Tools.Controller
             _targetBunifuPanelLocateStateList.Add(locationStateRef);
         }
 
+        /// <summary>
+        /// Adjust based in Docked state
+        /// </summary>
         public void ResponsiveSystem()
         {            
             // FlipFlop responsive resize 

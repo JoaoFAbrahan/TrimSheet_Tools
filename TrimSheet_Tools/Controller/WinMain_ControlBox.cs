@@ -19,6 +19,7 @@ namespace TrimSheet_Tools.Controller
         /// <param name="formRef">Main Window Reference</param>
         public WinMain_ControlBox(TrimSheet_Tools.View.WinMain formRef)
         {
+            // Initialize References
             this._targetForm = formRef;
 
             // Connect form events to methods

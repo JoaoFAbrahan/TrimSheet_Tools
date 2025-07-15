@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using TrimSheet_Tools.Controller;
 using TrimSheet_Tools.Model;
+//using TrimSheet_Tools.Model;
 
 namespace TrimSheet_Tools.View
 {
@@ -15,17 +16,32 @@ namespace TrimSheet_Tools.View
         // Global variables
         private TrimSheet_Tools.Model.DockPanelModel _dockingPanelState;
         private ResponsivitySystem _responsivitySystem;
-        private TrimSheetGenerated _generatedTexureSystem;
         private ExportTextureSystem _exportTextureSystem;
 
+        // Trim Sheet System
+        public int _genResolution;
+        public bool _genVerticalMode;
+        public float _genTexelDensity;
+        private List<TrimSheet_Tools.Model.StripData> _targetStripDataList;
 
-        public TrimSettings(TrimSheet_Tools.Model.DockPanelModel dockingPanelRef)
+        // Trim Sheet System Components
+        private TrimSheet_RebuildingShapeSystem _rebuildShapeSystem;
+        private TrimSheet_GeneratedSystem _generatedTexureSystem;
+        private TrimSheet_DataGridEditSystem _dataGridEditSystem;
+
+
+        public TrimSettings(ref List<TrimSheet_Tools.Model.StripData> stripDataListRef, in TrimSheet_Tools.Model.DockPanelModel dockingPanelRef)
         {
             InitializeComponent();
 
-            // Initialize
+            // Initialize References
+            this._targetStripDataList = stripDataListRef;
             this._dockingPanelState = dockingPanelRef;
-            this._generatedTexureSystem = new TrimSheetGenerated(this, this._dockingPanelState);
+
+            // Trim Sheet System
+            this._rebuildShapeSystem = new TrimSheet_RebuildingShapeSystem(ref _targetStripDataList, this, _dockingPanelState);
+            this._generatedTexureSystem = new TrimSheet_GeneratedSystem(ref _targetStripDataList, ref _rebuildShapeSystem, this);
+            this._dataGridEditSystem = new TrimSheet_DataGridEditSystem(ref _targetStripDataList, ref _rebuildShapeSystem, this);
             this._exportTextureSystem = new ExportTextureSystem();
 
             // Set Responsive Panels
@@ -35,10 +51,6 @@ namespace TrimSheet_Tools.View
             // Set Resources Type
             SetResourceFonts();
             DataGridViewStart();
-
-
-
-            ////////
         }
 
 
@@ -148,7 +160,25 @@ namespace TrimSheet_Tools.View
             _generatedTexureSystem.ResponsiveSystemViewer();
         }
 
+        private void generateTexture_Btn_Click(object sender, EventArgs e)
+        {
+            // Get parameters
+            if (!int.TryParse(selectedResolution.SelectedItem?.ToString().Split('x')[0], out _genResolution))
+                return;
+            _genTexelDensity = float.Parse(TrimSheet_Utilities.CheckerTexelDensity(TexelDensityGroupGenerated), CultureInfo.InvariantCulture);
+            _genVerticalMode = verticalMode_CheckBox.Checked;
+
+            // Generat TrimSheet
+            _generatedTexureSystem.Generat(e);
+        }
+        
+        private void stripsInfo_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            _dataGridEditSystem.DataGridStripEditing(e);
+        }
+
         private void selectFolder_Btn_Click(object sender, EventArgs e)
         { folderPath_TextBox.Text = _exportTextureSystem.ExportTexture(_generatedTexureSystem.ImageToExport()); }
+
     }
 }

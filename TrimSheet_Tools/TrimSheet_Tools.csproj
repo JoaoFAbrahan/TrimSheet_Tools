@@ -103,9 +103,11 @@
     <Compile Include="Controller\ExportTextureSystem.cs" />
     <Compile Include="Controller\FontLoader.cs" />
     <Compile Include="Controller\IStartComponents.cs" />
+    <Compile Include="Controller\TrimSheet_DataGridEditSystem.cs" />
+    <Compile Include="Controller\TrimSheet_RebuildingShapeSystem.cs" />
     <Compile Include="Controller\SetFontStyle.cs" />
     <Compile Include="Controller\ResponsivitySystem.cs" />
-    <Compile Include="Controller\TrimSheetGenerated.cs" />
+    <Compile Include="Controller\TrimSheet_GeneratedSystem.cs" />
     <Compile Include="Controller\WinMain_ControlBox.cs" />
     <Compile Include="Controller\WinMain_LoadForms.cs" />
     <Compile Include="Model\DockPanelModel.cs" />
@@ -113,6 +115,8 @@
     <Compile Include="Model\SResponsiveLocationState.cs" />
     <Compile Include="Model\SResponsiveSizeState.cs" />
     <Compile Include="Model\StripData.cs" />
+    <Compile Include="Model\TrimSheet_Utilities.cs" />
+    <Compile Include="Model\Vector2D.cs" />
     <Compile Include="Model\VerticalLabel.cs">
       <SubType>Component</SubType>
     </Compile>

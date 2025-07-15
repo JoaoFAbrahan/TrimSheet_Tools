@@ -14,6 +14,7 @@ namespace TrimSheet_Tools.Controller
 
         public WinMain_LoadForms(Panel panelRef)
         {
+            // Initialize References
             this._targetContainerPanel = panelRef;
         }
 

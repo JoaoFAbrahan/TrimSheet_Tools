@@ -12,10 +12,10 @@ namespace TrimSheet_Tools.Model
         public Color StripColor { get; set; }
         public String StripName { get; set; }
         public Vector2D StripSize { get; set; }
-        public String StripDensity { get; set; }
+        public float StripDensity { get; set; }
 
         // Internal
-        private bool _stripSplited;
+        private bool _stripSplited = false;
 
 
         // Methods

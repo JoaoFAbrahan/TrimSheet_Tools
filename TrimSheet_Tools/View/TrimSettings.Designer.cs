@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrimSettings));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -44,13 +48,31 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrimSettings));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.detailsPanel = new System.Windows.Forms.Panel();
+            this.projectPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.projectSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.prujectImport_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.projectSave_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.projectTitle_Label = new System.Windows.Forms.Label();
+            this.outputInfoPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.outputInfoSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.baseDensityInfo = new System.Windows.Forms.Label();
+            this.outBaseDensityLabel = new System.Windows.Forms.Label();
+            this.coverageSpaceInfo = new System.Windows.Forms.Label();
+            this.outCoverageSpaceLabel = new System.Windows.Forms.Label();
+            this.resolutionInfo = new System.Windows.Forms.Label();
+            this.outResolutionLabel = new System.Windows.Forms.Label();
+            this.outputInfoTitle_Label = new System.Windows.Forms.Label();
             this.stripsInformationPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.stripsInfo_DataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.ShapeColor = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeSizeX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeSizeY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StripSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeTexDensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stripInformationSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.stripInformation_Label = new System.Windows.Forms.Label();
             this.selectedSripPanel = new Bunifu.UI.WinForms.BunifuPanel();
@@ -100,29 +122,11 @@
             this.uvTrimView_Panel = new System.Windows.Forms.Panel();
             this.trimSheetViewerSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.trimSheetViewer_Label = new System.Windows.Forms.Label();
-            this.outputInfoPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.outputInfoSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.outputInfoTitle_Label = new System.Windows.Forms.Label();
-            this.resolutionInfo = new System.Windows.Forms.Label();
-            this.outResolutionLabel = new System.Windows.Forms.Label();
-            this.coverageSpaceInfo = new System.Windows.Forms.Label();
-            this.outCoverageSpaceLabel = new System.Windows.Forms.Label();
-            this.baseDensityInfo = new System.Windows.Forms.Label();
-            this.outBaseDensityLabel = new System.Windows.Forms.Label();
-            this.projectPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.projectSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.projectTitle_Label = new System.Windows.Forms.Label();
-            this.projectSave_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.prujectImport_Btn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ShapeColor = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeSizeX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeSizeY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StripSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeTexDensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsPanel.SuspendLayout();
+            this.projectPanel.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.outputInfoPanel.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.stripsInformationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stripsInfo_DataGridView)).BeginInit();
             this.selectedSripPanel.SuspendLayout();
@@ -135,10 +139,6 @@
             this.viewPanel.SuspendLayout();
             this.exportTexturePanel.SuspendLayout();
             this.trimSheetViewerPanel.SuspendLayout();
-            this.outputInfoPanel.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.projectPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // detailsPanel
@@ -154,6 +154,382 @@
             this.detailsPanel.Name = "detailsPanel";
             this.detailsPanel.Size = new System.Drawing.Size(586, 865);
             this.detailsPanel.TabIndex = 0;
+            // 
+            // projectPanel
+            // 
+            this.projectPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.projectPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectPanel.BackgroundImage")));
+            this.projectPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.projectPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.projectPanel.BorderRadius = 15;
+            this.projectPanel.BorderThickness = 1;
+            this.projectPanel.Controls.Add(this.projectSeparator);
+            this.projectPanel.Controls.Add(this.panel4);
+            this.projectPanel.Controls.Add(this.projectTitle_Label);
+            this.projectPanel.ForeColor = System.Drawing.Color.Coral;
+            this.projectPanel.Location = new System.Drawing.Point(449, 231);
+            this.projectPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.projectPanel.Name = "projectPanel";
+            this.projectPanel.ShowBorders = true;
+            this.projectPanel.Size = new System.Drawing.Size(133, 168);
+            this.projectPanel.TabIndex = 19;
+            // 
+            // projectSeparator
+            // 
+            this.projectSeparator.BackColor = System.Drawing.Color.Transparent;
+            this.projectSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectSeparator.BackgroundImage")));
+            this.projectSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.projectSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.projectSeparator.LineColor = System.Drawing.Color.DarkGray;
+            this.projectSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.projectSeparator.LineThickness = 1;
+            this.projectSeparator.Location = new System.Drawing.Point(23, 34);
+            this.projectSeparator.Name = "projectSeparator";
+            this.projectSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.projectSeparator.Size = new System.Drawing.Size(86, 14);
+            this.projectSeparator.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.prujectImport_Btn);
+            this.panel4.Controls.Add(this.projectSave_Btn);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel4.Location = new System.Drawing.Point(17, 51);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(95, 101);
+            this.panel4.TabIndex = 10;
+            // 
+            // prujectImport_Btn
+            // 
+            this.prujectImport_Btn.AllowAnimations = true;
+            this.prujectImport_Btn.AllowMouseEffects = true;
+            this.prujectImport_Btn.AllowToggling = false;
+            this.prujectImport_Btn.AnimationSpeed = 200;
+            this.prujectImport_Btn.AutoGenerateColors = false;
+            this.prujectImport_Btn.AutoRoundBorders = false;
+            this.prujectImport_Btn.AutoSizeLeftIcon = true;
+            this.prujectImport_Btn.AutoSizeRightIcon = true;
+            this.prujectImport_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.prujectImport_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.prujectImport_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prujectImport_Btn.BackgroundImage")));
+            this.prujectImport_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.prujectImport_Btn.ButtonText = "Import";
+            this.prujectImport_Btn.ButtonTextMarginLeft = 0;
+            this.prujectImport_Btn.ColorContrastOnClick = 45;
+            this.prujectImport_Btn.ColorContrastOnHover = 45;
+            this.prujectImport_Btn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.prujectImport_Btn.CustomizableEdges = borderEdges1;
+            this.prujectImport_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.prujectImport_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.prujectImport_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.prujectImport_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.prujectImport_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.prujectImport_Btn.Font = new System.Drawing.Font("Mollen Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prujectImport_Btn.ForeColor = System.Drawing.Color.White;
+            this.prujectImport_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.prujectImport_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.prujectImport_Btn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.prujectImport_Btn.IconMarginLeft = 11;
+            this.prujectImport_Btn.IconPadding = 10;
+            this.prujectImport_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prujectImport_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.prujectImport_Btn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.prujectImport_Btn.IconSize = 25;
+            this.prujectImport_Btn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.prujectImport_Btn.IdleBorderRadius = 5;
+            this.prujectImport_Btn.IdleBorderThickness = 1;
+            this.prujectImport_Btn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.prujectImport_Btn.IdleIconLeftImage = null;
+            this.prujectImport_Btn.IdleIconRightImage = null;
+            this.prujectImport_Btn.IndicateFocus = false;
+            this.prujectImport_Btn.Location = new System.Drawing.Point(6, 59);
+            this.prujectImport_Btn.Name = "prujectImport_Btn";
+            this.prujectImport_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.prujectImport_Btn.OnDisabledState.BorderRadius = 5;
+            this.prujectImport_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.prujectImport_Btn.OnDisabledState.BorderThickness = 1;
+            this.prujectImport_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.prujectImport_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.prujectImport_Btn.OnDisabledState.IconLeftImage = null;
+            this.prujectImport_Btn.OnDisabledState.IconRightImage = null;
+            this.prujectImport_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.prujectImport_Btn.onHoverState.BorderRadius = 5;
+            this.prujectImport_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.prujectImport_Btn.onHoverState.BorderThickness = 1;
+            this.prujectImport_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.prujectImport_Btn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.prujectImport_Btn.onHoverState.IconLeftImage = null;
+            this.prujectImport_Btn.onHoverState.IconRightImage = null;
+            this.prujectImport_Btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.prujectImport_Btn.OnIdleState.BorderRadius = 5;
+            this.prujectImport_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.prujectImport_Btn.OnIdleState.BorderThickness = 1;
+            this.prujectImport_Btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.prujectImport_Btn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.prujectImport_Btn.OnIdleState.IconLeftImage = null;
+            this.prujectImport_Btn.OnIdleState.IconRightImage = null;
+            this.prujectImport_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.prujectImport_Btn.OnPressedState.BorderRadius = 5;
+            this.prujectImport_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.prujectImport_Btn.OnPressedState.BorderThickness = 1;
+            this.prujectImport_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.prujectImport_Btn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.prujectImport_Btn.OnPressedState.IconLeftImage = null;
+            this.prujectImport_Btn.OnPressedState.IconRightImage = null;
+            this.prujectImport_Btn.Size = new System.Drawing.Size(86, 32);
+            this.prujectImport_Btn.TabIndex = 20;
+            this.prujectImport_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.prujectImport_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.prujectImport_Btn.TextMarginLeft = 0;
+            this.prujectImport_Btn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.prujectImport_Btn.UseDefaultRadiusAndThickness = true;
+            // 
+            // projectSave_Btn
+            // 
+            this.projectSave_Btn.AllowAnimations = true;
+            this.projectSave_Btn.AllowMouseEffects = true;
+            this.projectSave_Btn.AllowToggling = false;
+            this.projectSave_Btn.AnimationSpeed = 200;
+            this.projectSave_Btn.AutoGenerateColors = false;
+            this.projectSave_Btn.AutoRoundBorders = false;
+            this.projectSave_Btn.AutoSizeLeftIcon = true;
+            this.projectSave_Btn.AutoSizeRightIcon = true;
+            this.projectSave_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.projectSave_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.projectSave_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectSave_Btn.BackgroundImage")));
+            this.projectSave_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.projectSave_Btn.ButtonText = "Save";
+            this.projectSave_Btn.ButtonTextMarginLeft = 0;
+            this.projectSave_Btn.ColorContrastOnClick = 45;
+            this.projectSave_Btn.ColorContrastOnHover = 45;
+            this.projectSave_Btn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.projectSave_Btn.CustomizableEdges = borderEdges2;
+            this.projectSave_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.projectSave_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.projectSave_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.projectSave_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.projectSave_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.projectSave_Btn.Font = new System.Drawing.Font("Mollen Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectSave_Btn.ForeColor = System.Drawing.Color.White;
+            this.projectSave_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.projectSave_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.projectSave_Btn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.projectSave_Btn.IconMarginLeft = 11;
+            this.projectSave_Btn.IconPadding = 10;
+            this.projectSave_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.projectSave_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.projectSave_Btn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.projectSave_Btn.IconSize = 25;
+            this.projectSave_Btn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.projectSave_Btn.IdleBorderRadius = 5;
+            this.projectSave_Btn.IdleBorderThickness = 1;
+            this.projectSave_Btn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.projectSave_Btn.IdleIconLeftImage = null;
+            this.projectSave_Btn.IdleIconRightImage = null;
+            this.projectSave_Btn.IndicateFocus = false;
+            this.projectSave_Btn.Location = new System.Drawing.Point(6, 13);
+            this.projectSave_Btn.Name = "projectSave_Btn";
+            this.projectSave_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.projectSave_Btn.OnDisabledState.BorderRadius = 5;
+            this.projectSave_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.projectSave_Btn.OnDisabledState.BorderThickness = 1;
+            this.projectSave_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.projectSave_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.projectSave_Btn.OnDisabledState.IconLeftImage = null;
+            this.projectSave_Btn.OnDisabledState.IconRightImage = null;
+            this.projectSave_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.projectSave_Btn.onHoverState.BorderRadius = 5;
+            this.projectSave_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.projectSave_Btn.onHoverState.BorderThickness = 1;
+            this.projectSave_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.projectSave_Btn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.projectSave_Btn.onHoverState.IconLeftImage = null;
+            this.projectSave_Btn.onHoverState.IconRightImage = null;
+            this.projectSave_Btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.projectSave_Btn.OnIdleState.BorderRadius = 5;
+            this.projectSave_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.projectSave_Btn.OnIdleState.BorderThickness = 1;
+            this.projectSave_Btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
+            this.projectSave_Btn.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.projectSave_Btn.OnIdleState.IconLeftImage = null;
+            this.projectSave_Btn.OnIdleState.IconRightImage = null;
+            this.projectSave_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.projectSave_Btn.OnPressedState.BorderRadius = 5;
+            this.projectSave_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.projectSave_Btn.OnPressedState.BorderThickness = 1;
+            this.projectSave_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.projectSave_Btn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.projectSave_Btn.OnPressedState.IconLeftImage = null;
+            this.projectSave_Btn.OnPressedState.IconRightImage = null;
+            this.projectSave_Btn.Size = new System.Drawing.Size(86, 32);
+            this.projectSave_Btn.TabIndex = 19;
+            this.projectSave_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.projectSave_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.projectSave_Btn.TextMarginLeft = 0;
+            this.projectSave_Btn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.projectSave_Btn.UseDefaultRadiusAndThickness = true;
+            // 
+            // projectTitle_Label
+            // 
+            this.projectTitle_Label.AutoSize = true;
+            this.projectTitle_Label.BackColor = System.Drawing.Color.Transparent;
+            this.projectTitle_Label.Font = new System.Drawing.Font("Mollen Narrow", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectTitle_Label.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.projectTitle_Label.Location = new System.Drawing.Point(15, 15);
+            this.projectTitle_Label.Name = "projectTitle_Label";
+            this.projectTitle_Label.Size = new System.Drawing.Size(51, 17);
+            this.projectTitle_Label.TabIndex = 17;
+            this.projectTitle_Label.Text = "Project";
+            // 
+            // outputInfoPanel
+            // 
+            this.outputInfoPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.outputInfoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("outputInfoPanel.BackgroundImage")));
+            this.outputInfoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outputInfoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.outputInfoPanel.BorderRadius = 15;
+            this.outputInfoPanel.BorderThickness = 1;
+            this.outputInfoPanel.Controls.Add(this.outputInfoSeparator);
+            this.outputInfoPanel.Controls.Add(this.panel5);
+            this.outputInfoPanel.Controls.Add(this.outputInfoTitle_Label);
+            this.outputInfoPanel.ForeColor = System.Drawing.Color.Coral;
+            this.outputInfoPanel.Location = new System.Drawing.Point(449, 7);
+            this.outputInfoPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.outputInfoPanel.Name = "outputInfoPanel";
+            this.outputInfoPanel.ShowBorders = true;
+            this.outputInfoPanel.Size = new System.Drawing.Size(133, 202);
+            this.outputInfoPanel.TabIndex = 18;
+            // 
+            // outputInfoSeparator
+            // 
+            this.outputInfoSeparator.BackColor = System.Drawing.Color.Transparent;
+            this.outputInfoSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("outputInfoSeparator.BackgroundImage")));
+            this.outputInfoSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.outputInfoSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.outputInfoSeparator.LineColor = System.Drawing.Color.DarkGray;
+            this.outputInfoSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.outputInfoSeparator.LineThickness = 1;
+            this.outputInfoSeparator.Location = new System.Drawing.Point(23, 34);
+            this.outputInfoSeparator.Name = "outputInfoSeparator";
+            this.outputInfoSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.outputInfoSeparator.Size = new System.Drawing.Size(86, 14);
+            this.outputInfoSeparator.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.baseDensityInfo);
+            this.panel5.Controls.Add(this.outBaseDensityLabel);
+            this.panel5.Controls.Add(this.coverageSpaceInfo);
+            this.panel5.Controls.Add(this.outCoverageSpaceLabel);
+            this.panel5.Controls.Add(this.resolutionInfo);
+            this.panel5.Controls.Add(this.outResolutionLabel);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel5.Location = new System.Drawing.Point(17, 51);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(95, 133);
+            this.panel5.TabIndex = 10;
+            // 
+            // baseDensityInfo
+            // 
+            this.baseDensityInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.baseDensityInfo.AutoSize = true;
+            this.baseDensityInfo.BackColor = System.Drawing.Color.Transparent;
+            this.baseDensityInfo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.baseDensityInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baseDensityInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
+            this.baseDensityInfo.Location = new System.Drawing.Point(5, 107);
+            this.baseDensityInfo.Name = "baseDensityInfo";
+            this.baseDensityInfo.Size = new System.Drawing.Size(43, 12);
+            this.baseDensityInfo.TabIndex = 14;
+            this.baseDensityInfo.Text = "0 px/cm";
+            // 
+            // outBaseDensityLabel
+            // 
+            this.outBaseDensityLabel.AutoSize = true;
+            this.outBaseDensityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.outBaseDensityLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outBaseDensityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.outBaseDensityLabel.Location = new System.Drawing.Point(4, 92);
+            this.outBaseDensityLabel.Name = "outBaseDensityLabel";
+            this.outBaseDensityLabel.Size = new System.Drawing.Size(69, 12);
+            this.outBaseDensityLabel.TabIndex = 15;
+            this.outBaseDensityLabel.Text = "Base Density:";
+            // 
+            // coverageSpaceInfo
+            // 
+            this.coverageSpaceInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.coverageSpaceInfo.AutoSize = true;
+            this.coverageSpaceInfo.BackColor = System.Drawing.Color.Transparent;
+            this.coverageSpaceInfo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.coverageSpaceInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coverageSpaceInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
+            this.coverageSpaceInfo.Location = new System.Drawing.Point(5, 67);
+            this.coverageSpaceInfo.Name = "coverageSpaceInfo";
+            this.coverageSpaceInfo.Size = new System.Drawing.Size(28, 12);
+            this.coverageSpaceInfo.TabIndex = 12;
+            this.coverageSpaceInfo.Text = "0 cm";
+            // 
+            // outCoverageSpaceLabel
+            // 
+            this.outCoverageSpaceLabel.AutoSize = true;
+            this.outCoverageSpaceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.outCoverageSpaceLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outCoverageSpaceLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.outCoverageSpaceLabel.Location = new System.Drawing.Point(4, 52);
+            this.outCoverageSpaceLabel.Name = "outCoverageSpaceLabel";
+            this.outCoverageSpaceLabel.Size = new System.Drawing.Size(84, 12);
+            this.outCoverageSpaceLabel.TabIndex = 13;
+            this.outCoverageSpaceLabel.Text = "Coverage Space:";
+            // 
+            // resolutionInfo
+            // 
+            this.resolutionInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.resolutionInfo.AutoSize = true;
+            this.resolutionInfo.BackColor = System.Drawing.Color.Transparent;
+            this.resolutionInfo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.resolutionInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resolutionInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
+            this.resolutionInfo.Location = new System.Drawing.Point(5, 26);
+            this.resolutionInfo.Name = "resolutionInfo";
+            this.resolutionInfo.Size = new System.Drawing.Size(38, 12);
+            this.resolutionInfo.TabIndex = 10;
+            this.resolutionInfo.Text = "0x0 px";
+            // 
+            // outResolutionLabel
+            // 
+            this.outResolutionLabel.AutoSize = true;
+            this.outResolutionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.outResolutionLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outResolutionLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.outResolutionLabel.Location = new System.Drawing.Point(4, 11);
+            this.outResolutionLabel.Name = "outResolutionLabel";
+            this.outResolutionLabel.Size = new System.Drawing.Size(59, 12);
+            this.outResolutionLabel.TabIndex = 11;
+            this.outResolutionLabel.Text = "Resolution:";
+            // 
+            // outputInfoTitle_Label
+            // 
+            this.outputInfoTitle_Label.AutoSize = true;
+            this.outputInfoTitle_Label.BackColor = System.Drawing.Color.Transparent;
+            this.outputInfoTitle_Label.Font = new System.Drawing.Font("Mollen Narrow", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputInfoTitle_Label.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.outputInfoTitle_Label.Location = new System.Drawing.Point(15, 15);
+            this.outputInfoTitle_Label.Name = "outputInfoTitle_Label";
+            this.outputInfoTitle_Label.Size = new System.Drawing.Size(84, 17);
+            this.outputInfoTitle_Label.TabIndex = 17;
+            this.outputInfoTitle_Label.Text = "Output Info.";
             // 
             // stripsInformationPanel
             // 
@@ -243,6 +619,60 @@
             this.stripsInfo_DataGridView.Size = new System.Drawing.Size(526, 341);
             this.stripsInfo_DataGridView.TabIndex = 18;
             this.stripsInfo_DataGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.stripsInfo_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.stripsInfo_DataGridView_CellEndEdit);
+            // 
+            // ShapeColor
+            // 
+            this.ShapeColor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeColor.FillWeight = 121.8274F;
+            this.ShapeColor.HeaderText = "Color";
+            this.ShapeColor.Name = "ShapeColor";
+            this.ShapeColor.ReadOnly = true;
+            this.ShapeColor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeColor.Width = 50;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.FillWeight = 8.709719F;
+            this.ShapeName.HeaderText = "Name";
+            this.ShapeName.Name = "ShapeName";
+            // 
+            // ShapeSizeX
+            // 
+            this.ShapeSizeX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.ShapeSizeX.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ShapeSizeX.FillWeight = 154.5942F;
+            this.ShapeSizeX.HeaderText = "Size X (cm)";
+            this.ShapeSizeX.Name = "ShapeSizeX";
+            this.ShapeSizeX.Width = 60;
+            // 
+            // ShapeSizeY
+            // 
+            this.ShapeSizeY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeSizeY.FillWeight = 114.5665F;
+            this.ShapeSizeY.HeaderText = "Size Y (cm)";
+            this.ShapeSizeY.Name = "ShapeSizeY";
+            this.ShapeSizeY.Width = 60;
+            // 
+            // StripSize
+            // 
+            this.StripSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.StripSize.FillWeight = 86.76236F;
+            this.StripSize.HeaderText = "StripSize (px)";
+            this.StripSize.Name = "StripSize";
+            this.StripSize.Width = 85;
+            // 
+            // ShapeTexDensity
+            // 
+            this.ShapeTexDensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShapeTexDensity.FillWeight = 113.5398F;
+            this.ShapeTexDensity.HeaderText = "Density (px/cm)";
+            this.ShapeTexDensity.Name = "ShapeTexDensity";
+            this.ShapeTexDensity.ReadOnly = true;
+            this.ShapeTexDensity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShapeTexDensity.Width = 65;
             // 
             // stripInformationSeparator
             // 
@@ -1114,6 +1544,7 @@
             this.generateTexture_Btn.TextMarginLeft = 0;
             this.generateTexture_Btn.TextPadding = new System.Windows.Forms.Padding(0);
             this.generateTexture_Btn.UseDefaultRadiusAndThickness = true;
+            this.generateTexture_Btn.Click += new System.EventHandler(this.generateTexture_Btn_Click);
             // 
             // texelDensity512_btn
             // 
@@ -1597,435 +2028,6 @@
             this.trimSheetViewer_Label.TabIndex = 17;
             this.trimSheetViewer_Label.Text = "Trim Sheet Viewer";
             // 
-            // outputInfoPanel
-            // 
-            this.outputInfoPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.outputInfoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("outputInfoPanel.BackgroundImage")));
-            this.outputInfoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.outputInfoPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.outputInfoPanel.BorderRadius = 15;
-            this.outputInfoPanel.BorderThickness = 1;
-            this.outputInfoPanel.Controls.Add(this.outputInfoSeparator);
-            this.outputInfoPanel.Controls.Add(this.panel5);
-            this.outputInfoPanel.Controls.Add(this.outputInfoTitle_Label);
-            this.outputInfoPanel.ForeColor = System.Drawing.Color.Coral;
-            this.outputInfoPanel.Location = new System.Drawing.Point(449, 7);
-            this.outputInfoPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.outputInfoPanel.Name = "outputInfoPanel";
-            this.outputInfoPanel.ShowBorders = true;
-            this.outputInfoPanel.Size = new System.Drawing.Size(133, 202);
-            this.outputInfoPanel.TabIndex = 18;
-            // 
-            // outputInfoSeparator
-            // 
-            this.outputInfoSeparator.BackColor = System.Drawing.Color.Transparent;
-            this.outputInfoSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("outputInfoSeparator.BackgroundImage")));
-            this.outputInfoSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.outputInfoSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.outputInfoSeparator.LineColor = System.Drawing.Color.DarkGray;
-            this.outputInfoSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.outputInfoSeparator.LineThickness = 1;
-            this.outputInfoSeparator.Location = new System.Drawing.Point(23, 34);
-            this.outputInfoSeparator.Name = "outputInfoSeparator";
-            this.outputInfoSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.outputInfoSeparator.Size = new System.Drawing.Size(86, 14);
-            this.outputInfoSeparator.TabIndex = 16;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.baseDensityInfo);
-            this.panel5.Controls.Add(this.outBaseDensityLabel);
-            this.panel5.Controls.Add(this.coverageSpaceInfo);
-            this.panel5.Controls.Add(this.outCoverageSpaceLabel);
-            this.panel5.Controls.Add(this.resolutionInfo);
-            this.panel5.Controls.Add(this.outResolutionLabel);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel5.Location = new System.Drawing.Point(17, 51);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(95, 133);
-            this.panel5.TabIndex = 10;
-            // 
-            // outputInfoTitle_Label
-            // 
-            this.outputInfoTitle_Label.AutoSize = true;
-            this.outputInfoTitle_Label.BackColor = System.Drawing.Color.Transparent;
-            this.outputInfoTitle_Label.Font = new System.Drawing.Font("Mollen Narrow", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputInfoTitle_Label.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.outputInfoTitle_Label.Location = new System.Drawing.Point(15, 15);
-            this.outputInfoTitle_Label.Name = "outputInfoTitle_Label";
-            this.outputInfoTitle_Label.Size = new System.Drawing.Size(84, 17);
-            this.outputInfoTitle_Label.TabIndex = 17;
-            this.outputInfoTitle_Label.Text = "Output Info.";
-            // 
-            // resolutionInfo
-            // 
-            this.resolutionInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.resolutionInfo.AutoSize = true;
-            this.resolutionInfo.BackColor = System.Drawing.Color.Transparent;
-            this.resolutionInfo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.resolutionInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resolutionInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
-            this.resolutionInfo.Location = new System.Drawing.Point(5, 26);
-            this.resolutionInfo.Name = "resolutionInfo";
-            this.resolutionInfo.Size = new System.Drawing.Size(38, 12);
-            this.resolutionInfo.TabIndex = 10;
-            this.resolutionInfo.Text = "0x0 px";
-            // 
-            // outResolutionLabel
-            // 
-            this.outResolutionLabel.AutoSize = true;
-            this.outResolutionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.outResolutionLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outResolutionLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.outResolutionLabel.Location = new System.Drawing.Point(4, 11);
-            this.outResolutionLabel.Name = "outResolutionLabel";
-            this.outResolutionLabel.Size = new System.Drawing.Size(59, 12);
-            this.outResolutionLabel.TabIndex = 11;
-            this.outResolutionLabel.Text = "Resolution:";
-            // 
-            // coverageSpaceInfo
-            // 
-            this.coverageSpaceInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.coverageSpaceInfo.AutoSize = true;
-            this.coverageSpaceInfo.BackColor = System.Drawing.Color.Transparent;
-            this.coverageSpaceInfo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.coverageSpaceInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coverageSpaceInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
-            this.coverageSpaceInfo.Location = new System.Drawing.Point(5, 67);
-            this.coverageSpaceInfo.Name = "coverageSpaceInfo";
-            this.coverageSpaceInfo.Size = new System.Drawing.Size(28, 12);
-            this.coverageSpaceInfo.TabIndex = 12;
-            this.coverageSpaceInfo.Text = "0 cm";
-            // 
-            // outCoverageSpaceLabel
-            // 
-            this.outCoverageSpaceLabel.AutoSize = true;
-            this.outCoverageSpaceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.outCoverageSpaceLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outCoverageSpaceLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.outCoverageSpaceLabel.Location = new System.Drawing.Point(4, 52);
-            this.outCoverageSpaceLabel.Name = "outCoverageSpaceLabel";
-            this.outCoverageSpaceLabel.Size = new System.Drawing.Size(84, 12);
-            this.outCoverageSpaceLabel.TabIndex = 13;
-            this.outCoverageSpaceLabel.Text = "Coverage Space:";
-            // 
-            // baseDensityInfo
-            // 
-            this.baseDensityInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.baseDensityInfo.AutoSize = true;
-            this.baseDensityInfo.BackColor = System.Drawing.Color.Transparent;
-            this.baseDensityInfo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.baseDensityInfo.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseDensityInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(115)))), ((int)(((byte)(108)))));
-            this.baseDensityInfo.Location = new System.Drawing.Point(5, 107);
-            this.baseDensityInfo.Name = "baseDensityInfo";
-            this.baseDensityInfo.Size = new System.Drawing.Size(43, 12);
-            this.baseDensityInfo.TabIndex = 14;
-            this.baseDensityInfo.Text = "0 px/cm";
-            // 
-            // outBaseDensityLabel
-            // 
-            this.outBaseDensityLabel.AutoSize = true;
-            this.outBaseDensityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.outBaseDensityLabel.Font = new System.Drawing.Font("Mollen Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outBaseDensityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.outBaseDensityLabel.Location = new System.Drawing.Point(4, 92);
-            this.outBaseDensityLabel.Name = "outBaseDensityLabel";
-            this.outBaseDensityLabel.Size = new System.Drawing.Size(69, 12);
-            this.outBaseDensityLabel.TabIndex = 15;
-            this.outBaseDensityLabel.Text = "Base Density:";
-            // 
-            // projectPanel
-            // 
-            this.projectPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.projectPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectPanel.BackgroundImage")));
-            this.projectPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.projectPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.projectPanel.BorderRadius = 15;
-            this.projectPanel.BorderThickness = 1;
-            this.projectPanel.Controls.Add(this.projectSeparator);
-            this.projectPanel.Controls.Add(this.panel4);
-            this.projectPanel.Controls.Add(this.projectTitle_Label);
-            this.projectPanel.ForeColor = System.Drawing.Color.Coral;
-            this.projectPanel.Location = new System.Drawing.Point(449, 231);
-            this.projectPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.projectPanel.Name = "projectPanel";
-            this.projectPanel.ShowBorders = true;
-            this.projectPanel.Size = new System.Drawing.Size(133, 168);
-            this.projectPanel.TabIndex = 19;
-            // 
-            // projectSeparator
-            // 
-            this.projectSeparator.BackColor = System.Drawing.Color.Transparent;
-            this.projectSeparator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectSeparator.BackgroundImage")));
-            this.projectSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.projectSeparator.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.projectSeparator.LineColor = System.Drawing.Color.DarkGray;
-            this.projectSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.projectSeparator.LineThickness = 1;
-            this.projectSeparator.Location = new System.Drawing.Point(23, 34);
-            this.projectSeparator.Name = "projectSeparator";
-            this.projectSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.projectSeparator.Size = new System.Drawing.Size(86, 14);
-            this.projectSeparator.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.prujectImport_Btn);
-            this.panel4.Controls.Add(this.projectSave_Btn);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel4.Location = new System.Drawing.Point(17, 51);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(95, 101);
-            this.panel4.TabIndex = 10;
-            // 
-            // projectTitle_Label
-            // 
-            this.projectTitle_Label.AutoSize = true;
-            this.projectTitle_Label.BackColor = System.Drawing.Color.Transparent;
-            this.projectTitle_Label.Font = new System.Drawing.Font("Mollen Narrow", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectTitle_Label.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.projectTitle_Label.Location = new System.Drawing.Point(15, 15);
-            this.projectTitle_Label.Name = "projectTitle_Label";
-            this.projectTitle_Label.Size = new System.Drawing.Size(51, 17);
-            this.projectTitle_Label.TabIndex = 17;
-            this.projectTitle_Label.Text = "Project";
-            // 
-            // projectSave_Btn
-            // 
-            this.projectSave_Btn.AllowAnimations = true;
-            this.projectSave_Btn.AllowMouseEffects = true;
-            this.projectSave_Btn.AllowToggling = false;
-            this.projectSave_Btn.AnimationSpeed = 200;
-            this.projectSave_Btn.AutoGenerateColors = false;
-            this.projectSave_Btn.AutoRoundBorders = false;
-            this.projectSave_Btn.AutoSizeLeftIcon = true;
-            this.projectSave_Btn.AutoSizeRightIcon = true;
-            this.projectSave_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.projectSave_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.projectSave_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("projectSave_Btn.BackgroundImage")));
-            this.projectSave_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.projectSave_Btn.ButtonText = "Save";
-            this.projectSave_Btn.ButtonTextMarginLeft = 0;
-            this.projectSave_Btn.ColorContrastOnClick = 45;
-            this.projectSave_Btn.ColorContrastOnHover = 45;
-            this.projectSave_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.projectSave_Btn.CustomizableEdges = borderEdges2;
-            this.projectSave_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.projectSave_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.projectSave_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.projectSave_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.projectSave_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.projectSave_Btn.Font = new System.Drawing.Font("Mollen Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectSave_Btn.ForeColor = System.Drawing.Color.White;
-            this.projectSave_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.projectSave_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.projectSave_Btn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.projectSave_Btn.IconMarginLeft = 11;
-            this.projectSave_Btn.IconPadding = 10;
-            this.projectSave_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.projectSave_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.projectSave_Btn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.projectSave_Btn.IconSize = 25;
-            this.projectSave_Btn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.projectSave_Btn.IdleBorderRadius = 5;
-            this.projectSave_Btn.IdleBorderThickness = 1;
-            this.projectSave_Btn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.projectSave_Btn.IdleIconLeftImage = null;
-            this.projectSave_Btn.IdleIconRightImage = null;
-            this.projectSave_Btn.IndicateFocus = false;
-            this.projectSave_Btn.Location = new System.Drawing.Point(6, 13);
-            this.projectSave_Btn.Name = "projectSave_Btn";
-            this.projectSave_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.projectSave_Btn.OnDisabledState.BorderRadius = 5;
-            this.projectSave_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.projectSave_Btn.OnDisabledState.BorderThickness = 1;
-            this.projectSave_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.projectSave_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.projectSave_Btn.OnDisabledState.IconLeftImage = null;
-            this.projectSave_Btn.OnDisabledState.IconRightImage = null;
-            this.projectSave_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.projectSave_Btn.onHoverState.BorderRadius = 5;
-            this.projectSave_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.projectSave_Btn.onHoverState.BorderThickness = 1;
-            this.projectSave_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.projectSave_Btn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.projectSave_Btn.onHoverState.IconLeftImage = null;
-            this.projectSave_Btn.onHoverState.IconRightImage = null;
-            this.projectSave_Btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.projectSave_Btn.OnIdleState.BorderRadius = 5;
-            this.projectSave_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.projectSave_Btn.OnIdleState.BorderThickness = 1;
-            this.projectSave_Btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.projectSave_Btn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.projectSave_Btn.OnIdleState.IconLeftImage = null;
-            this.projectSave_Btn.OnIdleState.IconRightImage = null;
-            this.projectSave_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.projectSave_Btn.OnPressedState.BorderRadius = 5;
-            this.projectSave_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.projectSave_Btn.OnPressedState.BorderThickness = 1;
-            this.projectSave_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.projectSave_Btn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.projectSave_Btn.OnPressedState.IconLeftImage = null;
-            this.projectSave_Btn.OnPressedState.IconRightImage = null;
-            this.projectSave_Btn.Size = new System.Drawing.Size(86, 32);
-            this.projectSave_Btn.TabIndex = 19;
-            this.projectSave_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.projectSave_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.projectSave_Btn.TextMarginLeft = 0;
-            this.projectSave_Btn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.projectSave_Btn.UseDefaultRadiusAndThickness = true;
-            // 
-            // prujectImport_Btn
-            // 
-            this.prujectImport_Btn.AllowAnimations = true;
-            this.prujectImport_Btn.AllowMouseEffects = true;
-            this.prujectImport_Btn.AllowToggling = false;
-            this.prujectImport_Btn.AnimationSpeed = 200;
-            this.prujectImport_Btn.AutoGenerateColors = false;
-            this.prujectImport_Btn.AutoRoundBorders = false;
-            this.prujectImport_Btn.AutoSizeLeftIcon = true;
-            this.prujectImport_Btn.AutoSizeRightIcon = true;
-            this.prujectImport_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.prujectImport_Btn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.prujectImport_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prujectImport_Btn.BackgroundImage")));
-            this.prujectImport_Btn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.prujectImport_Btn.ButtonText = "Import";
-            this.prujectImport_Btn.ButtonTextMarginLeft = 0;
-            this.prujectImport_Btn.ColorContrastOnClick = 45;
-            this.prujectImport_Btn.ColorContrastOnHover = 45;
-            this.prujectImport_Btn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.prujectImport_Btn.CustomizableEdges = borderEdges1;
-            this.prujectImport_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.prujectImport_Btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.prujectImport_Btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.prujectImport_Btn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.prujectImport_Btn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.prujectImport_Btn.Font = new System.Drawing.Font("Mollen Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prujectImport_Btn.ForeColor = System.Drawing.Color.White;
-            this.prujectImport_Btn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.prujectImport_Btn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.prujectImport_Btn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.prujectImport_Btn.IconMarginLeft = 11;
-            this.prujectImport_Btn.IconPadding = 10;
-            this.prujectImport_Btn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.prujectImport_Btn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.prujectImport_Btn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.prujectImport_Btn.IconSize = 25;
-            this.prujectImport_Btn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.prujectImport_Btn.IdleBorderRadius = 5;
-            this.prujectImport_Btn.IdleBorderThickness = 1;
-            this.prujectImport_Btn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.prujectImport_Btn.IdleIconLeftImage = null;
-            this.prujectImport_Btn.IdleIconRightImage = null;
-            this.prujectImport_Btn.IndicateFocus = false;
-            this.prujectImport_Btn.Location = new System.Drawing.Point(6, 59);
-            this.prujectImport_Btn.Name = "prujectImport_Btn";
-            this.prujectImport_Btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.prujectImport_Btn.OnDisabledState.BorderRadius = 5;
-            this.prujectImport_Btn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.prujectImport_Btn.OnDisabledState.BorderThickness = 1;
-            this.prujectImport_Btn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.prujectImport_Btn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.prujectImport_Btn.OnDisabledState.IconLeftImage = null;
-            this.prujectImport_Btn.OnDisabledState.IconRightImage = null;
-            this.prujectImport_Btn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.prujectImport_Btn.onHoverState.BorderRadius = 5;
-            this.prujectImport_Btn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.prujectImport_Btn.onHoverState.BorderThickness = 1;
-            this.prujectImport_Btn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.prujectImport_Btn.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.prujectImport_Btn.onHoverState.IconLeftImage = null;
-            this.prujectImport_Btn.onHoverState.IconRightImage = null;
-            this.prujectImport_Btn.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.prujectImport_Btn.OnIdleState.BorderRadius = 5;
-            this.prujectImport_Btn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.prujectImport_Btn.OnIdleState.BorderThickness = 1;
-            this.prujectImport_Btn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
-            this.prujectImport_Btn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.prujectImport_Btn.OnIdleState.IconLeftImage = null;
-            this.prujectImport_Btn.OnIdleState.IconRightImage = null;
-            this.prujectImport_Btn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.prujectImport_Btn.OnPressedState.BorderRadius = 5;
-            this.prujectImport_Btn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.prujectImport_Btn.OnPressedState.BorderThickness = 1;
-            this.prujectImport_Btn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.prujectImport_Btn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.prujectImport_Btn.OnPressedState.IconLeftImage = null;
-            this.prujectImport_Btn.OnPressedState.IconRightImage = null;
-            this.prujectImport_Btn.Size = new System.Drawing.Size(86, 32);
-            this.prujectImport_Btn.TabIndex = 20;
-            this.prujectImport_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.prujectImport_Btn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.prujectImport_Btn.TextMarginLeft = 0;
-            this.prujectImport_Btn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.prujectImport_Btn.UseDefaultRadiusAndThickness = true;
-            // 
-            // ShapeColor
-            // 
-            this.ShapeColor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShapeColor.FillWeight = 121.8274F;
-            this.ShapeColor.HeaderText = "Color";
-            this.ShapeColor.Name = "ShapeColor";
-            this.ShapeColor.ReadOnly = true;
-            this.ShapeColor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ShapeColor.Width = 50;
-            // 
-            // ShapeName
-            // 
-            this.ShapeName.FillWeight = 8.709719F;
-            this.ShapeName.HeaderText = "Name";
-            this.ShapeName.Name = "ShapeName";
-            // 
-            // ShapeSizeX
-            // 
-            this.ShapeSizeX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.ShapeSizeX.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ShapeSizeX.FillWeight = 154.5942F;
-            this.ShapeSizeX.HeaderText = "Size X (cm)";
-            this.ShapeSizeX.Name = "ShapeSizeX";
-            this.ShapeSizeX.Width = 60;
-            // 
-            // ShapeSizeY
-            // 
-            this.ShapeSizeY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShapeSizeY.FillWeight = 114.5665F;
-            this.ShapeSizeY.HeaderText = "Size Y (cm)";
-            this.ShapeSizeY.Name = "ShapeSizeY";
-            this.ShapeSizeY.Width = 60;
-            // 
-            // StripSize
-            // 
-            this.StripSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.StripSize.FillWeight = 86.76236F;
-            this.StripSize.HeaderText = "StripSize (px)";
-            this.StripSize.Name = "StripSize";
-            this.StripSize.Width = 85;
-            // 
-            // ShapeTexDensity
-            // 
-            this.ShapeTexDensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShapeTexDensity.FillWeight = 113.5398F;
-            this.ShapeTexDensity.HeaderText = "Density (px/cm)";
-            this.ShapeTexDensity.Name = "ShapeTexDensity";
-            this.ShapeTexDensity.ReadOnly = true;
-            this.ShapeTexDensity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ShapeTexDensity.Width = 65;
-            // 
             // TrimSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2039,6 +2041,13 @@
             this.Text = "TrimSettings";
             this.Resize += new System.EventHandler(this.TrimSettings_Resize);
             this.detailsPanel.ResumeLayout(false);
+            this.projectPanel.ResumeLayout(false);
+            this.projectPanel.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.outputInfoPanel.ResumeLayout(false);
+            this.outputInfoPanel.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.stripsInformationPanel.ResumeLayout(false);
             this.stripsInformationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stripsInfo_DataGridView)).EndInit();
@@ -2060,13 +2069,6 @@
             this.exportTexturePanel.PerformLayout();
             this.trimSheetViewerPanel.ResumeLayout(false);
             this.trimSheetViewerPanel.PerformLayout();
-            this.outputInfoPanel.ResumeLayout(false);
-            this.outputInfoPanel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.projectPanel.ResumeLayout(false);
-            this.projectPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

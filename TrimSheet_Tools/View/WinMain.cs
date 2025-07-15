@@ -1,5 +1,6 @@
 ﻿using Bunifu.UI.WinForms.BunifuButton;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using TrimSheet_Tools.Controller;
@@ -9,12 +10,12 @@ namespace TrimSheet_Tools.View
     public partial class WinMain : Form, IDockPanelView
     {
         // Global variables
-        // ControlBox Component 
-        private WinMain_ControlBox _controlBox;
+        private WinMain_ControlBox _controlBox; // ControlBox Component
+        List<TrimSheet_Tools.Model.StripData> _stripDataList = new List<TrimSheet_Tools.Model.StripData>(); // Trim Sheet Data
 
         // Docking Panel System Component
         private TrimSheet_Tools.Model.DockPanelModel _dockPanelModel;
-        private DockPanelController _dockPanelSystem;
+        private DockPanelController _dockPanelSystem; 
 
         // Forms
         private WinMain_LoadForms _loadFormSystem;
@@ -39,7 +40,7 @@ namespace TrimSheet_Tools.View
             SetFontFromUI(); //Buttons Custom Type
 
             // Forms initialization
-            _loadFormSystem.AddFormList(_trimSettings = new TrimSettings(_dockPanelModel));
+            _loadFormSystem.AddFormList(_trimSettings = new TrimSettings(ref _stripDataList, in _dockPanelModel));
             _loadFormSystem.AddFormList(_uvPlanning = new UVPlanning());
         }
 
